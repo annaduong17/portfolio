@@ -1,6 +1,11 @@
-function TechStack() {
+function TechStack({ techStack }) {
+  const renderedItems = techStack.map((tech, index) => {
+    return (
+      <span key={index} className="tech" >{tech}</span>
+    )
+  })
   return (
-    <div>TechStack</div>
+    <div>{renderedItems}</div>
   );
 }
 
