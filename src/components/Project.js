@@ -8,6 +8,7 @@ function Project({ type, name, description, features, images, techStack, button 
     <div>
       <Slider 
         type={type} 
+        name={name}
         images={images}
       />
       <Details 
