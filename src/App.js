@@ -8,7 +8,7 @@ import NotFound from './components/NotFound';
 function App () {
   return(
     <BrowserRouter>
-      <div>
+      <div className='app'>
         <Navbar />
 
         <Routes>
