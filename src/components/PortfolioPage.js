@@ -145,6 +145,7 @@ function PortfolioPage() {
           name={item.name}
           description={item.description}
           features={item.features}
+          techStack={item.techStack}
           images={item.images}
           button={item.button}
         />

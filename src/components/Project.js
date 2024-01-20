@@ -3,13 +3,21 @@ import Details from './Details';
 import TechStack from './TechStack';
 import Button from './Button';
 
-function Project() {
+function Project({ type, name, description, features, images, techStack, button }) {
   return (
     <div>
-      <Slider />
-      <Details />
-      <TechStack />
-      <Button />
+      <Slider 
+        type={type} 
+        images={images}
+      />
+      <Details 
+        type={type}
+        name={name}
+        description={description}
+        features={features}
+      />
+      <TechStack techStack={techStack} />
+      <Button button={button} />
     </div>
   );
 }
