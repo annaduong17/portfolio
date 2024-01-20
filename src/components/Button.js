@@ -1,6 +1,9 @@
-function Button() {
+function Button({ type, children }) {
+  let classes; 
+  type ? classes = "btn primary btn" : classes = "btn";
+
   return (
-    <div>Button</div>
+    <button className={classes}>{children}</button>
   );
 }
 

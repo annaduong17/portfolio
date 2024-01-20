@@ -19,8 +19,8 @@ function Home() {
       </div>
 
       <div className="home-buttons">
-        <Button primary>HIRE ME</Button>
-        <Button secondary>HIRE ME</Button>
+        <Button className="btn primary-btn">HIRE ME</Button>
+        <Button className="btn secondary-btn">DOWNLOAD CV</Button>
       </div>
 
       <div>
