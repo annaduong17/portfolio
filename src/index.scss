@@ -25,6 +25,7 @@ body {
   width: 100%;
   height: 100%;
   font-family: 'Catamaran', sans-serif;
+  color: $cherry;
   font-size: 1rem;
   margin: 0;
 }
@@ -56,8 +57,10 @@ body {
 
 .navbar {
   border: 1px solid blue;
-  width: 100%;
-  height: 100px;
+  position: sticky;
+  top: 0;
+  padding: 50px 150px;
+  z-index: 100;
 
   .navlink {
     border: 1px solid green;
@@ -73,6 +76,25 @@ body {
   }
 }
 
+.btn {
+  border-radius: 10px;
+  text-decoration: none;
+  font-size: $text--md;
+  font-weight: 700;
+  padding: 15px 20px;
+
+  &.primary-btn {
+    color: $white;
+    background-color: $cherry;
+  }
+
+  &.secondary-btn {
+    color: $cherry;
+    border: 1px solid $cherry;
+    background-color: $white;
+  }
+}
+
 .home-page {
   position: relative;
   border: 1px solid green;
@@ -82,13 +104,87 @@ body {
 
   .home {
     border: 1px solid pink;
+    border-radius: 20px;
     background-color: $white;
     position: absolute;
     right: 150px;
     margin-left: 300px;
-    margin-top: 75px;
-    padding-block: 30px;
-    padding-left: 175px;
+    margin-top: 50px;
+    padding-top: 50px;
+    padding-left: 160px;
+    padding-right: 75px;
+
+    .home-heading {
+      margin-left: 65px;
+    }
+
+    h1 {
+      font-size: $title--lg;
+      font-weight: 400;
+      margin: 0;
+
+      span {
+        font-size: $title--xl;
+        font-family: 'Kaushan Script', cursive;
+        color: $pink;
+      }
+    }
+
+    h2 {
+      font-size: $title--sm;
+      font-weight: 100;
+      letter-spacing: 2px;
+      margin: 0;
+    }
+
+    .socials-description {
+      // border: 1px solid green;
+      display: flex;
+      align-items: flex-start;
+      padding-block: 20px 30px;
+
+      .home-socials {
+        padding-top: 30px;
+
+        * {
+          padding-bottom: 20px;
+        }
+      }
+      
+      p {
+        font-size: $text--lg;
+        letter-spacing: 0.15px;
+        line-height: 45px;
+        padding-left: 30px;
+      }
+    }
+
+    .home-buttons {
+      
+      .primary-btn {
+        padding-inline: 62px;
+        margin-right: 10px;
+        margin-left: 65px;
+      }
+    }
+
+    .view-portfolio-container {
+      // border: 1px solid blue;
+      margin-block: 50px 70px;
+      margin-inline: 65px;
+      
+      a {
+        text-decoration: none;
+        display: flex;
+        align-items: center;
+
+        p {
+          font-size: $text--lg;
+          color: $pink;
+          margin-right: 5px;
+        }
+      }
+    }
   }
 }
 
@@ -151,7 +247,7 @@ body {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin: 20px;
+      margin: 30px;
 
       button {
         background-color: $white;
