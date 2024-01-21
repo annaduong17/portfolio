@@ -1,4 +1,10 @@
 function Phone() {
+  const playlist = [
+    'Currently learning Next.js',
+    'Currently working on a Restaurant Online Ordering App',
+    'Currently reading A Quiet Life by Ethan Joella'
+  ]
+
   return (
     <div className="phone">
       <div className="phone-display">
