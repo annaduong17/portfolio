@@ -3,7 +3,7 @@ import Phone from './Phone';
 
 function HomePage() {
   return (
-    <div>
+    <div className='home-page'>
       <Phone /> 
       <Home />
     </div>

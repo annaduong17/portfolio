@@ -1,4 +1,3 @@
-import Button from './Button';
 import { NavLink } from 'react-router-dom';
 
 function Home() {
@@ -10,8 +9,8 @@ function Home() {
       </div>
 
       <div className="home-socials">
-        <img src="/images/icons/icon-github.svg" alt="github icon" />
-        <img src="/images/icons/icon-linkedin.svg" alt="linkedin icon" />
+        <img width={50} height={50} src="/images/icons/icon-github.svg" alt="github icon" />
+        <img width={50} height={50} src="/images/icons/icon-linkedin.svg" alt="linkedin icon" />
       </div>
 
       <div className="home-description">

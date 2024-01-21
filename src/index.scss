@@ -15,18 +15,27 @@ $text--lg: 1.25rem;
 $text--md: 1rem;
 $text--sm: 0.75rem;
 
+html {
+  font-size: 16px;
+}
+
 body {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
   font-family: 'Catamaran', sans-serif;
+  font-size: 1rem;
+  margin: 0;
 }
 
 .app {
   border: 1px solid red;
-  max-width: 1200px;
-  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 1400px;
+  height: 100vh;
+  margin: auto;
   background-image: url('../public/images/background.jpg');
   background-repeat: no-repeat;
   background-size: 100%;
@@ -45,23 +54,10 @@ body {
   z-index: -2;
 }
 
-// .app::before {
-//   content: '';
-//   position: fixed;
-//   top: 0;
-//   right: 0;
-//   bottom: 0;
-//   left: 0;
-//   background-image: url('../public/images/background.jpg');
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   opacity: 50%;
-//   z-index: -1;
-// }
-
 .navbar {
   border: 1px solid blue;
   width: 100%;
+  height: 100px;
 
   .navlink {
     border: 1px solid green;
@@ -77,6 +73,91 @@ body {
   }
 }
 
-.avatar {
-  border-radius: 50%;
+.home-page {
+  position: relative;
+  border: 1px solid green;
+  width: 100%;
+  flex-grow: 1;
+  margin-inline: auto;
+
+  .home {
+    border: 1px solid pink;
+    background-color: $white;
+    position: absolute;
+    right: 150px;
+    margin-left: 300px;
+    margin-top: 75px;
+    padding-block: 30px;
+    padding-left: 175px;
+  }
+}
+
+.phone {
+  // border: 1px solid purple;
+  background-color: $white;
+  position: absolute;
+  top: 100px;
+  left: 150px;
+  border-radius: 15px;
+  box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .phone-display {
+    // border: 1px solid yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: $pink;
+    padding: 20px;
+    margin: 15px;
+
+    .avatar {
+      border-radius: 50%;
+      border: 2px solid $white;
+    }
+
+    h2 {
+      font-size: $text--lg;
+      font-weight: 300;
+      letter-spacing: 2.4px;
+      color: $white;
+
+    }
+
+  }
+
+  .phone-control {
+    text-align: center;
+
+    .progress-meter {
+      position: relative;
+      width: 200px;
+      height: 3px;
+      background-color: $light-cherry;
+      margin: 25px;
+      border-radius: 3px;
+
+      img {
+        position: absolute;
+        top: -24px;
+        left: -24px;
+      }
+    }
+
+    .control-buttons {
+      // border: 1px solid green;
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      margin: 20px;
+
+      button {
+        background-color: $white;
+        border: none;
+        padding-inline: 10px;
+      }
+    }
+  }
 }
