@@ -1,9 +1,11 @@
-import Contact from './Contact';
+import ContactInfo from './ContactInfo';
+import ContactForm from './ContactForm';
 
 function ContactPage() {
   return (
     <div>
-      <Contact />
+      <ContactInfo />
+      <ContactForm />
     </div>
   );
 }
