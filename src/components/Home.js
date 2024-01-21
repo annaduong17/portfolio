@@ -19,12 +19,12 @@ function Home() {
       </div>
 
       <div className="home-buttons">
-        <Button className="btn primary-btn">HIRE ME</Button>
-        <Button className="btn secondary-btn">DOWNLOAD CV</Button>
+        <NavLink to="/contact" className="btn primary-btn">HIRE ME</NavLink>
+        <a download href="/files/anna-duong-resume.pdf" className="btn secondary-btn">DOWNLOAD RESUME</a>
       </div>
 
       <div>
-        <NavLink>
+        <NavLink to="/portfolio">
           <p>View my portfolio</p>
           <img src="/images/icons/icon-arrow-right.svg" alt="right arrow icon" />
         </NavLink>

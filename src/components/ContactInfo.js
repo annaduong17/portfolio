@@ -30,7 +30,7 @@ function ContactInfo() {
         <a href="/files/resume.pdf">
           <img src="/images/icons/icon-file.svg" alt="resume icon" />
         </a>
-        <p>Download <a href="/files/resume.pdf" download>my resume</a></p>
+        <p>Download <a href="/files/anna-duong-resume.pdf" download>my resume</a></p>
       </section>
     </div>
   );
