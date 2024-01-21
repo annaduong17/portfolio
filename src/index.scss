@@ -31,7 +31,7 @@ body {
 }
 
 .app {
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-direction: column;
   max-width: 1400px;
@@ -39,7 +39,7 @@ body {
   margin: auto;
   background-image: url('../public/images/background.jpg');
   background-repeat: no-repeat;
-  background-size: 100%;
+  background-size: cover;
   position: relative;
   z-index: -1;
 }
@@ -56,14 +56,14 @@ body {
 }
 
 .navbar {
-  border: 1px solid blue;
+  // border: 1px solid blue;
   position: sticky;
   top: 0;
   padding: 50px 150px;
   z-index: 100;
 
   .navlink {
-    border: 1px solid green;
+    // border: 1px solid green;
     font-size: $text--md;
     letter-spacing: 1.4px;
     text-decoration: none;
@@ -97,19 +97,19 @@ body {
 
 .home-page {
   position: relative;
-  border: 1px solid green;
+  // border: 1px solid green;
   width: 100%;
   flex-grow: 1;
   margin-inline: auto;
 
   .home {
-    border: 1px solid pink;
+    // border: 1px solid pink;
     border-radius: 20px;
     background-color: $white;
     position: absolute;
     right: 150px;
     margin-left: 300px;
-    margin-top: 50px;
+    margin-top: 20px;
     padding-top: 50px;
     padding-left: 160px;
     padding-right: 75px;
