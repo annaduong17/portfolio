@@ -7,19 +7,76 @@ $light-pink: rgba(231, 113, 127, 0.25);
 $gray: rgba(230, 230, 230, 1);
 $white: #FFFFFF;
 
+$title--xl: 4.5rem;
+$title--lg: 3rem;
+$title--md: 2rem;
+$title--sm: 1.5rem;
+$text--lg: 1.25rem;
+$text--md: 1rem;
+$text--sm: 0.75rem;
+
 body {
   position: relative;
   box-sizing: border-box;
   width: 100%;
   height: 100%;
+  font-family: 'Catamaran', sans-serif;
 }
 
-.background {
-  position: fixed;
-  width: 100%;
-  max-width: 2000px;
-  height: auto;
-  inset: 0;
-  opacity: 50%;
+.app {
+  border: 1px solid red;
+  max-width: 1200px;
+  margin-inline: auto;
+  background-image: url('../public/images/background.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  position: relative;
   z-index: -1;
+}
+
+.app::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(230, 230, 230, 0.5);
+  z-index: -2;
+}
+
+// .app::before {
+//   content: '';
+//   position: fixed;
+//   top: 0;
+//   right: 0;
+//   bottom: 0;
+//   left: 0;
+//   background-image: url('../public/images/background.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   opacity: 50%;
+//   z-index: -1;
+// }
+
+.navbar {
+  border: 1px solid blue;
+  width: 100%;
+
+  .navlink {
+    border: 1px solid green;
+    font-size: $text--md;
+    letter-spacing: 1.4px;
+    text-decoration: none;
+    padding-right: 10%;
+    color: $cherry;
+  }
+
+  .navlink.active {
+    font-weight: 900;
+  }
+}
+
+.avatar {
+  border-radius: 50%;
 }

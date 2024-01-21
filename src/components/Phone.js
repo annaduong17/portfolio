@@ -8,7 +8,9 @@ function Phone() {
   return (
     <div className="phone">
       <div className="phone-display">
-        <img src="/images/avatar.jpeg" alt="avatar" />
+        <img height={200}
+        width={200} 
+        className="avatar" src="/images/avatar.jpeg" alt="avatar" />
         <h2>ANNA DUONG</h2>
         <p>Currently learning Next.js</p>
       </div>

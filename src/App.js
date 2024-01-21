@@ -9,7 +9,6 @@ function App () {
   return(
     <BrowserRouter>
       <div className='app'>
-        <img className='background' width={900} height={600}src="/images/background.jpg" alt="workspace with coffee, cherries, and keyboard" />
         <Navbar />
 
         <Routes>
