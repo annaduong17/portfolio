@@ -22,7 +22,7 @@ function Project({ type, name, description, features, images, techStack, button 
           features={features}
         />
         <TechStack techStack={techStack} />
-        <Button type={type}>{button}</Button>
+        <Button className="btn primary-btn" >{button}</Button>
       </div>
     </div>
   );

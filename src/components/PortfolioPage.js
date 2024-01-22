@@ -162,13 +162,13 @@ function PortfolioPage() {
 
   return (
     <div className='portfolio'>
+      <h2>Experience</h2>
       <section className='experience-section'>
-        <h2>Experience</h2>
         {renderedExperiences}
       </section>
 
+      <h2>Projects</h2>
       <section className='projects-section'>
-        <h2>Projects</h2>
         {renderedProjects}
       </section>
     </div>

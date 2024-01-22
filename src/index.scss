@@ -83,6 +83,9 @@ body {
   font-size: $text--md;
   font-weight: 700;
   padding: 15px 20px;
+  border: none;
+  width: 200px;
+  height: 60px;
 
   &.primary-btn {
     color: $white;
@@ -266,6 +269,9 @@ body {
 
   .projects-section {
     border: 1px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 
   .project {
@@ -276,11 +282,19 @@ body {
     margin-bottom: 75px;
   }
 
+  .projects-section .project {
+    max-width: 500px;
+    flex-direction: column;
+    margin-inline: 20px;
+  }
+
   .slider-container {
     border: 1px solid pink;
     background-color: $gray;
     // max-width: 500px;
     border-radius: 20px 0 0 20px;
+    display: flex;
+    align-items: center;
   }
 
   .slider {
@@ -306,7 +320,7 @@ body {
   }
 
   .info-container {
-    padding: 30px 60px;
+    padding: 40px 60px;
 
     .details {
       h3 {
