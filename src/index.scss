@@ -274,7 +274,7 @@ body {
     justify-content: center;
   }
 
-  .project {
+  .portfolio-item {
     border: 1px solid green;
     display: flex;
     background-color: $white;
@@ -282,7 +282,7 @@ body {
     margin-bottom: 75px;
   }
 
-  .projects-section .project {
+  .projects-section .portfolio-item {
     max-width: 500px;
     flex-direction: column;
     margin-inline: 20px;

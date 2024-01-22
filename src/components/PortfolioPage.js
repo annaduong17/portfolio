@@ -1,7 +1,7 @@
-import Project from './Project';
+import PortfolioItem from './PortfolioItem';
 
 function PortfolioPage() {
-  const projects = [
+  const portfolioItems = [
     {
       type: 'experience',
       name: 'Vueable Query',
@@ -137,9 +137,9 @@ function PortfolioPage() {
   ]
 
 
-  const portfolioItems = projects.map((item, index) => {
+  const renderedItems = portfolioItems.map((item, index) => {
     return (
-        <Project
+        <PortfolioItem
           key={index}
           type={item.type} 
           name={item.name}
@@ -152,11 +152,11 @@ function PortfolioPage() {
     )
   })
 
-  const renderedExperiences = portfolioItems.filter(item => {
+  const renderedExperiences = renderedItems.filter(item => {
     return item.props.type === 'experience';
   });
 
-  const renderedProjects = portfolioItems.filter(item => {
+  const renderedProjects = renderedItems.filter(item => {
     return item.props.type === 'project';
   });
 

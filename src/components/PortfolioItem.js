@@ -3,9 +3,9 @@ import Details from './Details';
 import TechStack from './TechStack';
 import Button from './Button';
 
-function Project({ type, name, description, features, images, techStack, button }) {
+function PortfolioItem({ type, name, description, features, images, techStack, button }) {
   return (
-    <div className='project'>
+    <div className='portfolio-item'>
       <div className='slider-container'>
         <Slider 
           type={type} 
@@ -28,4 +28,4 @@ function Project({ type, name, description, features, images, techStack, button 
   );
 }
 
-export default Project;
+export default PortfolioItem;
