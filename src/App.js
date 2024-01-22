@@ -8,15 +8,17 @@ import NotFound from './components/NotFound';
 function App () {
   return(
     <BrowserRouter>
-      <div className='app'>
-        <Navbar />
+      <div className='app-container'>
+        <div className='app'>
+          <Navbar />
 
-        <Routes>
-          <Route path='/' element={<HomePage />} />
-          <Route path='/portfolio' element={<PortfolioPage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='*' element={<NotFound />} />
-        </Routes>
+          <Routes>
+            <Route path='/' element={<HomePage />} />
+            <Route path='/portfolio' element={<PortfolioPage />} />
+            <Route path='/contact' element={<ContactPage />} />
+            <Route path='*' element={<NotFound />} />
+          </Routes>
+        </div>
       </div>
     </BrowserRouter>
   )
