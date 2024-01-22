@@ -182,6 +182,12 @@ body {
       width: 200px;
       margin-block: 50px 70px;
       margin-inline: 65px;
+
+      *:hover {
+        img {
+          transform: translateX(7px);
+        }
+      }
       
       a {
         text-decoration: none;
