@@ -5,6 +5,7 @@ function Slider({ type, name, images }) {
         key={index}
         src={image} 
         alt={name} 
+        width={200}
       />
     );
   });

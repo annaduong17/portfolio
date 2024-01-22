@@ -137,7 +137,7 @@ function PortfolioPage() {
   ]
 
 
-  const renderedItems = projects.map((item, index) => {
+  const portfolioItems = projects.map((item, index) => {
     return (
         <Project
           key={index}
@@ -152,16 +152,24 @@ function PortfolioPage() {
     )
   })
 
+  const renderedExperiences = portfolioItems.filter(item => {
+    return item.props.type === 'experience';
+  });
+
+  const renderedProjects = portfolioItems.filter(item => {
+    return item.props.type === 'project';
+  });
+
   return (
     <div className='portfolio'>
-      <section>
+      <section className='experience-section'>
         <h2>Experience</h2>
-        {renderedItems}
+        {renderedExperiences}
       </section>
 
-      <section>
+      <section className='projects-section'>
         <h2>Projects</h2>
-        {renderedItems}
+        {renderedProjects}
       </section>
     </div>
   );

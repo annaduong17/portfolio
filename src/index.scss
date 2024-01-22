@@ -258,3 +258,21 @@ body {
     }
   }
 }
+
+.portfolio {
+  border: 1px solid blue;
+  margin-inline: 150px;
+
+  .experience-section {
+    border: 1px solid red;
+  }
+
+  .project {
+    border: 1px solid green;
+    display: flex;
+  }
+
+  .projects-section {
+    border: 1px solid black;
+  }
+}
