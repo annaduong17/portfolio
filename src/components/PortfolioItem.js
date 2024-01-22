@@ -15,14 +15,18 @@ function PortfolioItem({ type, name, description, features, images, techStack, b
       </div>
 
       <div className='info-container'>
-        <Details 
-          type={type}
-          name={name}
-          description={description}
-          features={features}
-        />
-        <TechStack techStack={techStack} />
-        <Button className="btn primary-btn" >{button}</Button>
+        <div className='details-container'>
+          <Details 
+            type={type}
+            name={name}
+            description={description}
+            features={features}
+          />
+        </div>
+        <div className='tech-button-container'>
+          <TechStack techStack={techStack} />
+          <Button className="btn primary-btn" >{button}</Button>
+        </div>
       </div>
     </div>
   );

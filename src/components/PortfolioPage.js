@@ -24,7 +24,7 @@ function PortfolioPage() {
         '/images/vueable-query-2.png',
         '/images/vueable-query-3.png'
       ],
-      button: 'Visit Site'
+      button: 'Visit Site',
     },
     {
       type: 'project',
@@ -47,7 +47,7 @@ function PortfolioPage() {
         '/images/e-commerce-3.png',
         '/images/e-commerce-4.png'
       ],
-      button: 'View Github Repo'
+      button: 'View Github Repo',
     },
     {
       type: 'project',
