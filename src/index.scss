@@ -70,11 +70,16 @@ body {
     text-decoration: none;
     padding-right: 10%;
     color: $cherry;
+
+    &:hover {
+      color: $pink;
+    }
   }
 
   .navlink.active {
     font-weight: 900;
   }
+
 }
 
 .btn {
@@ -154,6 +159,11 @@ body {
 
       .home-socials {
         padding-top: 30px;
+
+        &:hover svg path {
+          fill: $pink;
+        }
+        
 
         * {
           padding-bottom: 20px;

@@ -11,8 +11,12 @@ function Home() {
 
       <div className='socials-description'>
         <div className="home-socials">
-          <img width={30} height={30} src="/images/icons/icon-github.svg" alt="github icon" />
-          <img width={35} height={25} src="/images/icons/icon-linkedin.svg" alt="linkedin icon" />
+          <a href="https://github.com/annaduong17" target="_blank" rel="noreferrer">
+            <img width={30} height={30} src="/images/icons/icon-github.svg" alt="github icon" />
+          </a>
+          <a href="https://www.linkedin.com/in/annaduong17/" target="_blank" rel="noreferrer">
+            <img width={35} height={25} src="/images/icons/icon-linkedin.svg" alt="linkedin icon" />
+          </a>
         </div>
 
         <div className="home-description">
