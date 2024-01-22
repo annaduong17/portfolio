@@ -285,11 +285,11 @@ body {
 }
 
 .portfolio {
-  border: 1px solid blue;
+  // border: 1px solid blue;
   margin-inline: 150px;
 
   .portfolio-item {
-    border: 1px solid green;
+    // border: 1px solid green;
     display: flex;
     background-color: $white;
     border-radius: 20px;
@@ -303,7 +303,7 @@ body {
   // }
 
   .slider-container {
-    border: 1px solid pink;
+    // border: 1px solid pink;
     background-color: $gray;
     // max-width: 500px;
     border-radius: 20px 0 0 20px;
@@ -312,7 +312,7 @@ body {
   }
 
   .slider {
-    border: 1px solid cyan;
+    // border: 1px solid cyan;
     margin: 30px 60px;
     display: flex;
     flex-direction: column;
@@ -321,7 +321,7 @@ body {
   }
 
   .slider-images {
-    border: 1px solid red;
+    // border: 1px solid red;
     width: 350px;
     overflow: hidden;
     display: flex;
@@ -392,4 +392,58 @@ body {
   //     height: 100%;
   //   }
   // }
+}
+
+.contact {
+  border: 1px solid red;
+  display: flex;
+  margin-inline: 150px;
+  border-radius: 20px;
+  background-color: $white;
+
+  section {
+    // border: 1px solid orange;
+    display: flex;
+    align-items: center;
+
+    a {
+      margin-right: 10px;
+    }
+  }
+
+  h2 {
+    font-family: 'Kaushan Script', cursive;
+    font-size: $title--lg;
+    color: $pink;
+    margin-top: 0;
+  }
+
+  .contact-info {
+    border: 1px solid blue;
+    width: 50%;
+    padding: 50px;
+    font-weight: 300;
+
+    a {
+      text-decoration: none;
+      font-weight: 700;
+      color: $cherry;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+  }
+
+  .contact-form {
+    border: 1px solid green;
+    padding: 50px;
+    background-color: $gray;
+
+    .form-section {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
 }

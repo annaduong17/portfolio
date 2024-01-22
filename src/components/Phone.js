@@ -20,6 +20,8 @@ function Phone() {
         <div className="progress-meter">
           <img width={50} height={50} src="/images/icons/icon-dot.svg" alt="dot svg" />
         </div>
+
+        {/* <input type="range" min="0" max="2" /> */}
         
         <div className="control-buttons">
           <button>
