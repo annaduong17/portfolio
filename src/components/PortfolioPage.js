@@ -25,6 +25,7 @@ function PortfolioPage() {
         '/images/vueable-query-3.png'
       ],
       button: 'Visit Site',
+      link: 'https://www.vueablequery.com/'
     },
     {
       type: 'project',
@@ -48,6 +49,7 @@ function PortfolioPage() {
         '/images/e-commerce-4.png'
       ],
       button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/e-commerce'
     },
     {
       type: 'project',
@@ -68,7 +70,8 @@ function PortfolioPage() {
         '/images/expenses-chart-1.png',
         '/images/expenses-chart-2.png'
       ],
-      button: 'View Github Repo'
+      button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/expenses-chart'
     },
     {
       type: 'project',
@@ -90,7 +93,8 @@ function PortfolioPage() {
         '/images/age-calculator-1.png',
         '/images/age-calculator-2.png'
       ],
-      button: 'View Github Repo'
+      button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/age-calculator'
     },
     {
       type: 'project',
@@ -112,7 +116,8 @@ function PortfolioPage() {
         '/images/newsletter-2.png',
         '/images/newsletter-3.png'
       ],
-      button: 'View Github Repo'
+      button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/newsletter'
     },
     {
       type: 'project',
@@ -132,7 +137,8 @@ function PortfolioPage() {
         '/images/faq-accordion-1.png',
         '/images/faq-accordion-2.png'
       ],
-      button: 'View Github Repo'
+      button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/faq-accordion'
     },
   ]
 
@@ -148,6 +154,7 @@ function PortfolioPage() {
           techStack={item.techStack}
           images={item.images}
           button={item.button}
+          link={item.link}
         />
     )
   })

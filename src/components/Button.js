@@ -1,7 +1,11 @@
-function Button({ className, children }) {
+function Button({ className, children, link }) {
 
   return (
-    <button className={className}>{children}</button>
+    <a className="link" href={link}>
+      <button className={className}>
+        {children}
+      </button>
+    </a>
   );
 }
 

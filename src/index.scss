@@ -86,6 +86,7 @@ body {
   border: none;
   width: 200px;
   height: 60px;
+  cursor: pointer;
 
   &.primary-btn {
     color: $white;
@@ -96,6 +97,10 @@ body {
     color: $cherry;
     border: 1px solid $cherry;
     background-color: $white;
+  }
+
+  &:hover {
+    background-color: $pink;
   }
 }
 

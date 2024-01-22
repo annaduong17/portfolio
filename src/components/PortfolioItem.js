@@ -3,7 +3,7 @@ import Details from './Details';
 import TechStack from './TechStack';
 import Button from './Button';
 
-function PortfolioItem({ type, name, description, features, images, techStack, button }) {
+function PortfolioItem({ type, name, description, features, images, techStack, button, link }) {
   return (
     <div className='portfolio-item'>
       <div className='slider-container'>
@@ -25,7 +25,7 @@ function PortfolioItem({ type, name, description, features, images, techStack, b
         </div>
         <div className='tech-button-container'>
           <TechStack techStack={techStack} />
-          <Button className="btn primary-btn" >{button}</Button>
+          <Button link={link} className="btn primary-btn" >{button}</Button>
         </div>
       </div>
     </div>
