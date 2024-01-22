@@ -5,6 +5,7 @@ $light-cherry: rgba(58, 9, 11, 0.25);
 $pink: rgba(231, 113, 127, 1);
 $light-pink: rgba(231, 113, 127, 0.25);
 $gray: rgba(230, 230, 230, 1);
+$light-gray: rgba(233, 233, 233, 0.5);
 $white: #FFFFFF;
 
 $title--xl: 4.5rem;
@@ -324,6 +325,24 @@ body {
         font-size: $text--lg;
         font-weight: 300;
       }
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+      text-align: center;
+      margin-block: 30px;
+    }
+
+    .tech {
+      font-weight: 700;
+      color: $pink;
+      background-color: $light-gray;
+      width: 65px;
+      margin: 0 10px 10px 0;
+      padding: 10px 30px;
+      border-radius: 25px;
+      flex-wrap: wrap;
     }
   }
 }

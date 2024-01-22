@@ -5,7 +5,7 @@ function TechStack({ techStack }) {
     )
   })
   return (
-    <div>{renderedItems}</div>
+    <div className="tech-stack">{renderedItems}</div>
   );
 }
 
