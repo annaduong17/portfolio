@@ -4,8 +4,7 @@ function Slider({ type, name, images }) {
       <img 
         key={index}
         src={image} 
-        alt={name} 
-        width={200}
+        alt={name}
       />
     );
   });
@@ -16,6 +15,7 @@ function Slider({ type, name, images }) {
         key={index}
         src="/images/icons/icon-dot.svg"
         alt="dot icon"
+        width={30}
       />
     );
   });
@@ -25,6 +25,7 @@ function Slider({ type, name, images }) {
       <div className="slider-images">
         {renderedImages}
       </div>
+      
       <div className="slider-dots">
         {renderedDots}
       </div>

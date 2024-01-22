@@ -263,8 +263,8 @@ body {
   border: 1px solid blue;
   margin-inline: 150px;
 
-  .experience-section {
-    border: 1px solid red;
+  .projects-section {
+    border: 1px solid black;
   }
 
   .project {
@@ -272,7 +272,30 @@ body {
     display: flex;
   }
 
-  .projects-section {
-    border: 1px solid black;
+  .slider-container {
+    border: 1px solid pink;
   }
+
+  .slider {
+    border: 1px solid cyan;
+    margin-inline: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 400px;
+  }
+
+  .slider-images {
+    border: 1px solid red;
+    max-width: 400px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
 }
