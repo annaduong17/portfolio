@@ -7,7 +7,7 @@ function Details({ type, name, description, features }) {
   })
 
   return (
-    <div>
+    <div className="details">
       <h3>{name}</h3>
       <p>{description}</p>
       <ul className="features">
