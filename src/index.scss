@@ -437,21 +437,11 @@ body {
 }
 
 .contact {
-  border: 1px solid red;
-  display: flex;
-  margin-inline: 150px;
+  // border: 1px solid red;
+  margin-inline: 300px;
   border-radius: 20px;
   background-color: $white;
-
-  section {
-    // border: 1px solid orange;
-    display: flex;
-    align-items: center;
-
-    a {
-      margin-right: 10px;
-    }
-  }
+  padding: 50px;
 
   h2 {
     font-family: 'Kaushan Script', cursive;
@@ -461,30 +451,20 @@ body {
   }
 
   .contact-info {
-    border: 1px solid blue;
-    width: 50%;
-    padding: 50px;
+    // border: 1px solid blue;
     font-weight: 300;
+    display: flex;
+    align-items: center;
 
     a {
       text-decoration: none;
       font-weight: 700;
       color: $cherry;
+      margin-right: 10px;
 
       &:hover {
         color: $pink;
       }
-    }
-  }
-
-  .contact-form {
-    border: 1px solid green;
-    padding: 50px;
-    background-color: $gray;
-
-    .form-section {
-      display: flex;
-      flex-direction: column;
     }
   }
 
