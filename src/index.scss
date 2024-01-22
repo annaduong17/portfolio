@@ -275,11 +275,11 @@ body {
     margin-bottom: 75px;
   }
 
-  .projects-section .portfolio-item {
-    max-width: 500px;
-    flex-direction: column;
-    margin-inline: 20px;
-  }
+  // .projects-section .portfolio-item {
+  //   max-width: 500px;
+  //   flex-direction: column;
+  //   margin-inline: 20px;
+  // }
 
   .slider-container {
     border: 1px solid pink;
@@ -353,22 +353,22 @@ body {
     }
   }
 
-  .projects-section {
-    border: 1px solid black;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+  // .projects-section {
+  //   border: 1px solid black;
+  //   display: flex;
+  //   flex-wrap: wrap;
+  //   justify-content: center;
 
-    .slider-container {
-      border-radius: 20px 20px 0 0 ;
-    }
+  //   .slider-container {
+  //     border-radius: 20px 20px 0 0 ;
+  //   }
 
-    .info-container {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      padding-inline: 45px;
-      height: 100%;
-    }
-  }
+  //   .info-container {
+  //     display: flex;
+  //     flex-direction: column;
+  //     justify-content: space-between;
+  //     padding-inline: 45px;
+  //     height: 100%;
+  //   }
+  // }
 }
