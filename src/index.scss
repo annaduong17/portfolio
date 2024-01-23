@@ -333,6 +333,8 @@ body {
   .portfolio-item {
     // border: 1px solid green;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
     background-color: $white;
     border-radius: 20px;
     margin-bottom: 75px;
@@ -341,31 +343,32 @@ body {
   .slider-container {
     // border: 1px solid pink;
     background-color: $gray;
-    border-radius: 20px 0 0 20px;
+    border-radius: 20px 20px 0 0;
     display: flex;
     align-items: center;
+    justify-content: center;
   }
 
   .slider {
     // border: 1px solid cyan;
-    margin: 30px;
+    margin: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
     // max-height: 400px;
   }
 
   .img-btn-container {
     display: flex;
+    justify-content: center;
     align-items: center;
-    max-width: 450px;
-    max-height: 400px;
+    max-width: 700px;
+    max-height: 500px;
 
     button {
       width: 40px;
       height: 35px;
-      margin: 10px;
+      margin: 20px;
       border: none;
       background-color: transparent;
       cursor: pointer;
@@ -378,14 +381,14 @@ body {
 
   .images {
     // border: 1px solid red;
-    width: 600px;
+    width: 500px;
     overflow: hidden;
     display: flex;
     align-items: center;
 
     img {
       width: 100%;
-      max-height: 450px;
+      max-height: 500px;
       margin: 0;
       padding: 0;
     }
@@ -414,7 +417,20 @@ body {
   }
 
   .info-container {
-    padding: 40px 60px;
+    
+    display: flex;
+    padding: 5% 7%;
+
+    .details-container{
+      // border: 1px solid purple;
+      max-width: 500px;
+    }
+
+    .tech-button-container {
+      display: flex;
+      flex-direction: column;
+      margin-left: 40px;
+    }
 
     .details {
       h3 {
