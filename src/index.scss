@@ -31,16 +31,26 @@ body {
   margin: 0;
 }
 
+// .app-container {
+//   height: 100%;
+//   background-image: url('../public/images/background.jpg');
+//   background-repeat: no-repeat;
+//   background-size: cover;
+//   position: relative;
+//   z-index: 10;
+// }
+
 .app {
   // border: 1px solid red;
   display: flex;
   flex-direction: column;
   max-width: 1400px;
-  height: 100vh;
+  height: 100%;
   margin: auto;
+  background: transparent;
   background-image: url('../public/images/background.jpg');
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100%;
   position: relative;
   z-index: 1;
 }
@@ -60,8 +70,18 @@ body {
   // border: 1px solid blue;
   position: sticky;
   top: 0;
-  padding: 50px 150px;
-  z-index: 100;
+  margin-bottom: 50px;
+  padding: 30px 150px;
+  z-index: 5;
+
+  &.white-bg {
+    background-color: $cherry;
+    box-shadow: 0px 10px 10px -10px gray;
+
+    .navlink {
+      color: $white;
+    }
+  }
 
   .navlink {
     // border: 1px solid green;
@@ -113,7 +133,8 @@ body {
   position: relative;
   // border: 1px solid green;
   width: 100%;
-  flex-grow: 1;
+  height: 100vh;
+  // flex-grow: 1;
   margin-inline: auto;
 
   .home {
