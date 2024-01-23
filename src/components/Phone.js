@@ -3,11 +3,13 @@ import { useState, useEffect, useRef } from 'react';
 function Phone() {
   const [ index, setIndex ] = useState(0);
   const [ playing, setPlaying ] = useState(false);
-
-  const rangeRef = useRef();
+  const rangeRef = useRef(null);
+  
   
   const handlePlay = () => {
+      console.log(index);
       setPlaying(true);
+      console.log('rangeRef in handlePlay',rangeRef.current.value);
   } 
 
   const handlePause = () => {
@@ -28,7 +30,7 @@ function Phone() {
 
   const handleRangeChange = (e) => {
     setPlaying(false);
-    setIndex(e.target.value);
+    setIndex(parseInt(e.target.value));
   }
 
 
@@ -38,18 +40,17 @@ function Phone() {
     'Currently reading A Quiet Life by Ethan Joella'
   ]
 
-  
-
   useEffect(() => {
+    rangeRef.current.value = index;
+
     let intervalId;
 
     if (playing) {
+      
       intervalId = setInterval(() => {
         setIndex((prev) => (prev === playlist.length - 1 ? 0 : prev + 1));
       }, 2000);
     }
-
-    rangeRef.current.value = index;
 
     return () => clearInterval(intervalId);
   }, [index, playing, playlist.length]);
