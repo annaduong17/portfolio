@@ -1,9 +1,56 @@
+import { useState, useEffect } from 'react';
+
 function Phone() {
+  const [ index, setIndex ] = useState(0);
+  const [ playing, setPlaying ] = useState(false);
+
+  
+  
+  const handlePlay = () => {
+      setPlaying(true);
+  } 
+
+  const handlePause = () => {
+    setPlaying(false);
+  }
+
+  const handleNext = () => {
+    setIndex(prev => {
+      return prev === playlist.length - 1 ? 0 : prev + 1;
+    });
+  }
+
+  const handlePrevious = () => {
+    setIndex(prev => {
+      return prev === 0 ? playlist.length - 1 : prev - 1;
+    });
+  }
+
+
   const playlist = [
-    'Currently learning Next.js',
+    'Currently learning Github Actions',
     'Currently working on a Restaurant Online Ordering App',
     'Currently reading A Quiet Life by Ethan Joella'
   ]
+
+  const renderedItems = playlist.map((item, i) => {
+    return (
+      <p key={i} className="song">{item}</p>
+    );
+  })
+
+  useEffect(() => {
+    let intervalId;
+
+    if (playing) {
+      intervalId = setInterval(() => {
+        setIndex((prev) => (prev === playlist.length - 1 ? 0 : prev + 1));
+      }, 2000);
+    }
+
+    // Cleanup the interval when playing changes or when the component unmounts
+    return () => clearInterval(intervalId);
+  }, [playing, playlist.length]);
 
   return (
     <div className="phone">
@@ -15,22 +62,25 @@ function Phone() {
       </div>
 
       <div className="phone-control">
-        <p>Currently learning Next.js</p>
-
-        {/* <div className="progress-meter">
-          <img width={50} height={50} src="/images/icons/icon-dot.svg" alt="dot svg" />
-        </div> */}
+        {renderedItems[index]}
 
         <input type="range" min="0" max="2" />
         
         <div className="control-buttons">
-          <button>
+          <button onClick={handlePrevious}>
             <img width={30} height={30} src="/images/icons/icon-previous.svg" alt="previous icon" />
           </button>
-          <button>
-            <img width={40} height={40} src="/images/icons/icon-play.svg" alt="play icon" />
-          </button>
-          <button>
+
+          { playing ? 
+            <button onClick={handlePause}>
+              <img width={40} src="/images/icons/icon-pause.svg" alt="pause button" />
+            </button> : 
+            <button onClick={handlePlay}>
+              <img width={40} height={40} src="/images/icons/icon-play.svg" alt="play icon" />
+            </button>
+            }
+
+          <button onClick={handleNext}>
             <img width={30} height={30} src="/images/icons/icon-next.svg" alt="next icon" />
           </button>
         </div>
