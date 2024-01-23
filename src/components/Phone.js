@@ -1,10 +1,10 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 
 function Phone() {
   const [ index, setIndex ] = useState(0);
   const [ playing, setPlaying ] = useState(false);
 
-  
+  const rangeRef = useRef();
   
   const handlePlay = () => {
       setPlaying(true);
@@ -26,6 +26,11 @@ function Phone() {
     });
   }
 
+  const handleRangeChange = (e) => {
+    setPlaying(false);
+    setIndex(e.target.value);
+  }
+
 
   const playlist = [
     'Currently learning Github Actions',
@@ -33,11 +38,7 @@ function Phone() {
     'Currently reading A Quiet Life by Ethan Joella'
   ]
 
-  const renderedItems = playlist.map((item, i) => {
-    return (
-      <p key={i} className="song">{item}</p>
-    );
-  })
+  
 
   useEffect(() => {
     let intervalId;
@@ -48,9 +49,16 @@ function Phone() {
       }, 2000);
     }
 
-    // Cleanup the interval when playing changes or when the component unmounts
+    rangeRef.current.value = index;
+
     return () => clearInterval(intervalId);
-  }, [playing, playlist.length]);
+  }, [index, playing, playlist.length]);
+
+  const renderedItems = playlist.map((item, i) => {
+    return (
+      <p key={i} className="song">{item}</p>
+    );
+  })
 
   return (
     <div className="phone">
@@ -64,7 +72,7 @@ function Phone() {
       <div className="phone-control">
         {renderedItems[index]}
 
-        <input type="range" min="0" max="2" />
+        <input ref={rangeRef} onChange={handleRangeChange} type="range" min="0" max="2" />
         
         <div className="control-buttons">
           <button onClick={handlePrevious}>
