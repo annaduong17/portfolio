@@ -22,8 +22,16 @@ function Slider({ type, name, images }) {
 
   return (
     <div className="slider">
-      <div className="slider-images">
-        {renderedImages}
+      <div className="img-btn-container">
+        <button>
+          <img src="/images/icons/icon-arrow-left-circle.svg" alt="arrow left icon" />
+        </button>
+        <div className="images">
+          {renderedImages}
+        </div>
+        <button>
+          <img src="/images/icons/icon-arrow-right-circle.svg" alt="arrow right icon" />
+        </button>
       </div>
       
       <div className="slider-dots">
