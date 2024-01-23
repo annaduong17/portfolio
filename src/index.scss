@@ -57,6 +57,14 @@ body {
   z-index: -1;
 }
 
+svg {
+  color: $cherry;
+
+  &:hover {
+    color: $pink;
+  }
+}
+
 .navbar {
   // border: 1px solid blue;
   position: sticky;
@@ -107,17 +115,25 @@ body {
   &.primary-btn {
     color: $white;
     background-color: $cherry;
+
+    &:hover {
+      background-color: $pink;
+    }
   }
 
   &.secondary-btn {
     color: $cherry;
     border: 1px solid $cherry;
     background-color: $white;
+
+    &:hover {
+      color: $white;
+      background-color: $pink;
+      border: none;
+    }
   }
 
-  &:hover {
-    background-color: $pink;
-  }
+  
 }
 
 .home-page {
@@ -170,15 +186,20 @@ body {
       padding-block: 20px 30px;
 
       .home-socials {
+        // border: 1px solid red;
         padding-top: 30px;
+        text-align: center;
 
-        &:hover svg path {
-          fill: $pink;
+
+        svg {
+          width: 30px;
+          height: 30px;
+          margin-bottom: 20px;
         }
-        
 
-        * {
-          padding-bottom: 20px;
+        svg.linkedin {
+          width: 25px;
+          height: 25px
         }
       }
       
@@ -208,6 +229,7 @@ body {
       *:hover {
         img {
           transform: translateX(7px);
+          transition: transform 0.3s ease;
         }
       }
       
@@ -244,6 +266,7 @@ body {
     align-items: center;
     background-color: $pink;
     padding: 35px 20px;
+    padding-bottom: 0;
     margin: 15px;
 
     .avatar {
@@ -278,7 +301,6 @@ body {
     input[type="range"] {
       -webkit-appearance: none;
       appearance: none;
-      background: transparent;
       cursor: pointer;
       width: 12rem;
       
@@ -286,12 +308,6 @@ body {
       &::-webkit-slider-runnable-track {
         background: $cherry;
         height: 0.25rem;
-        border-radius: 1rem;
-      }
-
-      ::-moz-range-track {
-        background: $cherry;
-        height: 0.5rem;
         border-radius: 1rem;
       }
 
@@ -305,6 +321,12 @@ body {
         border-radius: 50%;
       }
 
+      &::-moz-range-track {
+        background: $cherry;
+        height: 0.5rem;
+        border-radius: 1rem;
+      }
+
       &::-moz-range-thumb {
         -webkit-appearance: none; 
         appearance: none;
@@ -315,6 +337,21 @@ body {
         border-radius: 50%;
       }
 
+      &::-moz-range-progress {
+        background-color: $pink;
+      }
+
+      &::-ms-track {
+        background-color: $cherry;
+      }
+
+      &::-ms-thumb {
+        background-color: $pink;
+      }
+
+      &::-ms-fill-lower {
+        background-color: $pink;
+      }
     }
 
     .control-buttons {
@@ -324,6 +361,17 @@ body {
       justify-content: center;
       align-items: center;
       margin: 30px;
+
+      svg {
+        width: 30px;
+        height: 30px;
+      }
+
+      svg.pause,
+      svg.play {
+        width: 40px;
+        height: 40px;
+      }
 
       button {
         background-color: $white;

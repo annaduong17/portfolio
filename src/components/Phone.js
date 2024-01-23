@@ -30,7 +30,7 @@ function Phone() {
 
   const handleRangeChange = (e) => {
     setPlaying(false);
-    setIndex(parseInt(e.target.value));
+    setIndex(Number.parseInt(e.target.value));
   }
 
 
@@ -77,20 +77,30 @@ function Phone() {
         
         <div className="control-buttons">
           <button onClick={handlePrevious}>
-            <img width={30} height={30} src="/images/icons/icon-previous.svg" alt="previous icon" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="previous bi bi-skip-start-fill" viewBox="0 0 16 16">
+            <path d="M4 4a.5.5 0 0 1 1 0v3.248l6.267-3.636c.54-.313 1.232.066 1.232.696v7.384c0 .63-.692 1.01-1.232.697L5 8.753V12a.5.5 0 0 1-1 0z"/>
+          </svg>
           </button>
 
           { playing ? 
-            <button onClick={handlePause}>
-              <img width={40} src="/images/icons/icon-pause.svg" alt="pause button" />
+            <button className='pause-btn' onClick={handlePause}>
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="pause bi bi-pause-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.25 5C5.56 5 5 5.56 5 6.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C7.5 5.56 6.94 5 6.25 5m3.5 0c-.69 0-1.25.56-1.25 1.25v3.5a1.25 1.25 0 1 0 2.5 0v-3.5C11 5.56 10.44 5 9.75 5"/>
+              </svg>
+
+              
             </button> : 
             <button onClick={handlePlay}>
-              <img width={40} height={40} src="/images/icons/icon-play.svg" alt="play icon" />
+              <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="play bi bi-play-circle-fill" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M6.79 5.093A.5.5 0 0 0 6 5.5v5a.5.5 0 0 0 .79.407l3.5-2.5a.5.5 0 0 0 0-.814z"/>
+                </svg>
             </button>
             }
 
           <button onClick={handleNext}>
-            <img width={30} height={30} src="/images/icons/icon-next.svg" alt="next icon" />
+          <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="next bi bi-skip-end-fill" viewBox="0 0 16 16">
+            <path d="M12.5 4a.5.5 0 0 0-1 0v3.248L5.233 3.612C4.693 3.3 4 3.678 4 4.308v7.384c0 .63.692 1.01 1.233.697L11.5 8.753V12a.5.5 0 0 0 1 0z"/>
+          </svg>
           </button>
         </div>
       </div>
