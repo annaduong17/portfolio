@@ -1,10 +1,11 @@
 import { useState, useEffect, useRef } from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
 import Contact from './components/Contact';
 import NotFound from './components/NotFound';
+import ScrollToTop from './components/ScrollToTop';
 
 function App () {
   const [ scrolled, setScrolled ] = useState(false);
@@ -25,20 +26,17 @@ function App () {
   }, [scrolled]);
 
   return(
-    <BrowserRouter>
-      <div className='app-container'>
-      
         <div className='app'>
-        <Navbar scrolled={scrolled} ref={navbarRef} />
+          <Navbar scrolled={scrolled} ref={navbarRef} />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/portfolio' element={<PortfolioPage />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+
+          <ScrollToTop />
         </div>
-      </div>
-    </BrowserRouter>
   )
 }
 
