@@ -593,6 +593,17 @@ svg {
   }
 }
 
+.footer {
+  text-align: center;
+  padding-bottom: 50px;
+  
+  .copyright {
+    font-size: $text--sm;
+    font-weight: 700;
+  }
+
+}
+
 .not-found {
   // border: 1px solid purple;
   margin-inline: 150px;

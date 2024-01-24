@@ -4,6 +4,7 @@ import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
 import Contact from './components/Contact';
+import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import ScrollToTop from './components/ScrollToTop';
 
@@ -34,6 +35,8 @@ function App () {
             <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound />} />
           </Routes>
+
+          <Footer />
 
           <ScrollToTop />
         </div>
