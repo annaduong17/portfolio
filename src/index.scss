@@ -610,3 +610,27 @@ svg {
   height: 600px;
   margin-bottom: 100px;
 }
+
+.back-to-top-btn {
+  position: fixed;
+  right: 75px;
+  bottom: 75px;
+  color: $cherry;
+  border: none;
+  background: transparent;
+  
+  svg {
+    width: 40px;
+    height: 40px;
+  }
+
+  p {
+    font-size: $text--md;
+  }
+
+  &:hover {
+    * {
+      color: $pink;
+    }
+  }
+}
