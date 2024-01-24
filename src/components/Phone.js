@@ -36,8 +36,8 @@ function Phone() {
 
   const playlist = [
     'Currently learning Github Actions',
-    'Currently working on a Restaurant Online Ordering App',
-    'Currently reading A Quiet Life by Ethan Joella'
+    'Currently working on a Food Ordering App',
+    'Current favorite technologies: React and Sass'
   ]
 
   useEffect(() => {
@@ -73,7 +73,7 @@ function Phone() {
       <div className="phone-control">
         {renderedItems[index]}
 
-        <input ref={rangeRef} onChange={handleRangeChange} type="range" min="0" max="2" />
+        <input ref={rangeRef} onChange={handleRangeChange} type="range" min="0" max={playlist.length - 1} />
         
         <div className="control-buttons">
           <button onClick={handlePrevious}>
