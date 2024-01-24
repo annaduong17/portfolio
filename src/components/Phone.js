@@ -62,7 +62,8 @@ function Phone() {
   })
 
   return (
-    <div className="phone">
+    <div className='phone-container'>
+      <div className="phone">
       <div className="phone-display">
         <img height={180}
         width={180} 
@@ -104,6 +105,7 @@ function Phone() {
           </button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
