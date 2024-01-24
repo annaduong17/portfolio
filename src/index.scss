@@ -214,19 +214,20 @@ svg {
   position: relative;
   // border: 1px solid green;
   width: 100%;
-  height: 100vh;
+  height: 800px;
   // flex-grow: 1;
   margin-inline: auto;
+
 
   .home {
     // border: 1px solid pink;
     border-radius: 20px;
     background-color: $white;
-    position: absolute;
+    // position: absolute;
     right: 150px;
-    margin-left: 300px;
-    margin-top: 20px;
-    padding-top: 50px;
+    margin-inline: 300px 150px;
+    margin-top: 30px;
+    padding-block: 60px 20px;
     padding-left: 160px;
     padding-right: 75px;
 
@@ -668,7 +669,7 @@ svg {
 
 .footer {
   text-align: center;
-  padding-bottom: 50px;
+  padding-block: 50px;
   
   .copyright {
     font-size: $text--sm;
@@ -686,8 +687,8 @@ svg {
 
 .back-to-top-btn {
   position: fixed;
-  right: 75px;
-  bottom: 75px;
+  right: 50px;
+  bottom: 50px;
   color: $cherry;
   border: none;
   background: transparent;
