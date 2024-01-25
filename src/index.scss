@@ -493,14 +493,14 @@ svg {
   }
 
   .images {
-    // border: 1px solid red;
     width: clamp(150px, 50vw, 600px);
-    height: 100%;
     overflow: hidden;
     display: flex;
+    align-items: center;
 
     img {
       width: 100%;
+      height: 100%;
     }
   }
 
