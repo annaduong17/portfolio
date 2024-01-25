@@ -573,18 +573,23 @@ svg {
 
 .contact {
   // border: 1px solid red;
-  margin-inline: 400px;
-  margin-block: 75px;
+  margin-inline: auto;
+  width: clamp(200px, 70%, 500px);
   border-radius: 20px;
   background-color: $white;
-  padding: 50px;
+  padding: clamp(20px, 4vw, 50px);
   box-shadow: 0px 0px 60px 5px $shadow-gray;
 
   h2 {
     font-family: 'Kaushan Script', cursive;
-    font-size: 3rem;
+    font-size: clamp(1.5rem, 4vw, 3rem);
     color: $pink;
     margin-top: 0;
+  }
+
+  p {
+    // border: 1px solid pink;
+    font-size: clamp(0.75rem, 1vw, 1rem);
   }
 
   .contact-info {
@@ -592,6 +597,8 @@ svg {
     font-weight: 300;
     display: flex;
     align-items: center;
+
+    
 
     a {
       // border: 1px solid green;
@@ -602,7 +609,7 @@ svg {
       
 
       &.icon-link {
-        width: 30px;
+        width: clamp(20px, 2vw, 30px);
         display: flex;
         justify-content: center;
       }
