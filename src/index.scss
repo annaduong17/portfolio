@@ -63,19 +63,19 @@ svg {
   }
 }
 
-.hide {
-  display: none;
-}
-
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
   height: clamp(30px, 2vw, 50px);
-  padding-inline: clamp(50px, 10vw, 150px);
+  padding-inline: clamp(10px, 10vw, 150px);
   padding-block: clamp(20px, 2vw, 30px);
   margin-bottom: clamp(20px, 2vw, 30px);
   z-index: 5;
+  
+  &.mobile {
+    padding-inline: clamp(10px, 3vw, 50px);
+  }
 
   &.cherry-bg {
     background-color: $cherry;
@@ -112,16 +112,16 @@ svg {
 }
 
 .menu-icon {
-  position: fixed; 
+  position: absolute; 
   top: 0;
   border: none;
   background: transparent;
-  margin-block: clamp(0px, 4vw, 75px);
+  margin: clamp(20px, 3vw, 75px);
   cursor: pointer;
 
   svg {
     color: $cherry;
-    width: clamp(25px, 5vw, 50px);
+    width: clamp(30px, 5vw, 50px);
     height: 100%;
   }
 }
@@ -673,26 +673,25 @@ svg {
 
 .back-to-top-btn {
   position: fixed;
-  right: 50px;
-  bottom: 50px;
+  right: clamp(20px, 3vw, 50px);
+  bottom: clamp(20px, 3vw, 50px);
   color: $cherry;
   border: none;
-  background: transparent;
+  border-radius: 50%;
+  background: $cherry;
+  width: 50px;
+  height: 50px;
   
   svg {
-    width: 40px;
-    height: 40px;
-  }
-
-  p {
-    font-size: 1rem;
+    color: $white;
+    width: 20px;
+    height: 20px;
   }
 
   &:hover {
-    * {
-      color: $pink;
-    }
+    background-color: $pink;  
   }
+  
 }
 
 
@@ -704,11 +703,13 @@ svg {
 
   .home-page {
     flex-direction: column;
+    
 
     .phone-container {
       position: relative;
       left: 0;
       margin: 5vw;
+      
       
       
       .phone {
@@ -737,7 +738,7 @@ svg {
           -webkit-appearance: none;
           appearance: none;
           cursor: pointer;
-          width: 75vw;
+          width: 70vw;
       
 
           &::-webkit-slider-runnable-track {
@@ -803,7 +804,7 @@ svg {
 
     .home {
       width: 80%;
-      margin: 5vw;
+      margin-inline: 5vw;
       padding: 5vw;
 
       .home-buttons {
