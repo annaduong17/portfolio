@@ -63,10 +63,15 @@ svg {
   }
 }
 
+.hide {
+  display: none;
+}
+
 .navbar {
   position: fixed;
   top: 0;
   width: 100%;
+  height: clamp(30px, 2vw, 50px);
   padding-inline: clamp(50px, 10vw, 150px);
   padding-block: clamp(20px, 2vw, 30px);
   margin-bottom: clamp(20px, 2vw, 30px);
@@ -78,6 +83,14 @@ svg {
 
     .navlink {
       color: $white;
+    }
+
+    button svg {
+      color: $white;
+
+      &:hover {
+        color: $pink;
+      }
     }
   }
 
@@ -99,9 +112,11 @@ svg {
 }
 
 .menu-icon {
+  position: fixed; 
+  top: 0;
   border: none;
   background: transparent;
-  margin: clamp(0px, 5vw, 75px);
+  margin-block: clamp(0px, 4vw, 75px);
   cursor: pointer;
 
   svg {
