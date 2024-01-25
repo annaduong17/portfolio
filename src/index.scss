@@ -64,8 +64,9 @@ svg {
 }
 
 .navbar {
-  position: sticky;
+  position: fixed;
   top: 0;
+  width: 100%;
   padding-inline: clamp(50px, 10vw, 150px);
   padding-block: clamp(20px, 2vw, 30px);
   margin-bottom: clamp(20px, 2vw, 30px);
@@ -196,6 +197,7 @@ svg {
   position: relative;
   display: flex;
   align-items: center;
+  margin-top: clamp(75px, 10vw, 150px);
 
   .home {
     width: 100%;
@@ -423,6 +425,7 @@ svg {
 .portfolio {
   // border: 1px solid blue;
   margin-inline: clamp(20px, 6vw, 150px);
+  margin-top: clamp(75px, 10vw, 150px);
   
   h2 {
     font-size: clamp(1rem, 3vw, 2rem);
@@ -570,6 +573,7 @@ svg {
 .contact {
   // border: 1px solid red;
   margin-inline: auto;
+  margin-top: clamp(75px, 10vw, 150px);
   width: clamp(200px, 70%, 500px);
   border-radius: 20px;
   background-color: $white;
