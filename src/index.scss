@@ -422,7 +422,12 @@ svg {
 
 .portfolio {
   // border: 1px solid blue;
-  margin-inline: 150px;
+  margin-inline: auto;
+  
+  h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    margin-left: clamp(10px, 5vw, 50px)
+  }
 
   .portfolio-item {
     // border: 1px solid green;
@@ -430,15 +435,15 @@ svg {
     flex-direction: column;
     justify-content: center;
     background-color: $white;
-    border-radius: 20px;
-    margin-bottom: 75px;
+    border-radius: clamp(10px, 2vw, 20px);
     box-shadow: 0px 0px 60px 5px $shadow-gray;
+    margin: clamp(10px, 5vw, 50px);
   }
 
   .slider-container {
     // border: 1px solid pink;
     background-color: $gray;
-    border-radius: 20px 20px 0 0;
+    border-radius: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) 0 0 ;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -446,15 +451,10 @@ svg {
 
   .slider {
     // border: 1px solid cyan;
-    margin: 50px;
+    margin: clamp(10px, 5vw, 50px);
     display: flex;
     flex-direction: column;
     align-items: center;
-    
-    svg { 
-      width: 40px;
-      height: 40px;
-    }
   }
 
   .img-btn-container {
@@ -462,53 +462,51 @@ svg {
     display: flex;
     justify-content: center;
     align-items: center;
-    max-width: 700px;
-    max-height: 500px;
 
     button {
       border: none;
       // border: 1px solid black;
-      width: 50px;
-      height: 50px;
-      margin: 20px;
+      display: flex;
+      width: clamp(25px, 5vw, 50px);
+      height: clamp(25px, 5vw, 50px);
+      margin: clamp(5px, 1vw, 20px);
       background-color: transparent;
       cursor: pointer;
-    }
-    
-    img {
-      width: 30px;
+      
+
+      svg { 
+        width: clamp(20px, 4vw, 50px);
+        height: clamp(20px, 4vw, 50px);
+      }
     }
   }
 
   .images {
     // border: 1px solid red;
-    width: 600px;
+    width: clamp(150px, 50vw, 600px);
+    height: 100%;
     overflow: hidden;
     display: flex;
-    align-items: center;
 
     img {
       width: 100%;
-      max-height: 600px;
-      margin: 0;
-      padding: 0;
     }
   }
 
   .slider-dots {
-    width: 100px;
-    height: 30px;
-    margin-top: 50px;
+    // border: 1px solid orange;
+    margin-top: clamp(20px, 3vw, 50px);
     display: flex;
-    justify-content: center;
 
     .slider-dot {
       border: none;
+      // border: 1px solid red;
+      width: clamp(10px, 0.5vw, 20px);
       background-color: $pink;
-      height: 12px;
-      margin-right: 12px;
+      margin-right: clamp(10px, 1vw, 15px);
       border-radius: 50%;
       cursor: pointer;
+      aspect-ratio: 1 / 1;
     }
 
     .cherry {
@@ -517,54 +515,54 @@ svg {
   }
 
   .info-container {
-    
     display: flex;
-    padding: 5% 7%;
-
-    .details-container{
-      // border: 1px solid purple;
-      max-width: 500px;
-    }
-
-    .tech-button-container {
-      display: flex;
-      flex-direction: column;
-      margin-left: 40px;
-    }
+    padding: clamp(20px, 6vw, 75px);
 
     .details {
       h3 {
-        font-size: 2rem;
+        font-size: clamp(1rem, 3vw, 2.5rem);
         font-weight: 700;
         margin: 0;
         text-transform: uppercase;
       }
 
+      p, 
+      ul {
+        font-size: clamp(0.75rem, 2vw, 1.5rem);
+      }
+
       p {
-        font-size: 1rem;
         font-weight: 700;
       }
 
       ul {
-        font-size: 1.25rem;
         font-weight: 300;
       }
+    }
+
+    .tech-button-container {
+      // border: 1px solid blue;
+      display: flex;
+      flex-direction: column;
+      margin-left: clamp(0px, 5vw, 50px);
     }
 
     .tech-stack {
       display: flex;
       flex-wrap: wrap;
       text-align: center;
-      margin-block: 30px;
+      margin-block: clamp(20px, 3vw, 50px);
     }
 
     .tech {
+      font-size: clamp(0.5rem, 1.5vw, 1rem);
       font-weight: 700;
       color: $pink;
       background-color: $light-gray;
-      width: 65px;
-      margin: 0 10px 10px 0;
-      padding: 10px 30px;
+      width: clamp(75px, 12vw, 150px);
+      margin-right: clamp(5px, 0.75vw, 20px);
+      margin-bottom: clamp(5px, 0.75vw, 20px);
+      padding-block: clamp(7px, 1vw, 30px);
       border-radius: 25px;
       flex-wrap: wrap;
     }
@@ -796,4 +794,9 @@ svg {
       }
     }
   }
+
+  .info-container {
+    flex-direction: column;
+  }
+  
 }
