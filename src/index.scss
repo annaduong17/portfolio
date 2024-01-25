@@ -24,8 +24,6 @@ html {
 body {
   position: relative;
   box-sizing: border-box;
-  width: 100%;
-  height: 100%;
   font-family: 'Catamaran', sans-serif;
   color: $cherry;
   font-size: 1rem;
@@ -33,12 +31,11 @@ body {
 }
 
 .app {
-  // border: 1px solid red;
+  border: 1px solid red;
   display: flex;
   flex-direction: column;
-  max-width: 1400px;
-  height: 100%;
-  margin: auto;
+  width: min(100%, 1600px);
+  margin-inline: auto;
   background: transparent;
   background-image: url('../public/images/background.jpg');
   background-repeat: no-repeat;
@@ -70,8 +67,9 @@ svg {
   border: 1px solid blue;
   position: sticky;
   top: 0;
-  margin-bottom: 20px;
-  padding: 30px 150px;
+  padding-inline: clamp(50px, 10vw, 150px);
+  padding-block: clamp(20px, 2vw, 30px);
+  margin-bottom: clamp(20px, 2vw, 30px);
   z-index: 5;
 
   &.cherry-bg {
@@ -85,10 +83,10 @@ svg {
 
   .navlink {
     // border: 1px solid green;
-    font-size: $text--md;
+    font-size: clamp(0.75rem, 1vw, 1.25rem);
     letter-spacing: 1.4px;
     text-decoration: none;
-    padding-right: 10%;
+    padding-right: clamp(50px, 5vw, 100px);
     color: $cherry;
 
     &:hover {
@@ -99,21 +97,19 @@ svg {
   .navlink.active {
     font-weight: 900;
   }
-
 }
 
 .menu-icon {
   border: none;
   // border: 1px solid red;
   background: transparent;
-  width: 75px;
-  height: 75px;
-  margin: 20px 150px;
+  // width: 8vw;
+  // height: 8vw;
+  // margin: 20px 150px;
   cursor: pointer;
 
   svg {
     width: 50px;
-    height: 50px;
   }
 }
 
@@ -121,21 +117,19 @@ svg {
   position: fixed;
   top: 0;
   left: 0;
-  width: 300px;
-  height: 100vh;
+  // width: 300px;
+  // height: 100vh;
   background-color: $cherry;
   z-index: 20;
   
   button {
     border: none;
     background: transparent;
-    margin: 20px;
+    // margin: 20px;
     cursor: pointer;
     
     svg {
-      color: $white;
       width: 50px;
-      height: 50px;
 
       &:hover {
         color: $pink;
@@ -148,13 +142,13 @@ svg {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 0;
-    padding: 0;
-    height: 100vh;
+    // margin: 0;
+    // padding: 0;
+    // height: 100vh;
 
     li {
-      padding: 20px;
-      margin: 10px;
+      // padding: 20px;
+      // margin: 10px;
       list-style: none;
     }
 
@@ -162,11 +156,11 @@ svg {
       // border: 1px solid yellow;
       text-decoration: none;
       color: $white;
-      font-size: $text--lg;
+      // font-size: $text--lg;
       font-weight: 700;
       letter-spacing: 2px;
-      padding: 15px 20px;
-      margin: 25px 10px;
+      // padding: 15px 20px;
+      // margin: 25px 10px;
 
       &:hover {
         color: $pink;
@@ -176,24 +170,22 @@ svg {
 }
 
 .btn {
-  border-radius: 10px;
+  border-radius: clamp(5px, 0.25vw, 10px);
   text-decoration: none;
-  font-size: $text--md;
   font-weight: 700;
-  padding: 15px 20px;
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  padding-block: clamp(5px, 1.25vw, 15px);
+  padding-inline: clamp(5px, 2vw, 30px);
+  margin-right: clamp(5px, 0.75vw, 15px);
   border: none;
-  width: 200px;
-  height: 60px;
   cursor: pointer;
-
-  &.primary-btn {
-    color: $white;
-    background-color: $cherry;
+  color: $white;
+  background-color: $cherry;
+  border: 1px solid $cherry;
 
     &:hover {
       background-color: $pink;
     }
-  }
 
   &.secondary-btn {
     color: $cherry;
@@ -203,50 +195,41 @@ svg {
     &:hover {
       color: $white;
       background-color: $pink;
-      border: none;
     }
   }
 }
 
 .home-page {
   position: relative;
-  border: 1px solid green;
-  width: 100%;
-  height: 800px;
-  // flex-grow: 1;
-  margin-inline: auto;
-  margin-bottom: 50px;
+  // border: 1px solid green;
   display: flex;
   align-items: center;
 
   .home {
     // border: 1px solid pink;
+    width: 100%;
     border-radius: 20px;
     background-color: $white;
-    right: 150px;
-    margin-inline: 300px 150px;
-    padding-block: 60px 20px;
-    padding-left: 160px;
-    padding-right: 75px;
-
-    .home-heading {
-      margin-left: 65px;
-    }
+    margin-right: clamp(50px, 10vw, 150px);
+    margin-left: clamp(100px, 20vw, 300px);
+    padding-block: clamp(50px, 10vw, 100px);
+    padding-left: clamp(120px, 14vw, 200px);
+    padding-right: clamp(30px, 5vw, 100px);
 
     h1 {
-      font-size: $title--lg;
+      font-size: clamp(1.25rem, 3.5vw, 4rem);
       font-weight: 400;
       margin: 0;
 
       span {
-        font-size: $title--xl;
+        font-size: clamp(1.75rem, 5vw, 5rem);
         font-family: 'Kaushan Script', cursive;
         color: $pink;
       }
     }
 
     h2 {
-      font-size: $title--sm;
+      font-size: clamp(0.5rem, 1.5vw, 2rem);
       font-weight: 100;
       letter-spacing: 2px;
       margin: 0;
@@ -255,49 +238,46 @@ svg {
     .socials-description {
       // border: 1px solid green;
       display: flex;
-      align-items: flex-start;
-      padding-block: 20px 30px;
+      align-items: center;
+      margin-block: clamp(10px, 1.5vw, 30px);
 
       .home-socials {
         // border: 1px solid red;
-        padding-top: 30px;
         text-align: center;
+        margin-right: clamp(5px, 1.5vw, 20px);
 
 
         svg {
-          width: 30px;
-          height: 30px;
-          margin-bottom: 20px;
+          // border: 1px solid blue;
+          width: clamp(15px, 1.5vw, 30px);
+          margin-bottom: clamp(0px, 1vw, 30px);
         }
 
         svg.linkedin {
-          width: 25px;
-          height: 25px
+          width: clamp(12px, 1.3vw, 25px);
+          height: 100%;
         }
       }
       
       p {
-        font-size: $text--lg;
+        font-size: clamp(0.75rem, 1.25vw, 1.5rem);
         letter-spacing: 0.15px;
-        line-height: 45px;
-        padding-left: 30px;
+        line-height: 175%;
       }
     }
 
     .home-buttons {
-      
+        margin-block: clamp(10px, 3vw, 50px);
+
       .primary-btn {
-        padding-inline: 62px;
-        margin-right: 10px;
-        margin-left: 65px;
+        padding-inline: clamp(30px, 5vw, 75px);
       }
     }
 
     .view-portfolio-container {
       // border: 1px solid blue;
-      width: 200px;
-      margin-block: 50px 70px;
-      margin-inline: 65px;
+      font-size: clamp(0.75rem, 1vw, 1.25rem);
+      width: clamp(120px, 10vw, 200px);
 
       *:hover {
         img {
@@ -312,9 +292,7 @@ svg {
         align-items: center;
 
         p {
-          font-size: $text--lg;
           color: $pink;
-          margin-right: 5px;
         }
       }
     }
@@ -325,7 +303,8 @@ svg {
   // border: 1px solid blue;
   position: absolute;
   top: 0;
-  left: 150px;
+  left: clamp(20px, 10vw, 150px);
+  // max-width: 300px;
   height: 100%;
   display: flex;
   align-items: center;
@@ -342,29 +321,30 @@ svg {
     // border: 1px solid yellow;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     align-items: center;
     background-color: $pink;
-    padding: 35px 20px;
-    padding-bottom: 0;
-    margin: 15px;
+    margin: clamp(5px, 1.25vw, 10px);
+    padding-block: clamp(15px, 3vw, 30px);
+    padding-inline: clamp(10px, 1vw, 15px);
 
     .avatar {
       border-radius: 50%;
       border: 2px solid $white;
+      width: clamp(100px, 12vw, 200px);
+      height: 100%;
     }
 
     h2 {
-      font-size: $text--lg;
+      font-size: clamp(0.5rem, 1.25vw, 1.25rem);
       font-weight: 300;
-      letter-spacing: 2.4px;
+      letter-spacing: 2px;
       color: $white;
-
+      margin-top: 20px;
     }
-
   }
 
   .phone-control {
+    // border: 1px solid purple;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -372,48 +352,51 @@ svg {
 
     .song {
       // border: 1px solid blue;
-      width: 220px;
-      height: 50px;
+      font-size: clamp(0.5rem, 1vw, 1rem);
+      width: clamp(100px, 15vw, 200px);
+      height: 30px;
       display: flex;
       justify-content: center;
+      padding: clamp(5px, 1vw, 20px);
+      margin-top: 0;
     }
 
     input[type="range"] {
       -webkit-appearance: none;
       appearance: none;
       cursor: pointer;
-      width: 12rem;
+      width: clamp(110px, 15vw, 200px);
       
 
       &::-webkit-slider-runnable-track {
         background: $cherry;
-        height: 0.25rem;
+        height: min(0.5vw, 3px);
         border-radius: 1rem;
       }
 
       &::-webkit-slider-thumb {
         -webkit-appearance: none; 
         appearance: none;
-        margin-top: -6px; 
+        margin-top: max(-0.5vw, -6px); 
         background-color: $pink;
-        height: 1rem;
-        width: 1rem; 
+        height: min(1.25vw, 15px);
+        width: min(1.25vw, 15px); 
         border-radius: 50%;
       }
 
       &::-moz-range-track {
         background: $cherry;
-        height: 0.5rem;
+        height: min(0.5vw, 3px);
         border-radius: 1rem;
       }
 
       &::-moz-range-thumb {
         -webkit-appearance: none; 
         appearance: none;
-        margin-top: -6px; 
+        margin-top: max(-0.5vw, -6px); 
         background-color: $pink;
-        height: 1rem;
-        width: 1rem; 
+        height: min(1.25vw, 15px);
+        width: min(1.25vw, 15px); 
         border-radius: 50%;
       }
 
@@ -440,23 +423,23 @@ svg {
       flex-direction: row;
       justify-content: center;
       align-items: center;
-      margin: 30px;
+      margin: clamp(10px, 2vw, 25px);
 
       svg {
-        width: 30px;
-        height: 30px;
+        width: clamp(20px, 3vw, 40px);
+        height: clamp(20px, 3vw, 40px);
       }
 
-      svg.pause,
-      svg.play {
-        width: 40px;
-        height: 40px;
-      }
+      // svg.pause,
+      // svg.play {
+      //   width: 3vw;
+      //   height: 3vw;
+      // }
 
       button {
         background-color: $white;
         border: none;
-        padding-inline: 10px;
+        padding-inline: clamp(5px, 1vw, 10px);
         cursor: pointer;
       }
     }
@@ -674,10 +657,11 @@ svg {
 
 .footer {
   text-align: center;
-  padding-block: 50px;
+  margin-top: clamp(50px, 6vw, 100px);
+  margin-bottom: 20px;
   
   .copyright {
-    font-size: $text--sm;
+    font-size: 0.75rem;
     font-weight: 700;
   }
 
@@ -710,6 +694,126 @@ svg {
   &:hover {
     * {
       color: $pink;
+    }
+  }
+}
+
+
+
+@media (max-width: 500px) {
+  .app {
+    overflow: hidden;
+  }
+
+  .home-page {
+    flex-direction: column;
+
+    .phone-container {
+      position: relative;
+      left: 0;
+      margin: 5vw;
+      
+      
+      .phone {
+        // border: 1px solid blue;
+        box-shadow: inset 0px 0px 10px gray;
+
+        .phone-display {
+          margin: clamp(10px, 1vw, 10px);
+          
+          .avatar {
+            width: 50%;
+          }
+
+          h2 {
+            font-size: clamp(1rem, 5vw, 2rem);
+          }
+        }
+
+        .phone-control {
+          .song {
+            font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+            width: clamp(200px, 80vw, 350px);
+          }
+        }
+
+        input[type="range"] {
+          -webkit-appearance: none;
+          appearance: none;
+          cursor: pointer;
+          width: 75vw;
+      
+
+          &::-webkit-slider-runnable-track {
+             background: $cherry;
+              height: 1vw;
+              border-radius: 1rem;
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none; 
+            appearance: none; 
+            background-color: $pink;
+            margin-top: -1.5vw;
+            height: 4vw;
+            width: 4vw; 
+            border-radius: 50%;
+          }
+
+          &::-moz-range-track {
+            background: $cherry;
+            height: min(0.5vw, 3px);
+            border-radius: 1rem;
+          }
+
+          &::-moz-range-thumb {
+            -webkit-appearance: none; 
+            appearance: none;
+            margin-top: max(-0.5vw, -6px); 
+            background-color: $pink;
+            height: min(1.25vw, 15px);
+            width: min(1.25vw, 15px); 
+            border-radius: 50%;
+          }
+
+          &::-moz-range-progress {
+            background-color: $pink;
+          }
+
+          &::-ms-track {
+            background-color: $cherry;
+          }
+
+          &::-ms-thumb {
+            background-color: $pink;
+          }
+
+          &::-ms-fill-lower {
+            background-color: $pink;
+          }
+        }
+
+        .control-buttons {
+          margin: 10vw;
+
+          svg {
+            width: 10vw;
+            height: 100%;
+            padding-inline: 3vw;
+          }
+        }
+      }
+    }
+
+    .home {
+      // border: 1px solid green;
+      width: 80%;
+      margin: 5vw;
+      padding: 5vw;
+
+      .home-buttons {
+        flex-wrap: wrap;
+      }
     }
   }
 }

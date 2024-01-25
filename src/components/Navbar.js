@@ -3,7 +3,7 @@ import { NavLink } from 'react-router-dom';
 import Menu from './Menu';
 
 function Navbar({ scrolled }) {
-  const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 1200);
+  const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 600);
   const [ showMenu, setShowMenu ] = useState(false);
   
   const toggleMenu = () => {
@@ -11,7 +11,7 @@ function Navbar({ scrolled }) {
   }
 
   const handleResize = () => {
-    setIsDesktop(window.innerWidth > 1200);
+    setIsDesktop(window.innerWidth > 600);
   }
 
   useEffect(() => {
