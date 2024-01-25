@@ -9,14 +9,6 @@ $light-gray: rgba(233, 233, 233, 0.5);
 $shadow-gray: rgb(150, 150, 150);
 $white: #FFFFFF;
 
-// $title--xl: 4.5rem;
-// $title--lg: 3rem;
-// $title--md: 2rem;
-// $title--sm: 1.5rem;
-// $text--lg: 1.25rem;
-// $text--md: 1rem;
-// $text--sm: 0.75rem;
-
 html {
   font-size: 16px;
 }
@@ -520,12 +512,14 @@ svg {
     .slider-dot {
       border: none;
       // border: 1px solid red;
-      width: clamp(10px, 0.5vw, 20px);
+      // width: clamp(10px, 0.5vw, 20px);
+      width: 10px;
+      height: 10px;
       background-color: $pink;
       margin-right: clamp(10px, 1vw, 15px);
       border-radius: 50%;
       cursor: pointer;
-      aspect-ratio: 1 / 1;
+      // aspect-ratio: 1 / 1;
     }
 
     .cherry {
@@ -708,7 +702,7 @@ svg {
     .phone-container {
       position: relative;
       left: 0;
-      margin: 5vw;
+      margin: 7vw;
       
       
       
@@ -803,8 +797,8 @@ svg {
     }
 
     .home {
-      width: 80%;
-      margin-inline: 5vw;
+      width: 75%;
+      margin-inline: auto;
       padding: 5vw;
 
       .home-buttons {
