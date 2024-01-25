@@ -9,13 +9,13 @@ $light-gray: rgba(233, 233, 233, 0.5);
 $shadow-gray: rgb(150, 150, 150);
 $white: #FFFFFF;
 
-$title--xl: 4.5rem;
-$title--lg: 3rem;
-$title--md: 2rem;
-$title--sm: 1.5rem;
-$text--lg: 1.25rem;
-$text--md: 1rem;
-$text--sm: 0.75rem;
+// $title--xl: 4.5rem;
+// $title--lg: 3rem;
+// $title--md: 2rem;
+// $title--sm: 1.5rem;
+// $text--lg: 1.25rem;
+// $text--md: 1rem;
+// $text--sm: 0.75rem;
 
 html {
   font-size: 16px;
@@ -64,7 +64,6 @@ svg {
 }
 
 .navbar {
-  // border: 1px solid blue;
   position: sticky;
   top: 0;
   padding-inline: clamp(50px, 10vw, 150px);
@@ -82,7 +81,6 @@ svg {
   }
 
   .navlink {
-    // border: 1px solid green;
     font-size: clamp(0.75rem, 1vw, 1.25rem);
     letter-spacing: 1.4px;
     text-decoration: none;
@@ -101,7 +99,6 @@ svg {
 
 .menu-icon {
   border: none;
-  // border: 1px solid red;
   background: transparent;
   margin: clamp(0px, 5vw, 75px);
   cursor: pointer;
@@ -140,7 +137,6 @@ svg {
   }
 
   ul {
-    // border: 1px solid pink;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -198,12 +194,10 @@ svg {
 
 .home-page {
   position: relative;
-  // border: 1px solid green;
   display: flex;
   align-items: center;
 
   .home {
-    // border: 1px solid pink;
     width: 100%;
     border-radius: 20px;
     background-color: $white;
@@ -233,19 +227,16 @@ svg {
     }
 
     .socials-description {
-      // border: 1px solid green;
       display: flex;
       align-items: center;
       margin-block: clamp(10px, 1.5vw, 30px);
 
       .home-socials {
-        // border: 1px solid red;
         text-align: center;
         margin-right: clamp(5px, 1.5vw, 20px);
 
 
         svg {
-          // border: 1px solid blue;
           width: clamp(15px, 1.5vw, 30px);
           margin-bottom: clamp(0px, 1vw, 30px);
         }
@@ -272,7 +263,6 @@ svg {
     }
 
     .view-portfolio-container {
-      // border: 1px solid blue;
       font-size: clamp(0.75rem, 1vw, 1.25rem);
       width: clamp(120px, 10vw, 200px);
 
@@ -297,25 +287,21 @@ svg {
 }
 
 .phone-container {
-  // border: 1px solid blue;
   position: absolute;
   top: 0;
   left: clamp(20px, 10vw, 150px);
-  // max-width: 300px;
   height: 100%;
   display: flex;
   align-items: center;
 }
 
 .phone {
-  // border: 1px solid purple;
   background-color: $white;
   border-radius: 15px;
   box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
 
   .phone-display {
-    // border: 1px solid yellow;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -341,14 +327,12 @@ svg {
   }
 
   .phone-control {
-    // border: 1px solid purple;
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
 
     .song {
-      // border: 1px solid blue;
       font-size: clamp(0.5rem, 1vw, 1rem);
       width: clamp(100px, 15vw, 200px);
       height: 30px;
@@ -415,7 +399,6 @@ svg {
     }
 
     .control-buttons {
-      // border: 1px solid green;
       display: flex;
       flex-direction: row;
       justify-content: center;
@@ -426,12 +409,6 @@ svg {
         width: clamp(20px, 3vw, 40px);
         height: clamp(20px, 3vw, 40px);
       }
-
-      // svg.pause,
-      // svg.play {
-      //   width: 3vw;
-      //   height: 3vw;
-      // }
 
       button {
         background-color: $white;
@@ -528,7 +505,6 @@ svg {
     .slider-dot {
       border: none;
       background-color: $pink;
-      // width: 5px;
       height: 12px;
       margin-right: 12px;
       border-radius: 50%;
@@ -558,19 +534,19 @@ svg {
 
     .details {
       h3 {
-        font-size: $title--md;
+        font-size: 2rem;
         font-weight: 700;
         margin: 0;
         text-transform: uppercase;
       }
 
       p {
-        font-size: $text--md;
+        font-size: 1rem;
         font-weight: 700;
       }
 
       ul {
-        font-size: $text--lg;
+        font-size: 1.25rem;
         font-weight: 300;
       }
     }
@@ -606,7 +582,7 @@ svg {
 
   h2 {
     font-family: 'Kaushan Script', cursive;
-    font-size: $title--lg;
+    font-size: 3rem;
     color: $pink;
     margin-top: 0;
   }
@@ -668,9 +644,9 @@ svg {
 
 .not-found {
   // border: 1px solid purple;
-  margin-inline: 150px;
-  height: 600px;
-  margin-bottom: 100px;
+  font-size: clamp(0.5rem, 2vw, 2rem);
+  margin-inline: clamp(30px, 10vw, 150px);
+  height: clamp(100px, 30vw, 600px);
 }
 
 .back-to-top-btn {
@@ -687,7 +663,7 @@ svg {
   }
 
   p {
-    font-size: $text--md;
+    font-size: 1rem;
   }
 
   &:hover {
@@ -714,7 +690,6 @@ svg {
       
       
       .phone {
-        // border: 1px solid blue;
         box-shadow: inset 0px 0px 10px gray;
 
         .phone-display {
@@ -744,9 +719,9 @@ svg {
       
 
           &::-webkit-slider-runnable-track {
-             background: $cherry;
-              height: 1vw;
-              border-radius: 1rem;
+            background: $cherry;
+            height: 1vw;
+            border-radius: 1rem;
           }
 
           &::-webkit-slider-thumb {
@@ -761,17 +736,17 @@ svg {
 
           &::-moz-range-track {
             background: $cherry;
-            height: min(0.5vw, 3px);
+            height: 1vw;
             border-radius: 1rem;
           }
 
           &::-moz-range-thumb {
             -webkit-appearance: none; 
-            appearance: none;
-            margin-top: max(-0.5vw, -6px); 
+            appearance: none; 
             background-color: $pink;
-            height: min(1.25vw, 15px);
-            width: min(1.25vw, 15px); 
+            margin-top: -1.5vw;
+            height: 4vw;
+            width: 4vw; 
             border-radius: 50%;
           }
 
@@ -805,7 +780,6 @@ svg {
     }
 
     .home {
-      // border: 1px solid green;
       width: 80%;
       margin: 5vw;
       padding: 5vw;
