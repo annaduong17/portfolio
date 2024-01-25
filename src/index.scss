@@ -31,7 +31,7 @@ body {
 }
 
 .app {
-  border: 1px solid red;
+  // border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: min(100%, 1600px);
@@ -64,7 +64,7 @@ svg {
 }
 
 .navbar {
-  border: 1px solid blue;
+  // border: 1px solid blue;
   position: sticky;
   top: 0;
   padding-inline: clamp(50px, 10vw, 150px);
@@ -654,11 +654,13 @@ svg {
 
 .footer {
   text-align: center;
+  font-size: clamp(0.75rem, 2vw, 1rem);
   margin-top: clamp(50px, 6vw, 100px);
   margin-bottom: 20px;
+  padding-inline: 20px;
   
   .copyright {
-    font-size: 0.75rem;
+    font-size: clamp(0.5rem, 1.5vw, 0.75rem);
     font-weight: 700;
   }
 
