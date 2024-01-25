@@ -7,7 +7,7 @@ import Contact from './components/Contact';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
 import ScrollToTop from './components/ScrollToTop';
-import BackToTop from './BackToTop';
+import BackToTopButton from './components/BackToTopButton';
 
 function App () {
   const [ scrolled, setScrolled ] = useState(false);
@@ -37,7 +37,7 @@ function App () {
             <Route path='*' element={<NotFound />} />
           </Routes>
 
-          <BackToTop />
+          <BackToTopButton />
           <Footer />
           
 
