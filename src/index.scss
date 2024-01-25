@@ -422,10 +422,11 @@ svg {
 
 .portfolio {
   // border: 1px solid blue;
-  margin-inline: auto;
+  margin-inline: clamp(20px, 6vw, 150px);
   
   h2 {
     font-size: clamp(1rem, 3vw, 2rem);
+    margin-top: 0;
     margin-left: clamp(10px, 5vw, 50px)
   }
 
@@ -537,13 +538,11 @@ svg {
 
       ul {
         font-weight: 300;
+        padding: 10px;
       }
     }
 
     .tech-button-container {
-      // border: 1px solid blue;
-      display: flex;
-      flex-direction: column;
       margin-left: clamp(0px, 5vw, 50px);
     }
 
@@ -551,7 +550,7 @@ svg {
       display: flex;
       flex-wrap: wrap;
       text-align: center;
-      margin-block: clamp(20px, 3vw, 50px);
+      margin-bottom: clamp(20px, 3vw, 50px);
     }
 
     .tech {
@@ -562,9 +561,8 @@ svg {
       width: clamp(75px, 12vw, 150px);
       margin-right: clamp(5px, 0.75vw, 20px);
       margin-bottom: clamp(5px, 0.75vw, 20px);
-      padding-block: clamp(7px, 1vw, 30px);
-      border-radius: 25px;
-      flex-wrap: wrap;
+      padding-block: clamp(7px, 1vw, 15px);
+      border-radius: clamp(10px, 25px, 40px);
     }
   }
 }
