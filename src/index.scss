@@ -531,6 +531,11 @@ svg {
     display: flex;
     padding: clamp(20px, 6vw, 75px);
 
+    .details-container {
+      min-width: 70%;
+      
+    }
+
     .details {
       h3 {
         font-size: clamp(1rem, 3vw, 2.5rem);
@@ -566,14 +571,14 @@ svg {
     }
 
     .tech {
-      font-size: clamp(0.5rem, 1.5vw, 1rem);
+      font-size: clamp(0.5rem, 1.25vw, 1rem);
       font-weight: 700;
       color: $pink;
       background-color: $light-gray;
-      width: clamp(75px, 12vw, 150px);
+      width: clamp(75px, 5vw, 150px);
       margin-right: clamp(5px, 0.75vw, 20px);
       margin-bottom: clamp(5px, 0.75vw, 20px);
-      padding-block: clamp(7px, 1vw, 15px);
+      padding: clamp(10px, 1vw, 15px);
       border-radius: clamp(10px, 25px, 40px);
     }
   }
