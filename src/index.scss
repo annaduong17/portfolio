@@ -807,8 +807,12 @@ svg {
     }
   }
 
-  .info-container {
+  .portfolio .info-container {
     flex-direction: column;
+
+    .tech-button-container {
+      margin-left: 0px;
+    }
   }
   
 }
