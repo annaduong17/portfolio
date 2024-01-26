@@ -1,9 +1,12 @@
 function ToggleDetails({ handleToggle }) {
   return (
-    <div>
-      <span>Images</span>
-      <span onClick={handleToggle}>[Toggle Switch]</span>
-      <span>Details</span>
+    <div className="toggle-details">
+      <span className="toggle-text">Images</span>
+      <label class="switch">
+        <input onClick={handleToggle} type="checkbox" />
+        <span class="slider"></span>
+      </label>
+      <span className="toggle-text">Details</span>
     </div>
   );
 }
