@@ -554,6 +554,7 @@ svg {
     }
 
     .tech-button-container {
+      margin-top: clamp(30px, 7vw, 100px);
       margin-left: clamp(0px, 5vw, 50px);
     }
 
@@ -813,6 +814,7 @@ svg {
       padding-left: 20px;
     }
     .tech-button-container {
+      margin-top: 10px;
       margin-left: 0px;
     }
   }
