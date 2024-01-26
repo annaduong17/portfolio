@@ -1,6 +1,6 @@
 import { useState } from 'react';
 
-function Slider({ name, images }) {
+function ImageSlider({ name, images }) {
   const [ index, setIndex ] = useState(0);
   const [ selectedIndex, setSelectedIndex ] = useState(0);
 
@@ -77,4 +77,4 @@ function Slider({ name, images }) {
   );
 }
 
-export default Slider;
+export default ImageSlider;

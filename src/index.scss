@@ -429,47 +429,44 @@ svg {
   }
 }
 
-.portfolio {
-  // border: 1px solid blue;
-  margin-inline: clamp(20px, 6vw, 150px);
-  margin-top: clamp(75px, 10vw, 150px);
-  
-  h2 {
-    font-size: clamp(1rem, 3vw, 2rem);
-    margin-top: 0;
-    margin-left: clamp(10px, 5vw, 50px)
+.portfolio-page {
+  margin-top: clamp(75px, 5vw, 150px);
+
+  // h1 {
+  //   font-size: clamp(1rem, 3vw, 2rem);
+  //   margin-top: 0;
+  //   margin-left: clamp(10px, 5vw, 50px);
+  //   text-align: center;
+  // }
+
+  .projects {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   .portfolio-item {
+    width: 500px;
     // border: 1px solid green;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    background-color: $white;
-    border-radius: clamp(10px, 2vw, 20px);
-    box-shadow: 0px 0px 60px 5px $shadow-gray;
-    margin: clamp(10px, 5vw, 50px);
+    background: transparent;
+    margin-inline: auto;
+    margin-block: 20px;
+    text-align: center;
   }
 
-  .slider-container {
+  .image-slider {
     // border: 1px solid pink;
-    background-color: $gray;
-    border-radius: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) 0 0 ;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-
-  .slider {
-    // border: 1px solid cyan;
-    margin: clamp(10px, 5vw, 50px);
+    background-color: $white;
+    // border-radius: clamp(10px, 2vw, 20px) clamp(10px, 2vw, 20px) 0 0 ;
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
+    min-height: 500px;
+    padding-inline: 30px;
   }
 
-  .img-btn-container {
-    // border: 1px solid green;
+  .image-button-container {
+    // border: 1px solid orange;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -478,22 +475,22 @@ svg {
       border: none;
       // border: 1px solid black;
       display: flex;
-      width: clamp(25px, 5vw, 50px);
-      height: clamp(25px, 5vw, 50px);
-      margin: clamp(5px, 1vw, 20px);
+      width: 30px;
+      height: 30px;
+      margin: 20px;
       background-color: transparent;
       cursor: pointer;
       
 
       svg { 
-        width: clamp(20px, 4vw, 50px);
-        height: clamp(20px, 4vw, 50px);
+        width: 30px;
+        height: 30px;
       }
     }
   }
 
   .images {
-    width: clamp(150px, 50vw, 600px);
+    width: 350px;
     overflow: hidden;
     display: flex;
     align-items: center;
@@ -505,17 +502,17 @@ svg {
   }
 
   .slider-dots {
-    // border: 1px solid orange;
-    margin-top: clamp(20px, 3vw, 50px);
+    // border: 1px solid purple;
+    margin-top: 30px;
     display: flex;
 
     .slider-dot {
       border: none;
       // border: 1px solid red;
-      width: clamp(5px, 1.5vw, 15px);
-      height: clamp(5px, 1.5vw, 15px);
+      width: 10px;
+      height: 10px;
       background-color: $pink;
-      margin: clamp(5px, 2vw, 20px);
+      margin: 10px;
       border-radius: 50%;
       cursor: pointer;
     }

@@ -157,27 +157,12 @@ function PortfolioPage() {
           link={item.link}
         />
     )
-  })
-
-  const renderedExperiences = renderedItems.filter(item => {
-    return item.props.type === 'experience';
-  });
-
-  const renderedProjects = renderedItems.filter(item => {
-    return item.props.type === 'project';
   });
 
   return (
-    <div className='portfolio'>
-      <h2>Experience</h2>
-      <section className='experience-section'>
-        {renderedExperiences}
-      </section>
-
-      <h2>Projects</h2>
-      <section className='projects-section'>
-        {renderedProjects}
-      </section>
+    <div className='portfolio-page'>
+      {/* <h1>Projects</h1> */}
+      <div className='projects'>{renderedItems}</div>
     </div>
   );
 }

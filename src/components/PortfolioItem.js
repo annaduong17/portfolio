@@ -1,33 +1,27 @@
-import Slider from './Slider';
-import Details from './Details';
-import TechStack from './TechStack';
-import Button from './Button';
+import { useState } from 'react';
+import ToggleDetails from './ToggleDetails';
+import ImageSlider from './ImageSlider';
+import ProjectDetails from './ProjectDetails';
 
 function PortfolioItem({ type, name, description, features, images, techStack, button, link }) {
+  const [ showDetails, setShowDetails ] = useState(false);
+  const toggleDetails = () => {
+    setShowDetails(!showDetails);
+  };
+
   return (
     <div className='portfolio-item'>
-      <div className='slider-container'>
-        <Slider 
-          type={type} 
-          name={name}
-          images={images}
-        />
-      </div>
-
-      <div className='info-container'>
-        <div className='details-container'>
-          <Details 
-            type={type}
-            name={name}
-            description={description}
-            features={features}
-          />
-        </div>
-        <div className='tech-button-container'>
-          <TechStack techStack={techStack} />
-          <Button link={link} className="btn primary-btn" >{button}</Button>
-        </div>
-      </div>
+      <h2 className='project-name'>{name}</h2>
+      <ToggleDetails handleToggle={toggleDetails}/>
+      {showDetails ? <ProjectDetails 
+        description={description}
+        features={features} 
+        techStack={techStack}
+        button={button}
+        link={link}/> : <ImageSlider 
+        name={name}
+        images={images} /> 
+      }
     </div>
   );
 }
