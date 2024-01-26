@@ -550,7 +550,6 @@ svg {
 
       ul {
         font-weight: 300;
-        padding: 10px;
       }
     }
 
@@ -810,6 +809,9 @@ svg {
   .portfolio .info-container {
     flex-direction: column;
 
+    .details-container ul {
+      padding-left: 20px;
+    }
     .tech-button-container {
       margin-left: 0px;
     }
