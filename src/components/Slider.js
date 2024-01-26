@@ -44,11 +44,11 @@ function Slider({ type, name, images }) {
     const isSelected = i === selectedIndex;
 
     return (
-      <button
+      <span
         key={i}
         className={`slider-dot${isSelected ? ' cherry' : ''}`}
         onClick={() => handleDotClick(i)}>
-    </button>
+      </span>
     );
   });
 

@@ -512,14 +512,12 @@ svg {
     .slider-dot {
       border: none;
       // border: 1px solid red;
-      // width: clamp(10px, 0.5vw, 20px);
-      width: 10px;
-      height: 10px;
+      width: clamp(5px, 1.5vw, 15px);
+      height: clamp(5px, 1.5vw, 15px);
       background-color: $pink;
-      margin-right: clamp(10px, 1vw, 15px);
+      margin: clamp(5px, 2vw, 20px);
       border-radius: 50%;
       cursor: pointer;
-      // aspect-ratio: 1 / 1;
     }
 
     .cherry {
@@ -823,5 +821,4 @@ svg {
       margin-left: 0px;
     }
   }
-  
 }
