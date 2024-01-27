@@ -141,7 +141,6 @@ function PortfolioPage() {
     },
   ]
 
-
   const renderedItems = portfolioItems.map((item, index) => {
     return (
         <PortfolioItem
@@ -160,7 +159,6 @@ function PortfolioPage() {
 
   return (
     <div className='portfolio-page'>
-      {/* <h1>Projects</h1> */}
       <div className='projects'>{renderedItems}</div>
     </div>
   );

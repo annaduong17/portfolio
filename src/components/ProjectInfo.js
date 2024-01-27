@@ -1,5 +1,4 @@
 function ProjectInfo({ name, description, features, techStack, button, link }) {
-
   const renderedFeatures = features.map((feature, i) => {
     return (
       <li key={i}>{feature}</li>

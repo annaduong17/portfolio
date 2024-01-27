@@ -40,7 +40,6 @@ function App () {
           <BackToTopButton />
           <Footer />
           
-
           <ScrollToTop />
         </div>
   )

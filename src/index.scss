@@ -23,7 +23,6 @@ body {
 }
 
 .app {
-  // border: 1px solid red;
   display: flex;
   flex-direction: column;
   width: min(100%, 1600px);
@@ -288,7 +287,6 @@ svg {
   z-index: 1;
 
   .phone-display {
-    // width: clamp(110px, 90vw, 16vw);
     max-width: 300px;
     display: flex;
     flex-direction: column;
@@ -421,7 +419,6 @@ svg {
 
   .portfolio-item {
     width: 400px;
-    // border: 1px solid green;
     background-color: rgba(255, 255, 255, 1);
     border-radius: clamp(10px, 5vw, 20px);
     display: flex;
@@ -433,7 +430,6 @@ svg {
 
 
   .project-details {
-    // border: 1px solid red;
     color: $white;
     border-radius: 20px;
     display: flex;
@@ -442,7 +438,6 @@ svg {
   }
 
   .project-info {
-    // border: 1px solid green;
     font-size: 0.75rem;
     background-color: $cherry;
     padding-inline: clamp(20px, 2vw, 30px);
@@ -550,11 +545,9 @@ svg {
     input:checked + .slider:before {
       transform: translateX(24px);
     }
-    
   }
 
   .image-slider {
-    // border: 1px solid pink;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -579,20 +572,17 @@ svg {
     display: flex;
     align-items: center;
     
-
     img {
       max-width: 100%;
     }
   }
 
   .slider-dots {
-    // border: 1px solid purple;
     margin-top: 30px;
     display: flex;
 
     .slider-dot {
       border: none;
-      // border: 1px solid red;
       width: 10px;
       height: 10px;
       background-color: gray;
@@ -612,7 +602,6 @@ svg {
 
     .details-container {
       min-width: 70%;
-      
     }
 
     .details {
@@ -664,7 +653,6 @@ svg {
 }
 
 .contact {
-  // border: 1px solid red;
   margin-inline: auto;
   margin-top: clamp(75px, 10vw, 150px);
   width: clamp(200px, 70%, 500px);
@@ -680,25 +668,19 @@ svg {
   }
 
   p {
-    // border: 1px solid pink;
     font-size: clamp(0.75rem, 1vw, 1rem);
   }
 
   .contact-info {
-    // border: 1px solid blue;
     font-weight: 300;
     display: flex;
     align-items: center;
 
-    
-
     a {
-      // border: 1px solid green;
       text-decoration: none;
       font-weight: 700;
       color: $cherry;
       margin-right: 10px;
-      
 
       &.icon-link {
         width: clamp(20px, 2vw, 30px);
@@ -712,7 +694,6 @@ svg {
     }
 
     svg {
-      // border: 1px solid red;
       display: flex;
       justify-content: flex-start;
       width: 30px;
@@ -738,11 +719,9 @@ svg {
     font-size: clamp(0.5rem, 1.5vw, 0.75rem);
     font-weight: 700;
   }
-
 }
 
 .not-found {
-  // border: 1px solid purple;
   font-size: clamp(0.5rem, 2vw, 2rem);
   margin-inline: clamp(30px, 10vw, 150px);
   height: clamp(100px, 30vw, 600px);
@@ -768,8 +747,9 @@ svg {
   &:hover {
     background-color: $pink;  
   }
-  
 }
+
+
 
 
 @media (min-width: 400px) and (max-width: 500px) {
