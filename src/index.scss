@@ -431,7 +431,7 @@ svg {
 
 .portfolio-page {
   margin-top: clamp(75px, 5vw, 150px);
-
+  margin-inline: clamp(20px, 5vw, 50px);
   // h1 {
   //   font-size: clamp(1rem, 3vw, 2rem);
   //   margin-top: 0;
@@ -450,18 +450,76 @@ svg {
     background: transparent;
     display: flex;
     flex-direction: column;
-    text-align: center;
     flex-grow: 1;
-    
+  }
+
+
+  .project-details {
+    // border: 1px solid red;
+    color: $white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    // min-height: 750px;
+  }
+
+  .project-info {
+    // border: 1px solid green;
+    background-color: $cherry;
+    border-radius: 20px;
+    padding-inline: clamp(20px, 2vw, 30px);
+    margin: 1vw;
+    flex-grow: 1;
 
     .project-name {
       font-family: 'Kaushan Script', script;
+      font-size: 2rem;
+    }
+
+    .description {
+      color: $white;
+    }
+
+    .tech-stack {
+      display: flex;
+      flex-wrap: wrap;
+
+      .tech {
+        border: 1px solid $white;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        font-size: 0.75rem;
+        font-weight: 700;
+      }
+    }
+
+    .project-link {
+      display: flex;
+      width: 150px;
+      color: $pink;
+      text-decoration: none;
+      margin-block: 20px;
+
+      svg {
+        color: $pink;
+        width: 25px;
+        height: 25px;
+        margin-left: 3px;
+      }
+
+      &:hover {
+        svg {
+          transform: translateX(7px);
+          transition: transform 0.3s ease;
+        }
+      }
     }
   }
 
   .toggle-details {
     display: flex;
-    justify-content: center;
     align-items: center;
     margin: 15px;
 
@@ -493,8 +551,6 @@ svg {
       bottom: 0;
       border-radius: 50px;
       background-color: gray;
-      -webkit-transition: .3s;
-      transition: .3s;
     }
     
     .slider:before {
@@ -506,8 +562,6 @@ svg {
       bottom: 3px;
       border-radius: 50%;
       background-color: white;
-      -webkit-transition: .4s;
-      transition: .4s;
     }
     
     input:checked + .slider {
@@ -522,7 +576,7 @@ svg {
 
   .image-slider {
     // border: 1px solid pink;
-    background-color: rgba(255, 255, 255, 0.617);
+    background-color: rgba(255, 255, 255, 0.5);
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -755,6 +809,13 @@ svg {
   }
   
 }
+
+
+// @media (min-width: 1615px) {
+//   .portfolio-page .project-details {
+//     min-height: 550px;
+//   }
+// }
 
 
 
