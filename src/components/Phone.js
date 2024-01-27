@@ -37,7 +37,7 @@ function Phone() {
   const playlist = [
     'Currently learning Github Actions',
     'Currently working on a Food Ordering App',
-    'Current favorite technologies: React and Sass'
+    'Current favorite technology: React'
   ]
 
   useEffect(() => {
