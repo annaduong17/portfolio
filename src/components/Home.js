@@ -26,15 +26,8 @@ function Home() {
         </div>
       </div>
       <div className="home-buttons">
-        <NavLink to="/contact" className="btn primary-btn">Hire Me</NavLink>
-        <a download href="/files/anna-duong-resume.pdf" className="btn secondary-btn">Download Resume</a>
-      </div>
-
-      <div className='view-portfolio-container'>
-        <NavLink to="/portfolio">
-          <p>View my portfolio</p>
-          <img width={30} height={30} src="/images/icons/icon-arrow-right.svg" alt="right arrow icon" />
-        </NavLink>
+        <NavLink to="/portfolio" className="btn primary-btn">View Projects</NavLink>
+        <NavLink to="/contact" className="btn secondary-btn">Contact Me</NavLink>
       </div>
     </div>
   );
