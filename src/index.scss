@@ -802,14 +802,12 @@ svg {
         box-shadow: inset 0px 0px 10px $dark-gray;
 
         .phone-display {
-          min-height: 90vw;
+          padding-block: 20vw;
           margin: clamp(10px, 1vw, 10px);
           
           .avatar {
             width: 50%;
-            display: flex; 
-            justify-content: center;
-            align-items: center;
+            height: 100%;
           }
 
           h2 {
