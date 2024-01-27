@@ -58,7 +58,7 @@ svg {
 .navbar {
   position: fixed;
   top: 0;
-  width: 100%;
+  width: min(100%, 1300px);
   height: clamp(30px, 2vw, 50px);
   padding-inline: clamp(10px, 10vw, 150px);
   padding-block: clamp(20px, 2vw, 30px);
