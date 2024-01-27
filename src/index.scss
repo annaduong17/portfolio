@@ -660,11 +660,12 @@ svg {
   background-color: $white;
   padding: clamp(20px, 4vw, 50px);
 
-  h2 {
+  h1 {
     font-family: 'Kaushan Script', cursive;
     font-size: clamp(1.5rem, 4vw, 3rem);
     color: $pink;
     margin-top: 0;
+    text-align: center;
   }
 
   p {
