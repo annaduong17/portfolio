@@ -17,7 +17,7 @@ function PortfolioPage() {
         'Vue.js',
         'Pinia',
         'D3.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/vueable-query-1.png',
@@ -40,7 +40,7 @@ function PortfolioPage() {
       techStack: [
         'JavaScript',
         'React.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/e-commerce-1.png',
@@ -64,7 +64,7 @@ function PortfolioPage() {
       techStack: [
         'JavaScript',
         'React.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/expenses-chart-1.png',
@@ -87,7 +87,7 @@ function PortfolioPage() {
       techStack: [
         'JavaScript',
         'React.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/age-calculator-1.png',
@@ -109,7 +109,7 @@ function PortfolioPage() {
       techStack: [
         'JavaScript',
         'React.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/newsletter-1.png',
@@ -131,7 +131,7 @@ function PortfolioPage() {
       techStack: [
         'JavaScript',
         'React.js',
-        'Sass'
+        'SCSS'
       ],
       images: [
         '/images/faq-accordion-1.png',
