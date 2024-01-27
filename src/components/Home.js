@@ -22,12 +22,12 @@ function Home() {
         </div>
 
         <div className="home-description">
-          <p>I find joy in turning goals and visions into aesthetically pleasing user interfaces with satisfying user experience. Let me know how I can help.</p>
+          <p>I find joy in turning goals and visions into aesthetically pleasing user interfaces that provide satisfying user experience. Let me know how I can help.</p>
         </div>
       </div>
       <div className="home-buttons">
         <NavLink to="/portfolio" className="btn primary-btn">View Projects</NavLink>
-        <NavLink to="/contact" className="btn secondary-btn">Contact Me</NavLink>
+        <NavLink to="/contact" className="btn secondary-btn">Hire Me</NavLink>
       </div>
     </div>
   );

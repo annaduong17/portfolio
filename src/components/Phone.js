@@ -68,7 +68,7 @@ function Phone() {
         <img height={180}
         width={180} 
         className="avatar" src="/images/avatar.jpeg" alt="avatar" />
-        <h2>ANNA DUONG</h2>
+        <h2>Anna Duong</h2>
       </div>
 
       <div className="phone-control">

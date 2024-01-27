@@ -113,7 +113,7 @@ svg {
 
   svg {
     color: $cherry;
-    width: clamp(30px, 5vw, 50px);
+    width: clamp(20px, 5vw, 50px);
     height: 100%;
   }
 }
@@ -172,6 +172,8 @@ svg {
 
 .btn {
   border-radius: clamp(5px, 0.25vw, 10px);
+  border-radius: 50px;
+  width: 100px;
   text-decoration: none;
   font-weight: 700;
   font-size: clamp(0.5rem, 1vw, 1rem);
@@ -213,23 +215,23 @@ svg {
     margin-right: clamp(50px, 10vw, 150px);
     margin-left: clamp(100px, 20vw, 300px);
     padding-block: clamp(50px, 10vw, 100px);
-    padding-left: clamp(120px, 14vw, 200px);
-    padding-right: clamp(30px, 5vw, 100px);
+    padding-left: clamp(120px, 15vw, 200px);
+    padding-right: clamp(30px, 5vw, 75px);
 
     h1 {
-      font-size: clamp(1.25rem, 3.5vw, 4rem);
+      font-size: clamp(1.25rem, 3.5vw, 3.5rem);
       font-weight: 400;
       margin: 0;
 
       span {
-        font-size: clamp(1.75rem, 5vw, 5rem);
+        font-size: clamp(1.75rem, 5vw, 4.5rem);
         font-family: 'Kaushan Script', cursive;
         color: $pink;
       }
     }
 
     h2 {
-      font-size: clamp(0.5rem, 1.5vw, 2rem);
+      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
       font-weight: 100;
       letter-spacing: 2px;
       margin: 0;
@@ -242,7 +244,7 @@ svg {
 
       .home-socials {
         text-align: center;
-        margin-right: clamp(5px, 1.5vw, 20px);
+        margin-right: clamp(10px, 1.5vw, 20px);
 
 
         svg {
@@ -267,28 +269,6 @@ svg {
         margin-block: clamp(10px, 3vw, 50px);
 
     }
-
-    .view-portfolio-container {
-      font-size: clamp(0.75rem, 1vw, 1.25rem);
-      width: clamp(120px, 10vw, 200px);
-
-      *:hover {
-        img {
-          transform: translateX(7px);
-          transition: transform 0.3s ease;
-        }
-      }
-      
-      a {
-        text-decoration: none;
-        display: flex;
-        align-items: center;
-
-        p {
-          color: $pink;
-        }
-      }
-    }
   }
 }
 
@@ -308,10 +288,14 @@ svg {
   z-index: 1;
 
   .phone-display {
+    // width: clamp(110px, 90vw, 16vw);
+    max-width: 300px;
     display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: $pink;
+    border-radius: 10px 10px 0 0;
     margin: clamp(5px, 1.25vw, 10px);
     padding-block: clamp(15px, 3vw, 30px);
     padding-inline: clamp(10px, 1vw, 15px);
@@ -324,11 +308,10 @@ svg {
     }
 
     h2 {
-      font-size: clamp(0.5rem, 1.25vw, 1.25rem);
-      font-weight: 300;
-      letter-spacing: 2px;
+      font-size: clamp(1.25rem, 2vw, 2rem);
+      font-weight: 400;
       color: $white;
-      margin-top: 20px;
+      margin-block: 20px 0;
     }
   }
 
@@ -345,6 +328,7 @@ svg {
       display: flex;
       justify-content: center;
       padding: clamp(5px, 1vw, 20px);
+      padding-bottom: 0;
       margin-top: 0;
     }
 
@@ -445,7 +429,7 @@ svg {
     width: 400px;
     // border: 1px solid green;
     background-color: rgba(255, 255, 255, 1);
-    border-radius: 20px;
+    border-radius: clamp(10px, 5vw, 20px);
     display: flex;
     flex-direction: column;
     flex-grow: 1;
@@ -585,7 +569,7 @@ svg {
     align-items: center;
     justify-content: center;
     margin-block: clamp(10px, 1vw, 20px);
-    margin-inline: clamp(10px, 2vw, 20px);
+    margin-inline: clamp(20px, 2vw, 20px);
     flex-grow: 1;
 
     &:hover {
@@ -695,7 +679,7 @@ svg {
   border-radius: 20px;
   background-color: $white;
   padding: clamp(20px, 4vw, 50px);
-  box-shadow: 0px 0px 60px 5px $shadow-gray;
+  // box-shadow: 0px 0px 60px 5px $shadow-gray;
 
   h2 {
     font-family: 'Kaushan Script', cursive;
@@ -797,25 +781,33 @@ svg {
 }
 
 
-// @media (min-width: 1615px) {
-//   .portfolio-page .project-details {
-//     min-height: 550px;
-//   }
-// }
+@media (min-width: 400px) and (max-width: 500px) {
+  .home-page {
+    .home {
+      margin-right: 20px;
+      padding: 50px;
+      padding-left: 90px;
 
+      h1 {
+        font-size: 1rem;
 
-@media (max-width: 400px) {
-  .portfolio-page .portfolio-item {
-    margin-inline: 0;
+        span {
+          font-size: 1.25rem;
+        }
+      }
+    }
 
-    ul {
-      padding-left: 30px;
+    .phone-container {
+      left: 20px;
+
+      .phone-display {
+        min-width: 110px;
+      }
     }
   }
 }
 
-
-@media (max-width: 500px) {
+@media (max-width: 399px) {
   .app {
     overflow: hidden;
   }
@@ -828,19 +820,22 @@ svg {
       position: relative;
       left: 0;
       margin: 7vw;
+      margin-top: 0;
+      // order: 2;
       
       .phone {
         box-shadow: inset 0px 0px 10px gray;
 
         .phone-display {
+          min-height: 90vw;
           margin: clamp(10px, 1vw, 10px);
           
           .avatar {
-            width: 50%;
+            width: 70%;
           }
 
           h2 {
-            font-size: clamp(1rem, 5vw, 2rem);
+            font-size: 10vw;
           }
         }
 
@@ -930,15 +925,12 @@ svg {
     }
   }
 
-  .portfolio .info-container {
-    flex-direction: column;
+  .portfolio-page .portfolio-item {
+    margin-inline: 0;
 
-    .details-container ul {
-      padding-left: 20px;
-    }
-    .tech-button-container {
-      margin-top: 10px;
-      margin-left: 0px;
+    ul {
+      padding-left: 30px;
     }
   }
 }
+
