@@ -20,7 +20,6 @@ function PortfolioPage() {
         'SCSS'
       ],
       images: [
-        '/images/vueable-query-1.png',
         '/images/vueable-query-2.png',
         '/images/vueable-query-3.png'
       ],
@@ -29,7 +28,7 @@ function PortfolioPage() {
     },
     {
       type: 'project',
-      name: 'E-commerce',
+      name: 'E-commerce App',
       description: 'An app that displays shoes for sale',
       features: [
         'Open a lightbox gallery by clicking on the large product image', 

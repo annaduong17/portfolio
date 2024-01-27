@@ -151,15 +151,15 @@ svg {
     padding: 0;
 
     li {
-      padding: clamp(5px, 2vw, 20px);
-      margin: clamp(5px, 1vw, 10px);
+      padding: clamp(10px, 2vw, 20px);
+      margin: clamp(10px, 1vw, 10px);
       list-style: none;
     }
 
     li * {
       text-decoration: none;
       color: $white;
-      font-size: clamp(0.5rem, 2vw, 1rem);
+      font-size: clamp(0.75rem, 2vw, 1rem);
       font-weight: 700;
       letter-spacing: 2px;
 
@@ -442,12 +442,15 @@ svg {
   }
 
   .portfolio-item {
-    width: 500px;
+    width: 400px;
     // border: 1px solid green;
-    background: transparent;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: 20px;
     display: flex;
     flex-direction: column;
     flex-grow: 1;
+    padding-block: clamp(10px, 1vw, 20px);
+    margin: 10px;
   }
 
 
@@ -458,23 +461,24 @@ svg {
     display: flex;
     flex-direction: column;
     flex-grow: 1;
-    // min-height: 750px;
   }
 
   .project-info {
     // border: 1px solid green;
+    font-size: 0.75rem;
     background-color: $cherry;
-    border-radius: 20px;
     padding-inline: clamp(20px, 2vw, 30px);
-    margin: 1vw;
+    margin-block: clamp(10px, 1vw, 20px);
+    margin-inline: clamp(10px, 2vw, 20px);
     flex-grow: 1;
 
     .project-name {
       font-family: 'Kaushan Script', script;
-      font-size: 2rem;
+      font-size: 1.75rem;
     }
 
     .description {
+      
       color: $white;
     }
 
@@ -487,13 +491,14 @@ svg {
         margin-right: 10px;
         margin-bottom: 10px;
         padding: 5px 20px;
-        font-size: 0.75rem;
-        font-weight: 700;
+        font-size: 0.5rem;
+        // font-weight: 700;
       }
     }
 
     .project-link {
       display: flex;
+      align-items: center;
       width: 150px;
       color: $pink;
       text-decoration: none;
@@ -501,9 +506,9 @@ svg {
 
       svg {
         color: $pink;
-        width: 25px;
-        height: 25px;
-        margin-left: 3px;
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
       }
 
       &:hover {
@@ -518,7 +523,7 @@ svg {
   .toggle-details {
     display: flex;
     align-items: center;
-    margin: 15px;
+    justify-content: center;
 
     .toggle-text {
       font-size: 0.75rem;
@@ -573,38 +578,21 @@ svg {
 
   .image-slider {
     // border: 1px solid pink;
-    background-color: rgba(255, 255, 255, 0.5);
+    
     border-radius: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding-block: clamp(20px, 5vw, 50px);
-    padding-inline: 1vw;
-    margin: 1vw;
+    margin-block: clamp(10px, 1vw, 20px);
+    margin-inline: clamp(10px, 2vw, 20px);
     flex-grow: 1;
-  }
 
-  .image-button-container {
-    // border: 1px solid orange;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-    button {
-      border: none;
-      // border: 1px solid black;
-      display: flex;
-      width: 30px;
-      height: 30px;
-      margin: 20px;
-      background-color: transparent;
+    &:hover {
       cursor: pointer;
       
-
-      svg { 
-        width: 30px;
-        height: 30px;
+      .images {
+        box-shadow: 0px 0px 10px 1px $shadow-gray;
       }
     }
   }
@@ -614,6 +602,7 @@ svg {
     overflow: hidden;
     display: flex;
     align-items: center;
+    
 
     img {
       max-width: 100%;
@@ -630,14 +619,14 @@ svg {
       // border: 1px solid red;
       width: 10px;
       height: 10px;
-      background-color: $pink;
-      margin: 10px;
+      background-color: gray;
+      margin: 5px;
       border-radius: 50%;
       cursor: pointer;
     }
 
-    .cherry {
-      background-color: $cherry;
+    .pink {
+      background-color: $pink;
     }
   }
 
@@ -815,6 +804,16 @@ svg {
 // }
 
 
+@media (max-width: 400px) {
+  .portfolio-page .portfolio-item {
+    margin-inline: 0;
+
+    ul {
+      padding-left: 30px;
+    }
+  }
+}
+
 
 @media (max-width: 500px) {
   .app {
@@ -829,8 +828,6 @@ svg {
       position: relative;
       left: 0;
       margin: 7vw;
-      
-      
       
       .phone {
         box-shadow: inset 0px 0px 10px gray;
