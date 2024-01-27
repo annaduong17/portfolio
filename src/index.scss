@@ -7,6 +7,7 @@ $light-pink: rgba(231, 113, 127, 0.25);
 $gray: rgba(230, 230, 230, 1);
 $light-gray: rgba(233, 233, 233, 0.5);
 $shadow-gray: rgb(150, 150, 150);
+$dark-gray: rgb(128, 128, 128);
 $white: #FFFFFF;
 
 html {
@@ -428,7 +429,6 @@ svg {
     margin: 10px;
   }
 
-
   .project-details {
     color: $white;
     border-radius: 20px;
@@ -505,8 +505,8 @@ svg {
     .switch {
       position: relative;
       display: inline-block;
-      width: 45px;
-      height: 21px;
+      width: 30px;
+      height: 16px;
       margin: 15px;
     }
     
@@ -524,14 +524,14 @@ svg {
       right: 0;
       bottom: 0;
       border-radius: 50px;
-      background-color: gray;
+      background-color: $dark-gray;
     }
     
     .slider:before {
       position: absolute;
       content: "";
-      height: 15px;
-      width: 15px;
+      height: 10px;
+      width: 10px;
       left: 3px;
       bottom: 3px;
       border-radius: 50%;
@@ -543,7 +543,7 @@ svg {
     }
     
     input:checked + .slider:before {
-      transform: translateX(24px);
+      transform: translateX(14px);
     }
   }
 
@@ -585,7 +585,7 @@ svg {
       border: none;
       width: 10px;
       height: 10px;
-      background-color: gray;
+      background-color: $dark-gray;
       margin: 5px;
       border-radius: 50%;
       cursor: pointer;
@@ -794,7 +794,7 @@ svg {
       margin-top: 0;
       
       .phone {
-        box-shadow: inset 0px 0px 10px gray;
+        box-shadow: inset 0px 0px 10px $dark-gray;
 
         .phone-display {
           min-height: 90vw;
