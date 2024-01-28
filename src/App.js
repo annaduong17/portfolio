@@ -11,7 +11,17 @@ import BackToTopButton from './components/BackToTopButton';
 
 function App () {
   const [ scrolled, setScrolled ] = useState(false);
+  const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 600);
+  const [ showMenu, setShowMenu ] = useState(false);
   const navbarRef = useRef();
+
+  const toggleMenu = () => {
+    setShowMenu(!showMenu);
+  }
+
+  const handleResize = () => {
+    setIsDesktop(window.innerWidth > 600);
+  }
 
   useEffect(() => {
     const handleScroll = window.addEventListener('scroll', () => {
@@ -29,7 +39,14 @@ function App () {
 
   return(
         <div className='app'>
-          <Navbar scrolled={scrolled} ref={navbarRef} />
+          <Navbar 
+            scrolled={scrolled} 
+            ref={navbarRef}
+            isDesktop={isDesktop}
+            showMenu={showMenu}
+            toggleMenu={toggleMenu}
+            handleResize={handleResize}
+          />
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/portfolio' element={<PortfolioPage />} />

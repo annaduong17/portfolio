@@ -1,18 +1,8 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Menu from './Menu';
 
-function Navbar({ scrolled }) {
-  const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 600);
-  const [ showMenu, setShowMenu ] = useState(false);
-  
-  const toggleMenu = () => {
-    setShowMenu(!showMenu);
-  }
-
-  const handleResize = () => {
-    setIsDesktop(window.innerWidth > 600);
-  }
+function Navbar({ scrolled, isDesktop, showMenu, toggleMenu, handleResize }) {
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
