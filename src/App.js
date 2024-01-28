@@ -11,8 +11,7 @@ import BackToTopButton from './components/BackToTopButton';
 
 function App () {
   const [ scrolled, setScrolled ] = useState(false);
-  const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 600);
-  const [ isMobile, setIsMobile] = useState(window.innerWidth < 400);
+  const [ isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [ showMenu, setShowMenu ] = useState(false);
   const navbarRef = useRef();
 
@@ -21,8 +20,7 @@ function App () {
   }
 
   const handleResize = () => {
-    setIsDesktop(window.innerWidth > 600);
-    setIsMobile(window.innerWidth < 400);
+    setIsMobile(window.innerWidth < 600);
   }
 
   useEffect(() => {
@@ -52,7 +50,7 @@ function App () {
           <Navbar 
             scrolled={scrolled} 
             ref={navbarRef}
-            isDesktop={isDesktop}
+            isMobile={isMobile}
             showMenu={showMenu}
             toggleMenu={toggleMenu}
             handleResize={handleResize}

@@ -293,7 +293,6 @@ svg {
   z-index: 1;
 
   .phone-display {
-    max-width: 300px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -755,28 +754,7 @@ svg {
   }
 }
 
-
-
-
-@media (min-width: 400px) and (max-width: 500px) {
-  .home-page {
-    .home {
-      margin-right: 20px;
-      padding: 50px;
-      padding-inline: 80px 10px;
-    }
-
-    .phone-container {
-      left: 20px;
-
-      .phone-display {
-        min-width: 110px;
-      }
-    }
-  }
-}
-
-@media (max-width: 399px) {
+@media (max-width: 599px) {
   .app {
     overflow: hidden;
   }
@@ -786,11 +764,32 @@ svg {
 
     .home {
       text-align: center;
+
+      h1 {
+        font-size: clamp(1rem, 6vw, 2rem);
+
+        span {
+          font-size: clamp(1.5rem, 9vw, 3rem);
+        }
+      }
+
+      h2 {
+        font-size: clamp(0.75rem, 3vw, 2rem);
+      }
+
+      .home-description p {
+        font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+      }
+
+      .btn {
+        font-size: clamp(0.75rem, 2.5vw, 2rem);
+        padding-block: 2vw;
+        padding-inline: 5vw;
+      }
     }
 
     .phone-container {
-      position: relative;
-      left: 0;
+      position: unset;
       margin: 7vw;
       margin-top: 0;
       
@@ -798,7 +797,6 @@ svg {
         box-shadow: inset 0px 0px 10px $dark-gray;
 
         .phone-display {
-          // padding-block: 20vw;
           flex-direction: row;
           align-items: center;
           min-height: 100%;
@@ -807,13 +805,17 @@ svg {
           .avatar {
             width: 40%;
             height: 100%;
-            margin-right: 15px;
+            margin-right: 5vw;
+          }
+
+          .name {
+            font-size: clamp(1rem, 6vw, 3rem);
           }
         }
 
         .phone-control {
           .song {
-            font-size: clamp(0.75rem, 3.5vw, 1.5rem);
+            font-size: clamp(0.75rem, 3vw, 1.5rem);
             width: clamp(200px, 80vw, 350px);
           }
         }
@@ -822,7 +824,7 @@ svg {
           -webkit-appearance: none;
           appearance: none;
           cursor: pointer;
-          width: 70vw;
+          width: 60vw;
       
 
           &::-webkit-slider-runnable-track {
@@ -878,7 +880,7 @@ svg {
           margin: 8vw;
 
           svg {
-            width: 8vw;
+            width: 7vw;
             height: 100%;
             padding-inline: 2.5vw;
           }
