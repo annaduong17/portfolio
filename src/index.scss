@@ -176,9 +176,9 @@ svg {
   width: 100px;
   text-decoration: none;
   font-weight: 700;
-  font-size: clamp(0.75rem, 1vw, 1rem);
-  padding-block: clamp(8px, 1.25vw, 15px);
-  padding-inline: clamp(15px, 2vw, 30px);
+  font-size: clamp(0.5rem, 1vw, 1rem);
+  padding-block: clamp(5px, 1.25vw, 15px);
+  padding-inline: clamp(5px, 2vw, 30px);
   margin-right: clamp(5px, 0.75vw, 15px);
   border: none;
   cursor: pointer;
@@ -219,19 +219,19 @@ svg {
     padding-right: clamp(30px, 5vw, 75px);
 
     h1 {
-      font-size: clamp(1.2rem, 3.5vw, 3.5rem);
+      font-size: clamp(1.25rem, 3.5vw, 3.5rem);
       font-weight: 400;
       margin: 0;
 
       span {
-        font-size: clamp(1.5rem, 5vw, 4.5rem);
+        font-size: clamp(1.75rem, 5vw, 4.5rem);
         font-family: 'Kaushan Script', cursive;
         color: $pink;
       }
     }
 
     h2 {
-      font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+      font-size: clamp(0.5rem, 1.5vw, 1.5rem);
       font-weight: 100;
       letter-spacing: 2px;
       margin: 0;
@@ -267,6 +267,7 @@ svg {
 
     .home-buttons {
         margin-block: clamp(10px, 3vw, 50px);
+
     }
   }
 }
@@ -306,8 +307,8 @@ svg {
     }
 
     h2 {
-      font-family: 'Kaushan Script', cursive;
       font-size: clamp(1.25rem, 2vw, 2rem);
+      font-weight: 400;
       color: $white;
       margin-block: 20px 0;
     }
@@ -326,6 +327,7 @@ svg {
       display: flex;
       justify-content: center;
       padding: clamp(5px, 1vw, 20px);
+      padding-bottom: 0;
       margin-top: 0;
     }
 
@@ -755,11 +757,15 @@ svg {
   .home-page {
     .home {
       margin-right: 20px;
-      padding-block: 50px;
-      padding-inline: 80px 20px;
+      padding: 50px;
+      padding-left: 90px;
 
-      .btn {
-        font-size: 0.5rem;
+      h1 {
+        font-size: 1rem;
+
+        span {
+          font-size: 1.25rem;
+        }
       }
     }
 
@@ -780,17 +786,6 @@ svg {
 
   .home-page {
     flex-direction: column;
-
-    .home {
-      text-align: center;
-      h1 {
-        font-size: 1.25rem;
-
-        span {
-          font-size: 1.75rem;
-        }
-      }
-    }
 
     .phone-container {
       position: relative;
@@ -894,6 +889,10 @@ svg {
       width: 75%;
       margin-inline: auto;
       padding: 5vw;
+
+      .home-buttons {
+        flex-wrap: wrap;
+      }
     }
   }
 
