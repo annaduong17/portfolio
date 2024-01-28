@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react';
+import Home from './Home';
 
-function Phone() {
+function Phone({ isMobile }) {
   const [ index, setIndex ] = useState(0);
   const [ playing, setPlaying ] = useState(false);
   const rangeRef = useRef(null);
@@ -66,8 +67,9 @@ function Phone() {
         <img height={180}
         width={180} 
         className="avatar" src="/images/avatar.jpeg" alt="avatar" />
-        <h2>Anna Duong</h2>
+      <h2 className='name'>Anna Duong</h2>
       </div>
+      {isMobile && <Home />}
 
       <div className="phone-control">
         {renderedItems[index]}

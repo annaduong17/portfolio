@@ -1,16 +1,7 @@
-import { useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
 import Menu from './Menu';
 
 function Navbar({ scrolled, isDesktop, showMenu, toggleMenu, handleResize }) {
-
-  useEffect(() => {
-    window.addEventListener('resize', handleResize);
-
-    return () => {
-      window.removeEventListener('resize', handleResize);
-    }
-  });
 
   return (
     <div className="navbar-container">

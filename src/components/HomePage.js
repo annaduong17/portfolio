@@ -1,11 +1,11 @@
 import Home from './Home';
 import Phone from './Phone';
 
-function HomePage() {
+function HomePage({ isMobile }) {
   return (
     <div className='home-page'>
-      <Phone /> 
-      <Home />
+      <Phone isMobile={isMobile}/> 
+      {!isMobile && <Home />}
     </div>
   );
 }

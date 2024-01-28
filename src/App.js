@@ -12,6 +12,7 @@ import BackToTopButton from './components/BackToTopButton';
 function App () {
   const [ scrolled, setScrolled ] = useState(false);
   const [ isDesktop, setIsDesktop ] = useState(window.innerWidth > 600);
+  const [ isMobile, setIsMobile] = useState(window.innerWidth < 400);
   const [ showMenu, setShowMenu ] = useState(false);
   const navbarRef = useRef();
 
@@ -21,6 +22,7 @@ function App () {
 
   const handleResize = () => {
     setIsDesktop(window.innerWidth > 600);
+    setIsMobile(window.innerWidth < 400);
   }
 
   useEffect(() => {
@@ -37,6 +39,14 @@ function App () {
     }
   }, [scrolled]);
 
+  useEffect(() => {
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    }
+  });
+
   return(
         <div className='app'>
           <Navbar 
@@ -48,7 +58,7 @@ function App () {
             handleResize={handleResize}
           />
           <Routes>
-            <Route path='/' element={<HomePage />} />
+            <Route path='/' element={<HomePage isMobile={isMobile} />} />
             <Route path='/portfolio' element={<PortfolioPage />} />
             <Route path='/contact' element={<Contact />} />
             <Route path='*' element={<NotFound />} />
