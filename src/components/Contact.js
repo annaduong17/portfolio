@@ -3,7 +3,7 @@ function Contact() {
     <div className='contact'>
       
       <section>
-        <h1>Let's get in touch!</h1>
+        <h1 className="heading">Let's get in touch!</h1>
         <p>I am fluent in English and Vietnamese. Feel free to communicate with me in either language.</p>
       </section>
 

@@ -4,6 +4,7 @@ $cherry: rgba(58, 9, 11, 1);
 $light-cherry: rgba(58, 9, 11, 0.25);
 $pink: rgba(231, 113, 127, 1);
 $light-pink: rgba(231, 113, 127, 0.25);
+$green: rgb(135, 189, 96);
 $gray: rgba(230, 230, 230, 1);
 $light-gray: rgba(233, 233, 233, 0.5);
 $shadow-gray: rgb(150, 150, 150);
@@ -87,7 +88,7 @@ svg {
   }
 
   .navlink {
-    font-size: clamp(0.75rem, 1vw, 1.25rem);
+    font-size: clamp(0.75rem, 1vw, 1rem);
     letter-spacing: 1.4px;
     text-decoration: none;
     padding-right: clamp(50px, 5vw, 100px);
@@ -174,6 +175,14 @@ svg {
         font-weight: 900;
     }
   }
+}
+
+.heading {
+  font-family: 'Kaushan Script', cursive;
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  color: $pink;
+  margin-top: 0;
+  text-align: center;
 }
 
 .btn {
@@ -265,7 +274,7 @@ svg {
       }
       
       p {
-        font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+        font-size: clamp(1rem, 1.25vw, 1.5rem);
         letter-spacing: 0.15px;
         line-height: 175%;
       }
@@ -289,7 +298,7 @@ svg {
 
 .phone {
   background-color: $white;
-  border-radius: 15px;
+  border-radius: 20px;
   box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
   z-index: 1;
 
@@ -299,7 +308,7 @@ svg {
     justify-content: center;
     align-items: center;
     background-color: $pink;
-    border-radius: 10px 10px 0 0;
+    border-radius: 15px 15px 0 0;
     margin: clamp(5px, 1.25vw, 10px);
     padding-block: clamp(15px, 3vw, 30px);
     padding-inline: clamp(20px, 1vw, 15px);
@@ -419,6 +428,12 @@ svg {
   margin-top: clamp(75px, 5vw, 150px);
   margin-inline: clamp(20px, 5vw, 50px);
 
+  h2 {
+    font-size: clamp(0.75rem, 2vw, 1.5rem);
+    font-weight: 400;
+    text-align: center;
+  }
+
   .projects {
     display: flex;
     flex-wrap: wrap;
@@ -444,7 +459,7 @@ svg {
   }
 
   .project-info {
-    font-size: 0.75rem;
+    font-size: 1rem;
     background-color: $cherry;
     padding-inline: clamp(20px, 2vw, 30px);
     margin-block: clamp(10px, 1vw, 20px);
@@ -453,7 +468,7 @@ svg {
 
     .project-name {
       font-family: 'Kaushan Script', script;
-      font-size: 1.75rem;
+      font-size: 2rem;
     }
 
     .description {
@@ -470,7 +485,7 @@ svg {
         margin-right: 10px;
         margin-bottom: 10px;
         padding: 5px 20px;
-        font-size: 0.5rem;
+        font-size: 0.75rem;
       }
     }
 
@@ -511,9 +526,9 @@ svg {
     .switch {
       position: relative;
       display: inline-block;
-      width: 30px;
-      height: 16px;
-      margin: 15px;
+      width: 40px;
+      height: 21px;
+      margin: 10px;
     }
     
     .switch input {
@@ -536,20 +551,20 @@ svg {
     .slider:before {
       position: absolute;
       content: "";
-      height: 10px;
-      width: 10px;
-      left: 3px;
-      bottom: 3px;
+      height: 13px;
+      width: 13px;
+      left: 4px;
+      bottom: 4px;
       border-radius: 50%;
       background-color: white;
     }
     
     input:checked + .slider {
-      background-color: $pink;
+      background-color: $green;
     }
     
     input:checked + .slider:before {
-      transform: translateX(14px);
+      transform: translateX(19px);
     }
   }
 
@@ -597,8 +612,8 @@ svg {
       cursor: pointer;
     }
 
-    .pink {
-      background-color: $pink;
+    .fill {
+      background-color: $green;
     }
   }
 
@@ -666,16 +681,8 @@ svg {
   background-color: $white;
   padding: clamp(20px, 4vw, 50px);
 
-  h1 {
-    font-family: 'Kaushan Script', cursive;
-    font-size: clamp(1.5rem, 4vw, 3rem);
-    color: $pink;
-    margin-top: 0;
-    text-align: center;
-  }
-
   p {
-    font-size: clamp(0.75rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1vw, 1rem);
   }
 
   .contact-info {
@@ -717,20 +724,20 @@ svg {
 
 .footer {
   text-align: center;
-  font-size: clamp(0.75rem, 2vw, 1rem);
+  font-size: clamp(1rem, 2vw, 1rem);
   margin-top: clamp(50px, 6vw, 100px);
   margin-bottom: 20px;
   padding-inline: 20px;
   
   .copyright {
-    font-size: clamp(0.5rem, 1.5vw, 0.75rem);
+    font-size: clamp(0.75rem, 1.5vw, 0.75rem);
     font-weight: 700;
   }
 }
 
 .not-found {
-  font-size: clamp(0.5rem, 2vw, 2rem);
-  margin-inline: clamp(30px, 10vw, 150px);
+  font-size: clamp(1rem, 1vw, 2rem);
+  margin: clamp(30px, 10vw, 150px);
   height: clamp(100px, 30vw, 600px);
 }
 
@@ -780,7 +787,7 @@ svg {
       }
 
       .home-description p {
-        font-size: clamp(0.75rem, 2.5vw, 1.5rem);
+        font-size: clamp(1rem, 2vw, 1rem);
       }
 
       .btn {
@@ -792,18 +799,19 @@ svg {
 
     .phone-container {
       position: unset;
-      margin: 7vw;
+      margin: 5vw;
       margin-top: 0;
       
       .phone {
+        border-radius: clamp(20px, 10vw, 50px);
         box-shadow: inset 0px 0px 10px $dark-gray;
 
         .phone-display {
-          
+          border-radius: clamp(20px, 8vw, 50px) clamp(20px, 8vw, 50px) 0 0 ;
           flex-direction: row;
           align-items: center;
           min-height: 100%;
-          margin: clamp(10px, 1vw, 10px);
+          margin: clamp(10px, 1vw, 30px);
           padding-block: 5vw;
           
           .avatar {
@@ -814,6 +822,7 @@ svg {
 
           .name {
             font-size: clamp(1rem, 4vw, 3rem);
+            text-align: center;
           }
         }
 

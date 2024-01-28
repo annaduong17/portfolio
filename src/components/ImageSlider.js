@@ -36,7 +36,7 @@ function ImageSlider({ name, images }) {
     return (
       <span
         key={i}
-        className={`slider-dot ${isSelected ? 'pink' : ''}`}
+        className={`slider-dot ${isSelected ? 'fill' : ''}`}
         onClick={() => handleDotClick(i)}>
       </span>
     );
