@@ -154,12 +154,6 @@ svg {
       padding: clamp(15px, 2vw, 20px);
       margin: clamp(10px, 1vw, 10px);
       list-style: none;
-
-      &:hover {
-        * {
-          color: $pink;
-        }
-      }
     }
 
 
@@ -169,6 +163,11 @@ svg {
       font-size: clamp(0.75rem, 2vw, 1rem);
       font-weight: 300;
       letter-spacing: 2px;
+      padding: 20px;
+
+      &:hover {
+        color: $pink;
+      }
     }
 
     li *.active {
@@ -506,7 +505,7 @@ svg {
 
     .toggle-text {
       font-size: 0.75rem;
-      text-transform: uppercase;
+      font-weight: 700;
     }
 
     .switch {
