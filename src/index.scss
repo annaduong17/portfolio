@@ -151,9 +151,15 @@ svg {
     padding: 0;
 
     li {
-      padding: clamp(10px, 2vw, 20px);
+      padding: clamp(15px, 2vw, 20px);
       margin: clamp(10px, 1vw, 10px);
       list-style: none;
+
+      &:hover {
+        * {
+          color: $pink;
+        }
+      }
     }
 
 
@@ -163,10 +169,6 @@ svg {
       font-size: clamp(0.75rem, 2vw, 1rem);
       font-weight: 300;
       letter-spacing: 2px;
-
-      &:hover {
-        color: $pink;
-      }
     }
 
     li *.active {
@@ -301,20 +303,21 @@ svg {
     border-radius: 10px 10px 0 0;
     margin: clamp(5px, 1.25vw, 10px);
     padding-block: clamp(15px, 3vw, 30px);
-    padding-inline: clamp(10px, 1vw, 15px);
+    padding-inline: clamp(20px, 1vw, 15px);
 
     .avatar {
       border-radius: 50%;
-      border: 2px solid $white;
+      // border: 1px solid $cherry;
       width: clamp(100px, 12vw, 200px);
       height: 100%;
+      box-shadow: 0px 0px 5px 0px $cherry;
     }
 
     .name {
-      font-family: 'Kaushan Script', cursive;
-      font-size: clamp(1.25rem, 2vw, 2rem);
-      font-weight: 400;
+      font-size: clamp(0.75rem, 1.5vw, 2rem);
+      font-weight: 700;
       color: $white;
+      text-transform: uppercase;
       margin-block: 20px 0;
     }
   }
@@ -797,10 +800,12 @@ svg {
         box-shadow: inset 0px 0px 10px $dark-gray;
 
         .phone-display {
+          
           flex-direction: row;
           align-items: center;
           min-height: 100%;
           margin: clamp(10px, 1vw, 10px);
+          padding-block: 5vw;
           
           .avatar {
             width: 40%;
@@ -809,7 +814,7 @@ svg {
           }
 
           .name {
-            font-size: clamp(1rem, 6vw, 3rem);
+            font-size: clamp(1rem, 4vw, 3rem);
           }
         }
 
@@ -877,12 +882,14 @@ svg {
         }
 
         .control-buttons {
+          
           margin: 8vw;
 
           svg {
             width: 7vw;
             height: 100%;
             padding-inline: 2.5vw;
+            padding-block: 0;
           }
         }
       }
