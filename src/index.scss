@@ -246,7 +246,7 @@ svg {
     }
 
     h2 {
-      font-size: clamp(0.75rem, 1.5vw, 1.5rem);
+      font-size: clamp(1rem, 1.5vw, 1.5rem);
       font-weight: 100;
       letter-spacing: 2px;
       margin: 0;
@@ -682,7 +682,7 @@ svg {
   padding: clamp(20px, 4vw, 50px);
 
   p {
-    font-size: clamp(1rem, 1vw, 1rem);
+    font-size: clamp(1rem, 1.25vw, 2rem);
   }
 
   .contact-info {
@@ -783,7 +783,7 @@ svg {
       }
 
       h2 {
-        font-size: clamp(0.75rem, 3vw, 2rem);
+        font-size: clamp(1rem, 3vw, 2rem);
       }
 
       .home-description p {
@@ -916,6 +916,10 @@ svg {
 
   .portfolio-page .portfolio-item {
     margin-inline: 0;
+
+    h1 {
+      margin-top: 0;
+    }
 
     ul {
       padding-left: 30px;
