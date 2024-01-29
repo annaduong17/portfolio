@@ -787,7 +787,7 @@ svg {
       }
 
       .home-description p {
-        font-size: clamp(1rem, 2vw, 1rem);
+        font-size: clamp(1rem, 2vw, 2rem);
       }
 
       .btn {
@@ -924,6 +924,11 @@ svg {
     ul {
       padding-left: 30px;
     }
+  }
+
+  .contact {
+    width: auto;
+    margin-inline: clamp(20px, 5vw, 50px);
   }
 }
 
