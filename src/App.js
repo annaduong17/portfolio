@@ -19,8 +19,11 @@ function App () {
   }
 
 
-  const toggleMenu = () => {
+  const toggleMenu = (e) => {
     setShowMenu(!showMenu);
+    if (e.target.textContent) {
+      setActiveLink(e.target.textContent);
+    }
   }
 
   const handleResize = () => {

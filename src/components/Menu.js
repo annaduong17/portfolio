@@ -1,4 +1,6 @@
-function Menu({ toggleMenu }) {
+function Menu({ toggleMenu, activeLink }) {
+
+  
   return (
     <div className='menu'>
       <button onClick={toggleMenu}>
@@ -6,13 +8,13 @@ function Menu({ toggleMenu }) {
       </button>
       <ul>
         <li>
-          <a onClick={toggleMenu} href="#app">HOME</a>
+          <a className={`${activeLink === "HOME" ? "active" : ""}`} onClick={toggleMenu} href="#app">HOME</a>
         </li>
         <li>
-        <a onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
+        <a className={`${activeLink === "PROJECTS" ? "active" : ""}`} onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
         </li>
         <li>
-        <a onClick={toggleMenu} href="#contact-page">CONTACT</a>
+        <a className={`${activeLink === "CONTACT" ? "active" : ""}`} onClick={toggleMenu} href="#contact-page">CONTACT</a>
         </li>
       </ul>
     </div>
