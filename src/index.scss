@@ -56,6 +56,19 @@ svg {
   }
 }
 
+.flex-row-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-column-center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .active {
   font-weight: 700;
 }
@@ -148,9 +161,6 @@ svg {
   }
 
   ul {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
     padding: 0;
 
     li {
@@ -230,8 +240,6 @@ svg {
 
 .home-page {
   position: relative;
-  display: flex;
-  align-items: center;
 
   .home {
     width: 100%;
@@ -273,8 +281,6 @@ svg {
   top: 0;
   left: 0;
   height: 100%;
-  display: flex;
-  align-items: center;
 }
 
 .phone {
@@ -284,10 +290,6 @@ svg {
   z-index: 1;
 
   .phone-display {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     background-color: $pink;
     border-radius: 15px 15px 0 0;
     margin: clamp(5px, 1.25vw, 10px);
@@ -296,7 +298,6 @@ svg {
 
     .avatar {
       border-radius: 50%;
-      // border: 1px solid $cherry;
       width: clamp(100px, 12vw, 200px);
       height: 100%;
       box-shadow: 0px 0px 5px 0px $cherry;
@@ -313,11 +314,6 @@ svg {
   }
 
   .phone-control {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-
     .song {
       font-size: clamp(0.5rem, 1vw, 1rem);
       width: clamp(100px, 15vw, 200px);
@@ -385,10 +381,6 @@ svg {
     }
 
     .control-buttons {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
       margin: clamp(10px, 2vw, 25px);
 
       svg {
@@ -422,8 +414,6 @@ svg {
     width: 400px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: clamp(10px, 5vw, 20px);
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
     padding-block: clamp(10px, 1vw, 20px);
     margin: 10px;
@@ -432,8 +422,6 @@ svg {
   .project-details {
     color: $white;
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
     flex-grow: 1;
   }
 
@@ -493,10 +481,6 @@ svg {
   }
 
   .toggle-details {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
     .toggle-text {
       font-size: 0.75rem;
       font-weight: 700;
@@ -549,10 +533,6 @@ svg {
 
   .image-slider {
     border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
     margin-block: clamp(10px, 1vw, 20px);
     margin-inline: clamp(20px, 2vw, 20px);
     flex-grow: 1;
@@ -579,7 +559,6 @@ svg {
 
   .slider-dots {
     margin-top: 30px;
-    display: flex;
 
     .slider-dot {
       border: none;

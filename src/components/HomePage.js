@@ -3,7 +3,7 @@ import Phone from './Phone';
 
 function HomePage({ isMobile }) {
   return (
-    <div id='home-page' className='home-page page-margin'>
+    <div id='home-page' className='home-page page-margin flex-row-center'>
       <Phone isMobile={isMobile}/> 
       {!isMobile && <Home isMobile={isMobile}/>}
     </div>

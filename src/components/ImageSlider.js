@@ -43,14 +43,14 @@ function ImageSlider({ name, images }) {
   });
 
   return (
-    <div className="image-slider">
+    <div className="image-slider flex-column-center">
       <div onClick={handleImageClick} className='images-container'>
         <div className="images">
           {renderedImages}
         </div>
       </div>
       
-      <div className="slider-dots">
+      <div className="slider-dots flex-row-center">
         {renderedDots}
       </div>
     </div>

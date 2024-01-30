@@ -4,7 +4,7 @@ import ImageSlider from './ImageSlider';
 function ProjectDetails({ name, description, features, techStack, button, link, images, showDetails }) {
 
   return (
-    <div className='project-details'>
+    <div className='project-details flex-column-center'>
       {showDetails ? <ProjectInfo
         name={name} 
         description={description}

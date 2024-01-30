@@ -10,7 +10,7 @@ function PortfolioItem({ name, description, features, techStack, button, link, i
   };
 
   return (
-    <div className='portfolio-item'>
+    <div className='portfolio-item flex-column-center'>
       <ToggleDetails handleToggle={toggleDetails}/>
       <ProjectDetails 
         showDetails={showDetails}
