@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Open+Sans:wght@300;400;700;800&display=swap');
+
+$cherry: rgba(58, 9, 11, 1);
+$light-cherry: rgba(58, 9, 11, 0.25);
+$pink: rgba(231, 113, 127, 1);
+$light-pink: rgba(231, 113, 127, 0.25);
+$green: rgb(135, 189, 96);
+$gray: rgba(230, 230, 230, 1);
+$light-gray: rgba(233, 233, 233, 0.5);
+$shadow-gray: rgb(150, 150, 150);
+$dark-gray: rgb(128, 128, 128);
+$white: #FFFFFF;
+
+.contact {
+  border-radius: 20px;
+  background-color: $white;
+  padding: clamp(20px, 4vw, 50px);
+
+  p {
+    font-size: clamp(1rem, 1.25vw, 2rem);
+  }
+
+  .contact-info {
+    display: flex;
+    align-items: center;
+
+    a {
+      font-weight: 700;
+      color: $cherry;
+      margin-right: 10px;
+
+      &.icon-link {
+        width: clamp(20px, 4vw, 30px);
+        display: flex;
+        justify-content: center;
+      }
+
+      &:hover {
+        color: $pink;
+      }
+    }
+
+    svg {
+      display: flex;
+      justify-content: flex-start;
+      width: 40px;
+      height: 40px;
+      text-align: left;
+    }
+
+    .email,
+    .linkedin {
+      width: 25px;
+    }
+  }
+}

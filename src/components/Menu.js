@@ -1,3 +1,5 @@
+import '../styles/Menu.scss';
+
 function Menu({ toggleMenu, activeLink }) {
 
   

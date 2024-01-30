@@ -1,0 +1,233 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Open+Sans:wght@300;400;700;800&display=swap');
+
+$cherry: rgba(58, 9, 11, 1);
+$light-cherry: rgba(58, 9, 11, 0.25);
+$pink: rgba(231, 113, 127, 1);
+$light-pink: rgba(231, 113, 127, 0.25);
+$green: rgb(135, 189, 96);
+$gray: rgba(230, 230, 230, 1);
+$light-gray: rgba(233, 233, 233, 0.5);
+$shadow-gray: rgb(150, 150, 150);
+$dark-gray: rgb(128, 128, 128);
+$white: #FFFFFF;
+
+.portfolio-page {
+  h2 {
+    font-size: clamp(1rem, 3vw, 2rem);
+    font-weight: 400;
+    text-align: center;
+  }
+
+  .portfolio-item {
+    width: 400px;
+    background-color: rgba(255, 255, 255, 1);
+    border-radius: clamp(10px, 5vw, 20px);
+    flex-grow: 1;
+    padding-block: clamp(10px, 1vw, 20px);
+    margin: 10px;
+  }
+
+  .project-details {
+    color: $white;
+    border-radius: 20px;
+    flex-grow: 1;
+  }
+
+  .project-info {
+    font-size: 1rem;
+    background-color: $cherry;
+    padding-inline: clamp(20px, 2vw, 30px);
+    margin-block: clamp(10px, 1vw, 20px);
+    margin-inline: clamp(10px, 2vw, 20px);
+    flex-grow: 1;
+
+    .project-name {
+      font-family: 'Satisfy', cursive;
+      font-size: 2rem;
+    }
+
+    .description {
+      color: $white;
+    }
+
+    .tech-stack {
+      .tech {
+        border: 1px solid $white;
+        margin-right: 10px;
+        margin-bottom: 10px;
+        padding: 5px 20px;
+        font-size: 0.75rem;
+      }
+    }
+
+    .project-link {
+      display: flex;
+      align-items: center;
+      width: 175px;
+      color: $pink;
+      margin-block: 20px;
+
+      svg {
+        color: $pink;
+        width: 20px;
+        height: 20px;
+        margin-left: 2px;
+      }
+
+      &:hover {
+        svg {
+          transform: translateX(7px);
+          transition: transform 0.3s ease;
+        }
+      }
+    }
+  }
+
+  .toggle-details {
+    .toggle-text {
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .switch {
+      position: relative;
+      display: inline-block;
+      width: 40px;
+      height: 21px;
+      margin: 10px;
+    }
+    
+    .switch input {
+      opacity: 0;
+      width: 0;
+      height: 0;
+    }
+    
+    .slider {
+      position: absolute;
+      cursor: pointer;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      border-radius: 50px;
+      background-color: $dark-gray;
+    }
+    
+    .slider:before {
+      position: absolute;
+      content: "";
+      height: 13px;
+      width: 13px;
+      left: 4px;
+      bottom: 4px;
+      border-radius: 50%;
+      background-color: white;
+    }
+    
+    input:checked + .slider {
+      background-color: $green;
+    }
+    
+    input:checked + .slider:before {
+      transform: translateX(19px);
+    }
+  }
+
+  .image-slider {
+    border-radius: 20px;
+    margin-block: clamp(10px, 1vw, 20px);
+    margin-inline: clamp(20px, 2vw, 20px);
+    flex-grow: 1;
+
+    &:hover {
+      cursor: pointer;
+      
+      .images {
+        box-shadow: 0px 0px 10px 1px $shadow-gray;
+      }
+    }
+  }
+
+  .images {
+    width: 100%;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    
+    img {
+      max-width: 100%;
+    }
+  }
+
+  .slider-dots {
+    margin-top: 30px;
+
+    .slider-dot {
+      border: none;
+      width: 10px;
+      height: 10px;
+      background-color: $dark-gray;
+      margin: 5px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+
+    .fill {
+      background-color: $green;
+    }
+  }
+
+  .info-container {
+    display: flex;
+    padding: clamp(20px, 6vw, 75px);
+
+    .details-container {
+      min-width: 70%;
+    }
+
+    .details {
+      h3 {
+        font-size: clamp(1rem, 3vw, 2.5rem);
+        font-weight: 700;
+        margin: 0;
+        text-transform: uppercase;
+      }
+
+      p, 
+      ul {
+        font-size: clamp(0.75rem, 2vw, 1.5rem);
+      }
+
+      p {
+        font-weight: 700;
+      }
+
+      ul {
+        font-weight: 300;
+      }
+    }
+
+    .tech-button-container {
+      margin-top: clamp(30px, 7vw, 100px);
+      margin-left: clamp(0px, 5vw, 50px);
+    }
+
+    .tech-stack {
+      text-align: center;
+      margin-bottom: clamp(20px, 3vw, 50px);
+    }
+
+    .tech {
+      font-size: clamp(0.5rem, 1.25vw, 1rem);
+      font-weight: 700;
+      color: $pink;
+      background-color: $light-gray;
+      width: clamp(75px, 5vw, 150px);
+      margin-right: clamp(5px, 0.75vw, 20px);
+      margin-bottom: clamp(5px, 0.75vw, 20px);
+      padding: clamp(10px, 1vw, 15px);
+      border-radius: clamp(10px, 25px, 40px);
+    }
+  }
+}

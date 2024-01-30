@@ -1,5 +1,6 @@
 import Home from './Home';
 import Phone from './Phone';
+import '../styles/HomePage.scss';
 
 function HomePage({ isMobile }) {
   return (

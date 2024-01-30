@@ -1,4 +1,5 @@
 import PortfolioItem from './PortfolioItem';
+import '../styles/PortfolioPage.scss';
 
 function PortfolioPage() {
   const portfolioItems = [

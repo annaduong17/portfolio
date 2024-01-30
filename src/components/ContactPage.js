@@ -1,3 +1,5 @@
+import '../styles/ContactPage.scss';
+
 function ContactPage() {
   return (
     <div id="contact-page" className="page-margin page-padding">

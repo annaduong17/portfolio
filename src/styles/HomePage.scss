@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Open+Sans:wght@300;400;700;800&display=swap');
+
+$cherry: rgba(58, 9, 11, 1);
+$light-cherry: rgba(58, 9, 11, 0.25);
+$pink: rgba(231, 113, 127, 1);
+$light-pink: rgba(231, 113, 127, 0.25);
+$green: rgb(135, 189, 96);
+$gray: rgba(230, 230, 230, 1);
+$light-gray: rgba(233, 233, 233, 0.5);
+$shadow-gray: rgb(150, 150, 150);
+$dark-gray: rgb(128, 128, 128);
+$white: #FFFFFF;
+
+.phone-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+}
+
+.phone {
+  background-color: $white;
+  border-radius: 20px;
+  box-shadow: 10px 10px 30px 1px rgba(0, 0, 0, 0.5);
+  z-index: 1;
+
+  .phone-display {
+    background-color: $pink;
+    border-radius: 15px 15px 0 0;
+    margin: clamp(5px, 1.25vw, 10px);
+    padding-block: clamp(15px, 3vw, 30px);
+    padding-inline: clamp(20px, 1vw, 15px);
+
+    .avatar {
+      border-radius: 50%;
+      width: clamp(100px, 12vw, 200px);
+      height: 100%;
+      box-shadow: 0px 0px 5px 0px $cherry;
+    }
+
+    .title {
+      text-transform: uppercase;
+      font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      color: $white;
+      margin-block: 20px 0;
+    }
+  }
+
+  .phone-control {
+    .song {
+      font-size: clamp(0.5rem, 1vw, 1rem);
+      width: clamp(100px, 15vw, 200px);
+      height: 30px;
+      display: flex;
+      justify-content: center;
+      padding: clamp(5px, 1vw, 20px);
+      margin-top: 0;
+    }
+
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      cursor: pointer;
+      width: clamp(110px, 15vw, 200px);
+      
+
+      &::-webkit-slider-runnable-track {
+        background: $cherry;
+        height: min(0.5vw, 3px);
+        border-radius: 1rem;
+      }
+
+      &::-webkit-slider-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        margin-top: max(-0.5vw, -6px); 
+        background-color: $pink;
+        height: min(1.25vw, 15px);
+        width: min(1.25vw, 15px); 
+        border-radius: 50%;
+      }
+
+      &::-moz-range-track {
+        background: $cherry;
+        height: min(0.5vw, 3px);
+        border-radius: 1rem;
+      }
+
+      &::-moz-range-thumb {
+        -webkit-appearance: none; 
+        appearance: none;
+        margin-top: max(-0.5vw, -6px); 
+        background-color: $pink;
+        height: min(1.25vw, 15px);
+        width: min(1.25vw, 15px); 
+        border-radius: 50%;
+      }
+
+      &::-moz-range-progress {
+        background-color: $pink;
+      }
+
+      &::-ms-track {
+        background-color: $cherry;
+      }
+
+      &::-ms-thumb {
+        background-color: $pink;
+      }
+
+      &::-ms-fill-lower {
+        background-color: $pink;
+      }
+    }
+
+    .control-buttons {
+      margin: clamp(10px, 2vw, 25px);
+
+      svg {
+        width: clamp(20px, 3vw, 40px);
+        height: clamp(20px, 3vw, 40px);
+      }
+
+      button {
+        background-color: $white;
+        border: none;
+        padding-inline: clamp(5px, 1vw, 10px);
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.home-page {
+  position: relative;
+
+  .home {
+    width: 100%;
+    border-radius: 20px;
+    background-color: $white;
+    margin-left: clamp(50px, 10vw, 200px);
+    padding-block: clamp(50px, 8vw, 150px);
+    padding-inline: clamp(125px, 15vw, 175px) clamp(30px, 5vw, 75px);
+
+    h1 {
+      font-family: 'Satisfy', sans-serif;
+      font-size: clamp(1rem, 4vw, 4rem);
+      color: $pink;
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(0.75rem, 2vw, 1.5rem);
+      font-weight: 400;
+      margin: 0;
+    }
+
+    .home-description {
+      p {
+      font-size: clamp(1rem, 1.25vw, 1.5rem);
+      line-height: 200%;
+      margin-top: clamp(30px, 3vw, 50px);
+      }
+    }
+
+    .home-buttons {
+        margin-top: clamp(30px, 4vw, 50px);
+    }
+  }
+}
