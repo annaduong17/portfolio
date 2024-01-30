@@ -69,6 +69,11 @@ svg {
   align-items: center;
 }
 
+.flex-wrap {
+  display: flex;
+  flex-wrap: wrap;
+}
+
 .active {
   font-weight: 700;
 }
@@ -114,8 +119,6 @@ svg {
     &:hover {
       color: $pink;
     }
-
-    
   }
 }
 
@@ -405,11 +408,6 @@ svg {
     text-align: center;
   }
 
-  .projects {
-    display: flex;
-    flex-wrap: wrap;
-  }
-
   .portfolio-item {
     width: 400px;
     background-color: rgba(255, 255, 255, 1);
@@ -439,14 +437,10 @@ svg {
     }
 
     .description {
-      
       color: $white;
     }
 
     .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
-
       .tech {
         border: 1px solid $white;
         margin-right: 10px;
@@ -611,8 +605,6 @@ svg {
     }
 
     .tech-stack {
-      display: flex;
-      flex-wrap: wrap;
       text-align: center;
       margin-bottom: clamp(20px, 3vw, 50px);
     }
@@ -866,10 +858,6 @@ svg {
       width: 75%;
       margin-inline: auto;
       padding: 5vw;
-
-      .home-buttons {
-        flex-wrap: wrap;
-      }
     }
   }
 
