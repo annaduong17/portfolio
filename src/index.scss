@@ -78,6 +78,10 @@ svg {
   font-weight: 700;
 }
 
+.no-underline {
+  text-decoration: none;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -112,7 +116,6 @@ svg {
   .navlink {
     font-size: clamp(0.75rem, 1vw, 1rem);
     letter-spacing: 1.4px;
-    text-decoration: none;
     padding-right: clamp(50px, 5vw, 100px);
     color: $cherry;
 
@@ -174,7 +177,6 @@ svg {
 
 
     li * {
-      text-decoration: none;
       color: $white;
       font-size: clamp(1rem, 2vw, 2rem);
       font-weight: 300;
@@ -213,7 +215,6 @@ svg {
   border-radius: clamp(5px, 0.25vw, 10px);
   border-radius: 50px;
   width: 100px;
-  text-decoration: none;
   font-weight: 700;
   font-size: clamp(0.7rem, 1vw, 1rem);
   padding-block: clamp(0.5rem, 1.75vw, 1.5rem);
@@ -455,7 +456,6 @@ svg {
       align-items: center;
       width: 150px;
       color: $pink;
-      text-decoration: none;
       margin-block: 20px;
 
       svg {
@@ -637,7 +637,6 @@ svg {
     align-items: center;
 
     a {
-      text-decoration: none;
       font-weight: 700;
       color: $cherry;
       margin-right: 10px;

@@ -11,8 +11,8 @@ function Home() {
       </div>
 
       <div className="home-buttons">
-        <a className="btn primary-btn" href="#portfolio-page">View Projects</a>
-        <a className="btn secondary-btn" href="#contact-page">Hire Me</a>
+        <a className="btn primary-btn no-underline" href="#portfolio-page">View Projects</a>
+        <a className="btn secondary-btn no-underline" href="#contact-page">Hire Me</a>
       </div>
     </div>
   );

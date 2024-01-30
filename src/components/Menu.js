@@ -8,13 +8,13 @@ function Menu({ toggleMenu, activeLink }) {
       </button>
       <ul className="flex-column-center">
         <li>
-          <a className={`${activeLink === "HOME" ? "active" : ""}`} onClick={toggleMenu} href="#app">HOME</a>
+          <a className={`no-underline ${activeLink === "HOME" ? "active" : ""}`} onClick={toggleMenu} href="#app">HOME</a>
         </li>
         <li>
-        <a className={`${activeLink === "PROJECTS" ? "active" : ""}`} onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
+        <a className={`no-underline ${activeLink === "PROJECTS" ? "active" : ""}`} onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
         </li>
         <li>
-        <a className={`${activeLink === "CONTACT" ? "active" : ""}`} onClick={toggleMenu} href="#contact-page">CONTACT</a>
+        <a className={`no-underline ${activeLink === "CONTACT" ? "active" : ""}`} onClick={toggleMenu} href="#contact-page">CONTACT</a>
         </li>
       </ul>
     </div>
