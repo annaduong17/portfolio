@@ -238,12 +238,12 @@ svg {
     border-radius: 20px;
     background-color: $white;
     margin-left: clamp(50px, 10vw, 200px);
-    padding-block: clamp(20px, 5vw, 100px);
-    padding-inline: clamp(120px, 15vw, 150px) clamp(30px, 5vw, 75px);
+    padding-block: clamp(50px, 8vw, 150px);
+    padding-inline: clamp(125px, 15vw, 175px) clamp(30px, 5vw, 75px);
 
     h1 {
       font-family: 'Satisfy', sans-serif;
-      font-size: clamp(1.2rem, 4vw, 4rem);
+      font-size: clamp(1rem, 4vw, 4rem);
       color: $pink;
       margin: 0;
     }
@@ -254,36 +254,16 @@ svg {
       margin: 0;
     }
 
-    .socials-description {
-      display: flex;
-      align-items: center;
-      margin-block: clamp(10px, 1.5vw, 30px);
-
-      .home-socials {
-        text-align: center;
-        margin-right: clamp(10px, 1.5vw, 20px);
-
-
-        svg {
-          width: clamp(15px, 1.5vw, 30px);
-          margin-bottom: clamp(0px, 1vw, 30px);
-        }
-
-        svg.linkedin {
-          width: clamp(12px, 1.3vw, 25px);
-          height: 100%;
-        }
-      }
-      
+    .home-description {
       p {
-        font-size: clamp(1rem, 1.25vw, 1.5rem);
-        line-height: 200%;
+      font-size: clamp(1rem, 1.25vw, 1.5rem);
+      line-height: 200%;
+      margin-top: clamp(30px, 3vw, 50px);
       }
     }
 
     .home-buttons {
-        margin-block: clamp(10px, 3vw, 50px);
-
+        margin-top: clamp(30px, 4vw, 50px);
     }
   }
 }
@@ -427,7 +407,6 @@ svg {
 }
 
 .portfolio-page {
-
   h2 {
     font-size: clamp(1rem, 3vw, 2rem);
     font-weight: 400;
@@ -787,12 +766,14 @@ svg {
 
       .home-description p {
         font-size: clamp(1rem, 2vw, 2rem);
+        margin-bottom: 10vw;
       }
 
       .btn {
         font-size: clamp(0.7rem, 2.5vw, 2rem);
         padding-block: 3.5vw;
         padding-inline: 5vw;
+        
       }
     }
 
@@ -824,6 +805,8 @@ svg {
         }
 
         .phone-control {
+          margin-top: 10vw;
+
           .song {
             font-size: clamp(0.75rem, 3vw, 1.5rem);
             width: clamp(200px, 80vw, 350px);
@@ -931,7 +914,7 @@ svg {
 @media (min-width: 1000px) {
   .home-page {
     .home {
-      padding-block: 100px;
+      padding-block: clamp(100px, 10vw, 150px);
     }
   }
 }

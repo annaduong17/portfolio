@@ -5,7 +5,7 @@ function HomePage({ isMobile }) {
   return (
     <div id='home-page' className='home-page page-margin'>
       <Phone isMobile={isMobile}/> 
-      {!isMobile && <Home />}
+      {!isMobile && <Home isMobile={isMobile}/>}
     </div>
   );
 }
