@@ -672,7 +672,7 @@ svg {
       margin-right: 10px;
 
       &.icon-link {
-        width: clamp(20px, 2vw, 30px);
+        width: clamp(20px, 4vw, 30px);
         display: flex;
         justify-content: center;
       }
@@ -685,7 +685,7 @@ svg {
     svg {
       display: flex;
       justify-content: flex-start;
-      width: 30px;
+      width: 40px;
       height: 40px;
       text-align: left;
     }
