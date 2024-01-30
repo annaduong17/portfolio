@@ -11,7 +11,13 @@ function App () {
   const [ scrolled, setScrolled ] = useState(false);
   const [ isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [ showMenu, setShowMenu ] = useState(false);
+  const [ activeLink, setActiveLink ] = useState("HOME");
   const navbarRef = useRef();
+
+  const handleNavClick = (e) => {
+    setActiveLink(e.target.textContent);
+  }
+
 
   const toggleMenu = () => {
     setShowMenu(!showMenu);
@@ -52,6 +58,8 @@ function App () {
             showMenu={showMenu}
             toggleMenu={toggleMenu}
             handleResize={handleResize}
+            handleNavClick={handleNavClick}
+            activeLink={activeLink}
           />
 
           <HomePage isMobile={isMobile} />

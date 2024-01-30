@@ -56,6 +56,10 @@ svg {
   }
 }
 
+.active {
+  font-weight: 700;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -97,6 +101,8 @@ svg {
     &:hover {
       color: $pink;
     }
+
+    
   }
 }
 
@@ -677,7 +683,6 @@ svg {
   }
 
   .contact-info {
-    font-weight: 300;
     display: flex;
     align-items: center;
 

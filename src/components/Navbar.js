@@ -1,6 +1,6 @@
 import Menu from './Menu';
 
-function Navbar({ scrolled, isMobile, showMenu, toggleMenu }) {
+function Navbar({ scrolled, isMobile, showMenu, toggleMenu, handleNavClick, activeLink }) {
 
   return (
     
@@ -12,13 +12,13 @@ function Navbar({ scrolled, isMobile, showMenu, toggleMenu }) {
           </button>
         </nav>) : (
         <nav className={`navbar ${scrolled ? "cherry-bg" : ""}`}>
-          <a href='#app' className="navlink">HOME</a>
-          <a href="#portfolio-page" className="navlink">PROJECTS</a>
-          <a href="#contact-page" className="navlink">CONTACT</a>
+          <a onClick={handleNavClick} href='#app' className={`navlink ${activeLink === "HOME" ? "active" : ""}`}>HOME</a>
+          <a onClick={handleNavClick} href="#portfolio-page" className={`navlink ${activeLink === "PROJECTS" ? "active" : ""}`}>PROJECTS</a>
+          <a onClick={handleNavClick} href="#contact-page" className={`navlink ${activeLink === "CONTACT" ? "active" : ""}`}>CONTACT</a>
         </nav>)  
       }
 
-        {showMenu && <Menu toggleMenu={toggleMenu}/>}
+        {showMenu && <Menu activeLink={activeLink} toggleMenu={toggleMenu}/>}
     </div>
   )
 }
