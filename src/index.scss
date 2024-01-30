@@ -177,6 +177,15 @@ svg {
   }
 }
 
+.page-margin {
+  margin: clamp(10px, 10vw, 130px);
+  margin-bottom: 0;
+}
+
+.page-padding {
+  padding-top: 100px;
+}
+
 .heading {
   font-family: 'Kaushan Script', cursive;
   font-size: clamp(1.75rem, 5vw, 3rem);
@@ -221,17 +230,14 @@ svg {
   position: relative;
   display: flex;
   align-items: center;
-  margin-top: clamp(75px, 10vw, 150px);
 
   .home {
     width: 100%;
     border-radius: 20px;
     background-color: $white;
-    margin-right: clamp(50px, 10vw, 150px);
-    margin-left: clamp(100px, 20vw, 300px);
+    margin-left: clamp(50px, 10vw, 200px);
     padding-block: clamp(50px, 10vw, 100px);
-    padding-left: clamp(120px, 15vw, 200px);
-    padding-right: clamp(30px, 5vw, 75px);
+    padding-inline: clamp(120px, 15vw, 150px) clamp(30px, 5vw, 75px);
 
     h1 {
       font-size: clamp(1.2rem, 3.5vw, 3.5rem);
@@ -290,7 +296,7 @@ svg {
 .phone-container {
   position: absolute;
   top: 0;
-  left: clamp(20px, 10vw, 150px);
+  left: 0;
   height: 100%;
   display: flex;
   align-items: center;
@@ -425,8 +431,6 @@ svg {
 }
 
 .portfolio-page {
-  margin-top: clamp(75px, 5vw, 150px);
-  margin-inline: clamp(20px, 5vw, 50px);
 
   h2 {
     font-size: clamp(1rem, 3vw, 2rem);
@@ -674,9 +678,6 @@ svg {
 }
 
 .contact {
-  margin-inline: auto;
-  margin-top: clamp(75px, 10vw, 150px);
-  width: clamp(200px, 70%, 500px);
   border-radius: 20px;
   background-color: $white;
   padding: clamp(20px, 4vw, 50px);
@@ -768,6 +769,11 @@ svg {
     overflow: hidden;
   }
 
+  .page-margin {
+    margin: clamp(10px, 5vw, 50px);
+    margin-top: 15vw;
+  }
+
   .home-page {
     flex-direction: column;
 
@@ -799,8 +805,6 @@ svg {
 
     .phone-container {
       position: unset;
-      margin: 5vw;
-      margin-top: 0;
       
       .phone {
         border-radius: clamp(20px, 10vw, 50px);
@@ -928,7 +932,6 @@ svg {
 
   .contact {
     width: auto;
-    margin-inline: clamp(20px, 5vw, 50px);
   }
 }
 

@@ -1,6 +1,6 @@
 function Contact() {
   return (
-    <div id="contact-page">
+    <div id="contact-page" className="page-margin page-padding">
       <div className='contact'>
       <section>
         <h1 className="heading">Let's get in touch!</h1>

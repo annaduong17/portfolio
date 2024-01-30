@@ -34,7 +34,7 @@ function Phone({ isMobile }) {
   }
 
   const playlist = [
-    'Currently learning Github Actions',
+    'Currently learning Next.js',
     'Currently working on a Food Ordering App',
     'Current favorite technology: React'
   ]

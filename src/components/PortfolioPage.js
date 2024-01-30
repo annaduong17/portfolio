@@ -158,9 +158,7 @@ function PortfolioPage() {
   });
 
   return (
-    <div id='portfolio-page' className='portfolio-page'>
-      <h1 className='heading'>Projects</h1>
-      <h2>Click the toggle switches for more info!</h2>
+    <div id='portfolio-page' className='portfolio-page page-margin page-padding'>
       <div className='projects'>{renderedItems}</div>
     </div>
   );
