@@ -46,7 +46,7 @@ function App () {
   });
 
   return(
-        <div className='app'>
+        <div id='app' className='app'>
           <Navbar 
             scrolled={scrolled} 
             ref={navbarRef}
@@ -55,17 +55,15 @@ function App () {
             toggleMenu={toggleMenu}
             handleResize={handleResize}
           />
-          <Routes>
-            <Route path='/' element={<HomePage isMobile={isMobile} />} />
-            <Route path='/portfolio' element={<PortfolioPage />} />
-            <Route path='/contact' element={<Contact />} />
-            <Route path='*' element={<NotFound />} />
-          </Routes>
+
+          <HomePage isMobile={isMobile} />
+          <PortfolioPage />
+          <Contact />
 
           <BackToTopButton />
           <Footer />
           
-          <ScrollToTop />
+          {/* <ScrollToTop /> */}
         </div>
   )
 }

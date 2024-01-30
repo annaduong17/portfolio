@@ -12,9 +12,9 @@ function Navbar({ scrolled, isMobile, showMenu, toggleMenu }) {
           </button>
         </nav>) : (
         <nav className={`navbar ${scrolled ? "cherry-bg" : ""}`}>
-          <NavLink className="navlink" to="/">HOME</NavLink>
-          <NavLink className="navlink" to="/portfolio">PORTFOLIO</NavLink>
-          <NavLink className="navlink" to="/contact">CONTACT</NavLink>
+          <a className='navlink' href="#app">HOME</a>
+          <a className='navlink' href="#portfolio-page">PROJECTS</a>
+          <a className='navlink' href="#contact-page">CONTACT</a>
         </nav>)  
       }
 

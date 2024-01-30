@@ -1,7 +1,7 @@
 function Contact() {
   return (
-    <div className='contact'>
-      
+    <div id="contact-page">
+      <div className='contact'>
       <section>
         <h1 className="heading">Let's get in touch!</h1>
         <p>I am fluent in English and Vietnamese. Feel free to communicate with me in either language.</p>
@@ -33,6 +33,7 @@ function Contact() {
       </section>
 
     </div>
+  </div>
   );
 }
 
