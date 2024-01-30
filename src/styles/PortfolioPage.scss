@@ -35,6 +35,7 @@ $white: #FFFFFF;
 
   .project-info {
     font-size: 1rem;
+    line-height: 175%;
     background-color: $cherry;
     padding-inline: clamp(20px, 2vw, 30px);
     margin-block: clamp(10px, 1vw, 20px);
@@ -48,6 +49,7 @@ $white: #FFFFFF;
 
     .description {
       color: $white;
+      
     }
 
     .tech-stack {
@@ -175,59 +177,6 @@ $white: #FFFFFF;
 
     .fill {
       background-color: $green;
-    }
-  }
-
-  .info-container {
-    display: flex;
-    padding: clamp(20px, 6vw, 75px);
-
-    .details-container {
-      min-width: 70%;
-    }
-
-    .details {
-      h3 {
-        font-size: clamp(1rem, 3vw, 2.5rem);
-        font-weight: 700;
-        margin: 0;
-        text-transform: uppercase;
-      }
-
-      p, 
-      ul {
-        font-size: clamp(0.75rem, 2vw, 1.5rem);
-      }
-
-      p {
-        font-weight: 700;
-      }
-
-      ul {
-        font-weight: 300;
-      }
-    }
-
-    .tech-button-container {
-      margin-top: clamp(30px, 7vw, 100px);
-      margin-left: clamp(0px, 5vw, 50px);
-    }
-
-    .tech-stack {
-      text-align: center;
-      margin-bottom: clamp(20px, 3vw, 50px);
-    }
-
-    .tech {
-      font-size: clamp(0.5rem, 1.25vw, 1rem);
-      font-weight: 700;
-      color: $pink;
-      background-color: $light-gray;
-      width: clamp(75px, 5vw, 150px);
-      margin-right: clamp(5px, 0.75vw, 20px);
-      margin-bottom: clamp(5px, 0.75vw, 20px);
-      padding: clamp(10px, 1vw, 15px);
-      border-radius: clamp(10px, 25px, 40px);
     }
   }
 }
