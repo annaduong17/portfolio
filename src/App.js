@@ -1,12 +1,10 @@
 import { useState, useEffect, useRef } from 'react';
-import { Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
-import Contact from './components/Contact';
+import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
-import ScrollToTop from './components/ScrollToTop';
 import BackToTopButton from './components/BackToTopButton';
 
 function App () {
@@ -58,12 +56,10 @@ function App () {
 
           <HomePage isMobile={isMobile} />
           <PortfolioPage />
-          <Contact />
+          <ContactPage />
 
           <BackToTopButton />
           <Footer />
-          
-          {/* <ScrollToTop /> */}
         </div>
   )
 }

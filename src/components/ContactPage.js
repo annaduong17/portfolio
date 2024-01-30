@@ -1,9 +1,9 @@
-function Contact() {
+function ContactPage() {
   return (
     <div id="contact-page" className="page-margin page-padding">
       <div className='contact'>
       <section>
-        <h1 className="heading">Let's get in touch!</h1>
+        <h2 className="heading">Contact Me</h2>
         <p>I am fluent in English and Vietnamese. Feel free to communicate with me in either language.</p>
       </section>
 
@@ -37,4 +37,4 @@ function Contact() {
   );
 }
 
-export default Contact;
+export default ContactPage;

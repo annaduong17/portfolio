@@ -67,7 +67,7 @@ function Phone({ isMobile }) {
         <img height={180}
         width={180} 
         className="avatar" src="/images/avatar.jpeg" alt="avatar" />
-      <h2 className='name'>Anna Duong</h2>
+      <h2 className='title'>Web Developer</h2>
       </div>
       {isMobile && <Home />}
 

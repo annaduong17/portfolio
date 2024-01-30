@@ -1,9 +1,9 @@
-import { NavLink } from 'react-router-dom';
 import Menu from './Menu';
 
 function Navbar({ scrolled, isMobile, showMenu, toggleMenu }) {
 
   return (
+    
     <div className="navbar-container">
       {isMobile ? (
         <nav className={`navbar mobile ${scrolled ? "cherry-bg" : ""}`}>
@@ -12,9 +12,9 @@ function Navbar({ scrolled, isMobile, showMenu, toggleMenu }) {
           </button>
         </nav>) : (
         <nav className={`navbar ${scrolled ? "cherry-bg" : ""}`}>
-          <a className='navlink' href="#app">HOME</a>
-          <a className='navlink' href="#portfolio-page">PROJECTS</a>
-          <a className='navlink' href="#contact-page">CONTACT</a>
+          <a href='#app' className="navlink">HOME</a>
+          <a href="#portfolio-page" className="navlink">PROJECTS</a>
+          <a href="#contact-page" className="navlink">CONTACT</a>
         </nav>)  
       }
 

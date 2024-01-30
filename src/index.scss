@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Catamaran:wght@300;400;500;700;800&family=Kaushan+Script&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&family=Open+Sans:wght@300;400;700;800&display=swap');
 
 $cherry: rgba(58, 9, 11, 1);
 $light-cherry: rgba(58, 9, 11, 0.25);
@@ -18,7 +18,7 @@ html {
 body {
   position: relative;
   box-sizing: border-box;
-  font-family: 'Catamaran', sans-serif;
+  font-family: 'Open Sans', sans-serif;
   color: $cherry;
   font-size: 1rem;
   margin: 0;
@@ -97,10 +97,6 @@ svg {
     &:hover {
       color: $pink;
     }
-  }
-
-  .navlink.active {
-    font-weight: 900;
   }
 }
 
@@ -187,7 +183,7 @@ svg {
 }
 
 .heading {
-  font-family: 'Kaushan Script', cursive;
+  font-family: 'Satisfy', cursive;
   font-size: clamp(1.75rem, 5vw, 3rem);
   color: $pink;
   margin-top: 0;
@@ -201,8 +197,8 @@ svg {
   text-decoration: none;
   font-weight: 700;
   font-size: clamp(0.7rem, 1vw, 1rem);
-  padding-block: clamp(8px, 1.25vw, 15px);
-  padding-inline: clamp(15px, 2vw, 30px);
+  padding-block: clamp(0.5rem, 1.75vw, 1.5rem);
+  padding-inline: clamp(1rem, 2.5vw, 2rem);
   margin-right: clamp(5px, 0.75vw, 15px);
   border: none;
   cursor: pointer;
@@ -236,25 +232,19 @@ svg {
     border-radius: 20px;
     background-color: $white;
     margin-left: clamp(50px, 10vw, 200px);
-    padding-block: clamp(50px, 10vw, 100px);
+    padding-block: clamp(20px, 5vw, 100px);
     padding-inline: clamp(120px, 15vw, 150px) clamp(30px, 5vw, 75px);
 
     h1 {
-      font-size: clamp(1.2rem, 3.5vw, 3.5rem);
-      font-weight: 400;
+      font-family: 'Satisfy', sans-serif;
+      font-size: clamp(1.2rem, 4vw, 4rem);
+      color: $pink;
       margin: 0;
-
-      span {
-        font-size: clamp(1.5rem, 5vw, 4.5rem);
-        font-family: 'Kaushan Script', cursive;
-        color: $pink;
-      }
     }
 
     h2 {
-      font-size: clamp(1rem, 1.5vw, 1.5rem);
-      font-weight: 100;
-      letter-spacing: 2px;
+      font-size: clamp(0.75rem, 2vw, 1.5rem);
+      font-weight: 400;
       margin: 0;
     }
 
@@ -281,8 +271,7 @@ svg {
       
       p {
         font-size: clamp(1rem, 1.25vw, 1.5rem);
-        letter-spacing: 0.15px;
-        line-height: 175%;
+        line-height: 200%;
       }
     }
 
@@ -327,11 +316,12 @@ svg {
       box-shadow: 0px 0px 5px 0px $cherry;
     }
 
-    .name {
-      font-size: clamp(0.75rem, 1.5vw, 2rem);
-      font-weight: 700;
-      color: $white;
+    .title {
       text-transform: uppercase;
+      font-size: clamp(0.75rem, 1.25vw, 1.5rem);
+      font-weight: 700;
+      letter-spacing: 0.25px;
+      color: $white;
       margin-block: 20px 0;
     }
   }
@@ -471,7 +461,7 @@ svg {
     flex-grow: 1;
 
     .project-name {
-      font-family: 'Kaushan Script', script;
+      font-family: 'Satisfy', cursive;
       font-size: 2rem;
     }
 
@@ -771,25 +761,23 @@ svg {
 
   .page-margin {
     margin: clamp(10px, 5vw, 50px);
-    margin-top: 15vw;
+    margin-top: clamp(65px, 15vw, 100px);
   }
+
 
   .home-page {
     flex-direction: column;
 
     .home {
       text-align: center;
+      padding-inline: 0;
 
       h1 {
-        font-size: clamp(1.25rem, 6.5vw, 2rem);
-
-        span {
-          font-size: clamp(1.5rem, 9.5vw, 3rem);
-        }
+        font-size: clamp(1.25rem, 6.5vw, 4rem);
       }
 
       h2 {
-        font-size: clamp(1rem, 3vw, 2rem);
+        font-size: clamp(0.75rem, 3.5vw, 3rem);
       }
 
       .home-description p {
@@ -797,8 +785,8 @@ svg {
       }
 
       .btn {
-        font-size: clamp(0.75rem, 2.5vw, 2rem);
-        padding-block: 2vw;
+        font-size: clamp(0.7rem, 2.5vw, 2rem);
+        padding-block: 3.5vw;
         padding-inline: 5vw;
       }
     }
@@ -824,8 +812,8 @@ svg {
             margin-right: 5vw;
           }
 
-          .name {
-            font-size: clamp(1rem, 4vw, 3rem);
+          .title {
+            font-size: clamp(0.75rem, 4vw, 3rem);
             text-align: center;
           }
         }
@@ -932,6 +920,14 @@ svg {
 
   .contact {
     width: auto;
+  }
+}
+
+@media (min-width: 1000px) {
+  .home-page {
+    .home {
+      padding-block: 100px;
+    }
   }
 }
 

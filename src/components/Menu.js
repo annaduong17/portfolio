@@ -1,5 +1,3 @@
-import { NavLink } from 'react-router-dom';
-
 function Menu({ toggleMenu }) {
   return (
     <div className='menu'>
@@ -8,13 +6,13 @@ function Menu({ toggleMenu }) {
       </button>
       <ul>
         <li>
-          <NavLink onClick={toggleMenu} to='/'>HOME</NavLink>
+          <a onClick={toggleMenu} href="#app">HOME</a>
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to='/portfolio'>PORTFOLIO</NavLink>
+        <a onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
         </li>
         <li>
-          <NavLink onClick={toggleMenu} to='/contact'>CONTACT</NavLink>
+        <a onClick={toggleMenu} href="#contact-page">CONTACT</a>
         </li>
       </ul>
     </div>
