@@ -5,8 +5,8 @@ function Home() {
     <div className="home">
 
       <div className="home-heading">
-        <h1>Hello there, I'm <span>Anna</span>.</h1>
-        <h2>FRONT END DEVELOPER</h2>
+        <h1>Hello, I'm <span>Anna</span>.</h1>
+        <h2>WEB DEVELOPER</h2>
       </div>
 
       <div className='socials-description'>
@@ -22,7 +22,7 @@ function Home() {
         </div>
 
         <div className="home-description">
-          <p>I find joy in turning goals and visions into aesthetically pleasing user interfaces that provide satisfying user experience. Let me know how I can help.</p>
+          <p>I'm a front-end focused full-stack developer. I find joy in turning goals and visions into functional and aesthetically pleasing user interfaces that provide satisfying user experience. Let me know how I can help.</p>
         </div>
       </div>
       <div className="home-buttons">
