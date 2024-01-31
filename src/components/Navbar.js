@@ -15,6 +15,7 @@ function Navbar({ scrolled, isMobile, showMenu, toggleMenu, handleNavClick, acti
         <nav className={`navbar ${scrolled ? "cherry-bg" : ""}`}>
           <a onClick={handleNavClick} href='#app' className={`navlink no-underline ${activeLink === "HOME" ? "active" : ""}`}>HOME</a>
           <a onClick={handleNavClick} href="#portfolio-page" className={`navlink no-underline ${activeLink === "PROJECTS" ? "active" : ""}`}>PROJECTS</a>
+          <a onClick={handleNavClick} href="#testimonials-page" className={`navlink no-underline ${activeLink === "TESTIMONIALS" ? "active" : ""}`}>TESTIMONIALS</a>
           <a onClick={handleNavClick} href="#contact-page" className={`navlink no-underline ${activeLink === "CONTACT" ? "active" : ""}`}>CONTACT</a>
         </nav>)  
       }

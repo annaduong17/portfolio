@@ -14,14 +14,15 @@ $white: #FFFFFF;
 .contact {
   border-radius: 20px;
   background-color: $white;
-  padding: clamp(20px, 4vw, 50px);
+  padding-block: clamp(50px, 8vw, 150px);
+  padding-inline: clamp(30px, 5vw, 75px);
 
   h2 {
     text-align: center;
   }
 
   p {
-    font-size: clamp(1rem, 1.25vw, 2rem);
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 200%;
   }
 
@@ -32,7 +33,7 @@ $white: #FFFFFF;
     a {
       font-weight: 700;
       color: $cherry;
-      margin-right: 1vw;
+      margin-right: clamp(10px, 1vw, 20px);
 
       &.icon-link {
         width: clamp(20px, 2.5vw, 40px);
