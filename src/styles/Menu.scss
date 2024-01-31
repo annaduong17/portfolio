@@ -19,6 +19,7 @@ $white: #FFFFFF;
   height: 100vh;
   background-color: $cherry;
   z-index: 20;
+
   
   button {
     border: none;
@@ -39,6 +40,7 @@ $white: #FFFFFF;
 
   ul {
     padding: 0;
+    align-items: center;
 
     li {
       padding: clamp(15px, 2vw, 20px);

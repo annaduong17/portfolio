@@ -2,7 +2,7 @@ function Home() {
   return (
     <div className="home">
       <div className="home-heading">
-        <h1>Welcome to My Portfolio!</h1>
+        <h1 className="heading">Welcome to My Portfolio</h1>
       </div>
 
       <div className="home-description">

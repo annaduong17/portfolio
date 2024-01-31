@@ -69,7 +69,7 @@ function App () {
           <PortfolioPage />
           <ContactPage />
 
-          <BackToTopButton />
+          <BackToTopButton setActiveLink={setActiveLink}/>
           <Footer />
         </div>
   )

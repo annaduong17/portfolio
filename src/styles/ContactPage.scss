@@ -16,6 +16,10 @@ $white: #FFFFFF;
   background-color: $white;
   padding: clamp(20px, 4vw, 50px);
 
+  h2 {
+    text-align: center;
+  }
+
   p {
     font-size: clamp(1rem, 1.25vw, 2rem);
     line-height: 200%;
@@ -28,10 +32,10 @@ $white: #FFFFFF;
     a {
       font-weight: 700;
       color: $cherry;
-      margin-right: 10px;
+      margin-right: 1vw;
 
       &.icon-link {
-        width: clamp(20px, 4vw, 30px);
+        width: clamp(20px, 2.5vw, 40px);
         display: flex;
         justify-content: center;
       }
@@ -44,14 +48,9 @@ $white: #FFFFFF;
     svg {
       display: flex;
       justify-content: flex-start;
-      width: 40px;
-      height: 40px;
+      width: 50px;
+      height: 50px;
       text-align: left;
-    }
-
-    .email,
-    .linkedin {
-      width: 25px;
     }
   }
 }

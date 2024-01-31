@@ -34,11 +34,11 @@ function Phone({ isMobile }) {
   }
 
   const playlist = [
-    'Email: aduong9417@gmail.com',
-    'GitHub: github.com/annaduong17',
-    'LinkedIn: linkedin.com/in/annaduong17',
-    'Learning: Next.js',
-    'Working on: a Quiz App'
+    'aduong9417@gmail.com',
+    'github.com/annaduong17',
+    'linkedin.com/in/annaduong17',
+    'Learning Next.js',
+    'Working on a Quiz App'
   ]
 
   useEffect(() => {

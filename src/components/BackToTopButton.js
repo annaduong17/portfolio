@@ -1,13 +1,15 @@
 import { useState, useEffect } from 'react';
 
-function BackToTopButton() {
+function BackToTopButton({ setActiveLink }) {
   const [ showComponent, setShowComponent ] = useState(false);
 
   const handleBackToTopClick = () => {
     window.scrollTo({
       top: 0,
       behavior: 'smooth'
-    })
+    });
+
+    setActiveLink('HOME');
   }
 
   useEffect(() => {
