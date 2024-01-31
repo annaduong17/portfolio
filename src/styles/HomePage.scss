@@ -30,6 +30,7 @@ $white: #FFFFFF;
     margin: clamp(5px, 1.25vw, 10px);
     padding-block: clamp(15px, 3vw, 30px);
     padding-inline: clamp(20px, 1vw, 15px);
+    text-align: center;
 
     .avatar {
       border-radius: 50%;
@@ -38,13 +39,21 @@ $white: #FFFFFF;
       box-shadow: 0px 0px 5px 0px $cherry;
     }
 
+    .name {
+      font-family: 'Satisfy', cursive;
+      font-size: clamp(1.5rem, 2.5vw, 2.5rem);
+      font-weight: 400;
+      color: $white;
+      margin-block: 2vw 0;
+    }
+
     .title {
       text-transform: uppercase;
-      font-size: clamp(0.75rem, 1.25vw, 1.5rem);
-      font-weight: 700;
+      font-size: clamp(0.65rem, 1vw, 1.5rem);
+      font-weight: 400;
       letter-spacing: 0.25px;
       color: $white;
-      margin-block: 20px 0;
+      margin-block: 0;
     }
   }
 
@@ -53,8 +62,7 @@ $white: #FFFFFF;
       font-size: clamp(0.5rem, 1vw, 1rem);
       width: clamp(100px, 15vw, 200px);
       height: 30px;
-      display: flex;
-      justify-content: center;
+      text-align: center;
       padding: clamp(5px, 1vw, 20px);
       margin-top: 0;
     }
@@ -142,18 +150,12 @@ $white: #FFFFFF;
     background-color: $white;
     margin-left: clamp(50px, 10vw, 200px);
     padding-block: clamp(50px, 8vw, 150px);
-    padding-inline: clamp(125px, 15vw, 175px) clamp(30px, 5vw, 75px);
+    padding-inline: clamp(135px, 15vw, 175px) clamp(30px, 5vw, 75px);
 
     h1 {
-      font-family: 'Satisfy', sans-serif;
-      font-size: clamp(1rem, 4vw, 4rem);
+      font-family: 'Open Sans', sans-serif;
+      font-size: clamp(1.5rem, 3vw, 4rem);
       color: $pink;
-      margin: 0;
-    }
-
-    h2 {
-      font-size: clamp(0.75rem, 2vw, 1.5rem);
-      font-weight: 400;
       margin: 0;
     }
 
@@ -161,7 +163,6 @@ $white: #FFFFFF;
       p {
       font-size: clamp(1rem, 1.25vw, 1.5rem);
       line-height: 200%;
-      margin-top: clamp(30px, 3vw, 50px);
       }
     }
 

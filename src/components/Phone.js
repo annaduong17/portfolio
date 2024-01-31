@@ -34,9 +34,11 @@ function Phone({ isMobile }) {
   }
 
   const playlist = [
-    'Currently learning Next.js',
-    'Currently working on a Food Ordering App',
-    'Current favorite technology: React'
+    'Email: aduong9417@gmail.com',
+    'GitHub: github.com/annaduong17',
+    'LinkedIn: linkedin.com/in/annaduong17',
+    'Learning: Next.js',
+    'Working on: a Quiz App'
   ]
 
   useEffect(() => {
@@ -48,7 +50,7 @@ function Phone({ isMobile }) {
       
       intervalId = setInterval(() => {
         setIndex((prev) => (prev === playlist.length - 1 ? 0 : prev + 1));
-      }, 2000);
+      }, 1000);
     }
 
     return () => clearInterval(intervalId);
@@ -56,7 +58,7 @@ function Phone({ isMobile }) {
 
   const renderedItems = playlist.map((item, i) => {
     return (
-      <p key={i} className="song">{item}</p>
+      <p key={i} className="song flex-row-center">{item}</p>
     );
   })
 
@@ -67,7 +69,10 @@ function Phone({ isMobile }) {
         <img height={180}
         width={180} 
         className="avatar" src="/images/avatar.jpeg" alt="avatar" />
-      <h2 className='title'>Web Developer</h2>
+        <div>
+          <h2 className='name'>Anna Duong</h2>
+          <h3 className='title'>Web Developer</h3>
+        </div>
       </div>
       {isMobile && <Home />}
 
