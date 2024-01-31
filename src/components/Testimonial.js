@@ -1,6 +1,16 @@
-function Testimonial() {
+function Testimonial({ name, title, image, recommendation }) {
   return (
-    <div>testimonial</div>
+    <div className="testimonial">
+      <div className="recommender-container">
+        <img src={image} alt="avatar" />
+        <h2>{name}</h2>
+        <h3>{title}</h3>
+        </div>
+      
+      <div className="recommendation-container">
+        <p>{recommendation}</p>
+      </div>
+    </div>
   );
 }
 

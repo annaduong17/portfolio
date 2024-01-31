@@ -1,4 +1,5 @@
 import Testimonial from "./Testimonial";
+import '../styles/TestimonialsPage.scss';
 
 function TestimonialsPage() {
   const testimonialsArr = [
@@ -34,7 +35,9 @@ function TestimonialsPage() {
   })
 
   return (
-    <div id="testimonials-page">Testimonials Page</div>
+    <div id="testimonials-page" className="testimonials-page page-margin page-padding">
+      <div className="testimonials">{renderedItems}</div>
+    </div>
   );
 }
 

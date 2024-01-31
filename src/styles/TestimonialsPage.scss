@@ -11,3 +11,62 @@ $shadow-gray: rgb(150, 150, 150);
 $dark-gray: rgb(128, 128, 128);
 $white: #FFFFFF;
 
+.testimonial {
+  display: flex;
+  min-height: 300px;
+  background-color: rgba(255, 255, 255, 1);
+  border-radius: clamp(10px, 5vw, 20px);
+  flex-grow: 0;
+  padding: clamp(10px, 5vw, 50px);
+  margin-bottom: clamp(10px, 2vw, 30px);
+
+  img {
+    border-radius: 50%;
+  }
+}
+
+.recommender-container {
+  text-align: center;
+  min-width: 200px;
+  padding-top: clamp(10px, 2vw, 30px);
+  
+
+  h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(1rem, 2vw, 2rem);
+    color: $pink;
+    margin-bottom: 0px;
+  }
+
+  h3 {
+    font-size: clamp(0.75rem, 1vw, 1rem);
+    margin-top: 0;
+    text-transform: uppercase;
+  }
+}
+
+.recommendation-container {
+  padding-left: clamp(20px, 5vw, 50px);
+
+  p {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    line-height: 200%;
+  }
+}
+
+
+@media (max-width: 1000px) {
+  .testimonial {
+    flex-direction: column;
+  }
+
+  .recommender-container {
+    h2 {
+      font-size: clamp(1.5rem, 3vw, 3rem);
+    }
+    
+    h3 {
+      font-size: clamp(0.75rem, 1vw, 1.5rem);
+    }
+  }
+}
