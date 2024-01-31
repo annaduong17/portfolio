@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
+import TestimonialsPage from './components/TestimonialsPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
 import NotFound from './components/NotFound';
@@ -67,6 +68,7 @@ function App () {
 
           <HomePage isMobile={isMobile} />
           <PortfolioPage />
+          <TestimonialsPage />
           <ContactPage />
 
           <BackToTopButton setActiveLink={setActiveLink}/>

@@ -16,6 +16,9 @@ function Menu({ toggleMenu, activeLink }) {
         <a className={`no-underline ${activeLink === "PROJECTS" ? "active" : ""}`} onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>
         </li>
         <li>
+        <a className={`no-underline ${activeLink === "TESTIMONIALS" ? "active" : ""}`} onClick={toggleMenu} href="#testimonials-page">TESTIMONIALS</a>
+        </li>
+        <li>
         <a className={`no-underline ${activeLink === "CONTACT" ? "active" : ""}`} onClick={toggleMenu} href="#contact-page">CONTACT</a>
         </li>
       </ul>
