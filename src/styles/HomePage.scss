@@ -160,7 +160,7 @@ $white: #FFFFFF;
       font-family: 'Open Sans', sans-serif;
       font-size: clamp(1.5rem, 3vw, 4rem);
       color: $pink;
-      margin: 0;
+      margin-top: 0;
     }
 
     .home-description {
@@ -172,6 +172,165 @@ $white: #FFFFFF;
 
     .home-buttons {
         margin-top: clamp(30px, 4vw, 75px);
+    }
+  }
+}
+
+@media (max-width: 599px) {
+  .home-page {
+    flex-direction: column;
+
+    .home {
+      text-align: center;
+      padding-inline: 0;
+
+      h1 {
+        font-size: clamp(1.25rem, 6.5vw, 4rem);
+      }
+
+      h2 {
+        font-size: clamp(0.75rem, 3.5vw, 3rem);
+      }
+
+      .home-description p {
+        font-size: clamp(1rem, 2vw, 2rem);
+        margin-bottom: 10vw;
+      }
+
+      .btn {
+        font-size: clamp(0.7rem, 2.5vw, 2rem);
+        padding-block: 3.5vw;
+        padding-inline: 5vw;
+        
+      }
+    }
+
+    .phone-container {
+      position: unset;
+      
+      .phone {
+        border-radius: clamp(20px, 10vw, 50px);
+        box-shadow: inset 0px 0px 10px $dark-gray;
+
+        .phone-display {
+          border-radius: clamp(20px, 8vw, 50px) clamp(20px, 8vw, 50px) 0 0 ;
+          flex-direction: row;
+          align-items: center;
+          min-height: 100%;
+          margin: clamp(10px, 1vw, 30px);
+          padding-block: 5vw;
+          
+          .avatar {
+            width: 40%;
+            height: 100%;
+            margin-right: 5vw;
+          }
+
+          .name {
+            font-size: clamp(1.5rem, 7vw, 3rem);
+          }
+
+          .title {
+            font-size: clamp(0.75rem, 3vw, 3rem);
+            text-align: center;
+          }
+        }
+
+        .phone-control {
+          margin-top: 10vw;
+
+          .song {
+            font-size: clamp(0.75rem, 3vw, 1.5rem);
+            width: clamp(200px, 80vw, 350px);
+          }
+        }
+
+        input[type="range"] {
+          -webkit-appearance: none;
+          appearance: none;
+          cursor: pointer;
+          width: 60vw;
+      
+
+          &::-webkit-slider-runnable-track {
+            background: $cherry;
+            height: 1vw;
+            border-radius: 1rem;
+          }
+
+          &::-webkit-slider-thumb {
+            -webkit-appearance: none; 
+            appearance: none; 
+            background-color: $pink;
+            margin-top: -1.5vw;
+            height: 4vw;
+            width: 4vw; 
+            border-radius: 50%;
+          }
+
+          &::-moz-range-track {
+            background: $cherry;
+            height: 1vw;
+            border-radius: 1rem;
+          }
+
+          &::-moz-range-thumb {
+            -webkit-appearance: none; 
+            appearance: none; 
+            background-color: $pink;
+            margin-top: -1.5vw;
+            height: 4vw;
+            width: 4vw; 
+            border-radius: 50%;
+          }
+
+          &::-moz-range-progress {
+            background-color: $pink;
+          }
+
+          &::-ms-track {
+            background-color: $cherry;
+          }
+
+          &::-ms-thumb {
+            background-color: $pink;
+          }
+
+          &::-ms-fill-lower {
+            background-color: $pink;
+          }
+        }
+
+        .control-buttons {
+          
+          margin: 8vw;
+
+          svg {
+            width: 7vw;
+            height: 100%;
+            padding-inline: 2.5vw;
+            padding-block: 0;
+          }
+        }
+      }
+    }
+
+    .home {
+      width: 75%;
+      margin-inline: auto;
+      padding: 5vw;
+
+      h1 {
+        font-size: 5vw;
+      }
+    }
+  }
+}
+
+@media (min-width: 800px) {
+  .home-page {
+    .home {
+      padding-block: clamp(50px, 10vw, 150px);
     }
   }
 }

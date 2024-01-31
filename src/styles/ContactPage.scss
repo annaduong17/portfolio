@@ -55,3 +55,9 @@ $white: #FFFFFF;
     }
   }
 }
+
+@media (max-width: 599px) {
+  .contact {
+    width: auto;
+  }
+}

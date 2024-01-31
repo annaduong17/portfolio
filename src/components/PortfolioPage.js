@@ -160,7 +160,10 @@ function PortfolioPage() {
 
   return (
     <div id='portfolio-page' className='portfolio-page page-margin page-padding'>
-      <div className='projects flex-wrap'>{renderedItems}</div>
+      <h2 className='heading'>Projects</h2>
+      <div className='projects flex-wrap'>
+        {renderedItems}
+      </div>
     </div>
   );
 }

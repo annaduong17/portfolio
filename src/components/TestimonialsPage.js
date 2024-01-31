@@ -36,6 +36,7 @@ function TestimonialsPage() {
 
   return (
     <div id="testimonials-page" className="testimonials-page page-margin page-padding">
+      <h2 className="heading">Testimonials</h2>
       <div className="testimonials">{renderedItems}</div>
     </div>
   );

@@ -11,6 +11,12 @@ $shadow-gray: rgb(150, 150, 150);
 $dark-gray: rgb(128, 128, 128);
 $white: #FFFFFF;
 
+.testimonials-page {
+  h2 {
+    text-align: center;
+  }
+}
+
 .testimonial {
   display: flex;
   min-height: 300px;
