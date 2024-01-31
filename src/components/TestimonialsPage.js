@@ -1,3 +1,5 @@
+import Testimonial from "./Testimonial";
+
 function TestimonialsPage() {
   const testimonialsArr = [
     {
@@ -19,6 +21,17 @@ function TestimonialsPage() {
       recommendation: 'Anna is an exceptional software engineer that can contribute to any team. I have worked on several occasions with her, but I was most impressed with her during our time working on Vueable Query. She displayed a knack for learning and understanding new technologies in order to develop key features for our product. Anna did not take any shortcuts and went above and beyond fulfilling her tasks by writing clean and effective code. But aside from having the discipline to self-navigate her way through obstacles, she is open-minded to learn from others, which drives intellectual conversations that benefit all parties. She goes out of her way to make sure that the team works under a friendly and positive environment. Her resiliency to overcome roadblocks and passion to expand her skill sets as a software engineer were a valuable asset to our team. My experience working with Anna shows that she possesses tremendous potential and can have an immediate impact on any team.'
     }
   ]
+
+  const renderedItems = testimonialsArr.map((testimonial, i) => {
+    return (
+      <Testimonial 
+        name={testimonial.name}
+        title={testimonial.title}
+        image={testimonial.image}
+        recommendation={testimonial.recommendation}
+      />
+    )
+  })
 
   return (
     <div id="testimonials-page">Testimonials Page</div>
