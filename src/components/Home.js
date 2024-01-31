@@ -6,12 +6,12 @@ function Home() {
       </div>
 
       <div className="home-description">
-        <p>Hello, I'm Anna, a front-end focused full-stack developer. I find joy in turning goals and visions into functional and aesthetically pleasing user interfaces that provide satisfying user experience. Let me know how I can help.</p>
+        <p>Hello, I'm Anna, a web developer. I find joy in translating goals and visions into both functional and visually appealing user interfaces. As a full-stack developer with a strong focus on front-end technologies, I'm dedicated to creating seamless and enjoyable user experiences. Feel free to explore my work and let me know how I can help or contribute to your next project.</p>
       </div>
 
       <div className="home-buttons">
-        <a className="btn primary-btn no-underline" href="#portfolio-page">View Projects</a>
-        <a className="btn secondary-btn no-underline" href="#contact-page">Hire Me</a>
+        <a className="btn primary-btn no-underline" href="#portfolio-page">See My Work</a>
+        <a className="btn secondary-btn no-underline" href="#contact-page">Contact Me</a>
       </div>
     </div>
   );
