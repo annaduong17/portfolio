@@ -82,11 +82,9 @@ svg {
 }
 
 .menu-icon {
-  position: absolute; 
-  top: 0;
   border: none;
   background: transparent;
-  margin: clamp(20px, 3vw, 75px);
+  margin-left: clamp(20px, 3vw, 75px);
   cursor: pointer;
 
   svg {
@@ -97,12 +95,12 @@ svg {
 }
 
 .page-margin {
-  margin: clamp(10px, 10vw, 130px);
+  margin: clamp(10px, 10vw, 100px);
   margin-bottom: 0;
 }
 
 .page-padding {
-  padding-top: clamp(50px, 10vw, 100px);
+  padding-top: clamp(75px, 5vw, 150px);
 }
 
 .heading {
@@ -141,12 +139,6 @@ svg {
       background-color: $pink;
     }
   }
-}
-
-.not-found {
-  font-size: clamp(1rem, 1vw, 2rem);
-  margin: clamp(30px, 10vw, 150px);
-  height: clamp(100px, 30vw, 600px);
 }
 
 .back-to-top-btn {

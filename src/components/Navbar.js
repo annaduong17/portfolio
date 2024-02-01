@@ -2,7 +2,6 @@ import Menu from './Menu';
 import '../styles/Navbar.scss';
 
 function Navbar({ scrolled, isMobile, showMenu, toggleMenu, handleNavClick, activeLink }) {
-
   return (
     
     <div className="navbar-container">

@@ -18,6 +18,20 @@ $white: #FFFFFF;
   height: 100%;
 }
 
+.song {
+      font-size: clamp(0.5rem, 1vw, 1rem);
+      width: clamp(100px, 15vw, 200px);
+      height: 30px;
+      text-align: center;
+      padding: clamp(5px, 1vw, 20px);
+      margin-block: 0 clamp(10px, 1vw, 20px);
+      color: $cherry;
+
+      &:hover {
+        color: $pink;
+      }
+    }
+
 .phone {
   background-color: $white;
   border-radius: 20px;
@@ -61,15 +75,6 @@ $white: #FFFFFF;
 
   .phone-control {
     align-items: center;
-
-    .song {
-      font-size: clamp(0.5rem, 1vw, 1rem);
-      width: clamp(100px, 15vw, 200px);
-      height: 30px;
-      text-align: center;
-      padding: clamp(5px, 1vw, 20px);
-      margin-top: 0;
-    }
 
     input[type="range"] {
       -webkit-appearance: none;
@@ -242,6 +247,7 @@ $white: #FFFFFF;
           .song {
             font-size: clamp(0.75rem, 3vw, 1.5rem);
             width: clamp(200px, 80vw, 350px);
+            margin-block: 0 clamp(10px, 5vw, 30px);
           }
         }
 

@@ -34,11 +34,24 @@ function Phone({ isMobile }) {
   }
 
   const playlist = [
-    'aduong9417@gmail.com',
-    'github.com/annaduong17',
-    'linkedin.com/in/annaduong17',
-    'Learning Next.js',
-    'Working on a Quiz App'
+    {
+      song: 'aduong9417@gmail.com',
+      href: 'mailto:aduong9417@gmail.com'
+    },
+    {
+      song: 'github.com/annaduong17',
+      href: 'https://github.com/annaduong17'
+    },
+    {
+      song: 'linkedin.com/in/annaduong17',
+      href: 'https://www.linkedin.com/in/annaduong17'
+    },
+    {
+      song: 'Learning Next.js'
+    },
+    {
+      song: 'Working on a Quiz App'
+    }
   ]
 
   useEffect(() => {
@@ -57,10 +70,9 @@ function Phone({ isMobile }) {
   }, [index, playing, playlist.length]);
 
   const renderedItems = playlist.map((item, i) => {
-    return (
-      <p key={i} className="song flex-row-center">{item}</p>
-    );
-  })
+    return item.href ? <a key={i} href={item.href} target="_blank" rel="noreferrer" className="song flex-row-center">{item.song}</a> :
+    <p key={i} className="song flex-row-center">{item.song}</p>
+  });
 
   return (
     <div className='phone-container flex-row-center'>
