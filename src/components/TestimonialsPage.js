@@ -13,7 +13,7 @@ function TestimonialsPage() {
       name: 'Esther Witbeck',
       title: 'Software Engineer',
       image: '/images/esther-avatar.jpeg',
-      recommendation: 'Anna is dedicated. She went above and beyond working with our team on Vueable Query, both with product and promotion. She spent long hours refining features, improving them with her emphasis on aesthetics and UX and especially the clear skill her code evinces.Anna exudes curiosity. She\'s never afraid to dive directly into new and unfamiliar technologies, surfacing with new insights for her team and work. Maybe most importantly, Anna is positive. Nothing gets in the way of her optimism; she brightened every day and every standup with her enthusiasm. I credit Anna\'s commitment and infectious good moods for much of what we were able to accomplish.'
+      recommendation: 'Anna is dedicated. She went above and beyond working with our team on Vueable Query, both with product and promotion. She spent long hours refining features, improving them with her emphasis on aesthetics and UX and especially the clear skill her code evinces. Anna exudes curiosity. She\'s never afraid to dive directly into new and unfamiliar technologies, surfacing with new insights for her team and work. Maybe most importantly, Anna is positive. Nothing gets in the way of her optimism; she brightened every day and every standup with her enthusiasm. I credit Anna\'s commitment and infectious good moods for much of what we were able to accomplish.'
     },
     {
       name: 'Brandon Yoon',
