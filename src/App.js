@@ -68,7 +68,7 @@ function App () {
           <HomePage isMobile={isMobile} />
           <PortfolioPage />
           <TestimonialsPage />
-          <ContactPage />
+          <ContactPage setActiveLink={setActiveLink}/>
 
           <BackToTopButton setActiveLink={setActiveLink}/>
           <Footer />

@@ -112,6 +112,16 @@ $white: #FFFFFF;
   }
 }
 
+.success {
+  
+  h2 {
+    font-family: 'Satisfy', cursive;
+    font-size: clamp(1.5rem, 3vw, 3rem);
+    margin-top: 0;
+    color: $pink;
+  }
+}
+
 @media (max-width: 1000px) {
   .contact-page div.flex-row-center {
     flex-direction: column;

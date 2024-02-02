@@ -1,7 +1,7 @@
-function ContactForm() {
+function ContactForm({ handleSubmit }) {
   return (
     <div id="form-container" className="contact">
-      <form className="contact-form">
+      <form onSubmit={handleSubmit} className="contact-form">
       <h3 className="text-align-center">Contact Form</h3>
       <p>I am fluent in English and Vietnamese. Feel free to communicate with me in either language.</p>
 
