@@ -5,7 +5,6 @@ import PortfolioPage from './components/PortfolioPage';
 import TestimonialsPage from './components/TestimonialsPage';
 import ContactPage from './components/ContactPage';
 import Footer from './components/Footer';
-import NotFound from './components/NotFound';
 import BackToTopButton from './components/BackToTopButton';
 
 function App () {

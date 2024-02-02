@@ -45,12 +45,6 @@ function Phone({ isMobile }) {
     {
       song: 'linkedin.com/in/annaduong17',
       href: 'https://www.linkedin.com/in/annaduong17'
-    },
-    {
-      song: 'Learning Next.js'
-    },
-    {
-      song: 'Working on a Quiz App'
     }
   ]
 
@@ -70,8 +64,7 @@ function Phone({ isMobile }) {
   }, [index, playing, playlist.length]);
 
   const renderedItems = playlist.map((item, i) => {
-    return item.href ? <a key={i} href={item.href} target="_blank" rel="noreferrer" className="song flex-row-center">{item.song}</a> :
-    <p key={i} className="song flex-row-center">{item.song}</p>
+    return <a key={i} href={item.href} target="_blank" rel="noreferrer" className="song flex-row-center">{item.song}</a>;
   });
 
   return (

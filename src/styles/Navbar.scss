@@ -12,14 +12,17 @@ $dark-gray: rgb(128, 128, 128);
 $white: #FFFFFF;
 
 .navbar {
+  display: flex;
+  align-items: center;
   position: fixed;
   top: 0;
   width: min(100%, 1300px);
   height: clamp(30px, 2vw, 50px);
-  padding-inline: clamp(10px, 10vw, 150px);
+  padding-inline: clamp(10px, 10vw, 100px);
   padding-block: clamp(15px, 1vw, 30px);
   margin-bottom: clamp(20px, 2vw, 30px);
   z-index: 5;
+  
   
   &.mobile {
     padding-inline: clamp(10px, 3vw, 50px);

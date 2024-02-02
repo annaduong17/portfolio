@@ -6,6 +6,7 @@ function ProjectDetails({ name, description, features, techStack, button, link, 
   return (
     <div className='project-details flex-column-center'>
       {showDetails ? <ProjectInfo
+        showDetails={showDetails}
         name={name} 
         description={description}
         features={features} 

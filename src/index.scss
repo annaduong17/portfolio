@@ -73,12 +73,12 @@ svg {
   flex-wrap: wrap;
 }
 
-.active {
-  font-weight: 700;
-}
-
 .no-underline {
   text-decoration: none;
+}
+
+.bold {
+  font-weight: 700;
 }
 
 .menu-icon {
@@ -105,7 +105,6 @@ svg {
 
 .heading {
   font-size: clamp(1.5rem, 3vw, 4rem);
-  font-weight: 700;
   color: $pink;
   margin-top: 0;
 }
@@ -114,7 +113,6 @@ svg {
   border-radius: clamp(5px, 0.25vw, 10px);
   border-radius: 50px;
   width: 100px;
-  font-weight: 700;
   font-size: clamp(0.7rem, 1vw, 1rem);
   padding-block: clamp(0.5rem, 1.75vw, 1.5rem);
   padding-inline: clamp(1rem, 2.5vw, 2rem);
