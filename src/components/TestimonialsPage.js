@@ -26,6 +26,7 @@ function TestimonialsPage() {
   const renderedItems = testimonialsArr.map((testimonial, i) => {
     return (
       <Testimonial 
+        key={i}
         name={testimonial.name}
         title={testimonial.title}
         image={testimonial.image}

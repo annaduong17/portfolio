@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from 'react';
+import { useState, useEffect } from 'react';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import PortfolioPage from './components/PortfolioPage';
@@ -12,7 +12,6 @@ function App () {
   const [ isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [ showMenu, setShowMenu ] = useState(false);
   const [ activeLink, setActiveLink ] = useState("HOME");
-  const navbarRef = useRef();
 
   const handleNavClick = (e) => {
     setActiveLink(e.target.textContent);
@@ -56,7 +55,6 @@ function App () {
         <div id='app' className='app'>
           <Navbar 
             scrolled={scrolled} 
-            ref={navbarRef}
             isMobile={isMobile}
             showMenu={showMenu}
             toggleMenu={toggleMenu}

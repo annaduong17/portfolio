@@ -4,7 +4,7 @@ import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 import Success from './Success';
 
-function ContactPage({ setActiveLink }) {
+function ContactPage() {
   const [ formData, setFormData ] = useState({});
   const [ formSubmitted, setFormSubmitted ] = useState(false);
   const [ errors, setErrors ] = useState({});
@@ -49,18 +49,35 @@ function ContactPage({ setActiveLink }) {
     return newErrors;
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
 
     const newErrors = validateForm(formData);
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      setFormSubmitted(true);
-      scrollToSection(successMessageRef);
+      try {
+        const response = await fetch('http://localhost:3000/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }, 
+          body: JSON.stringify(formData)
+        });
+  
+        if (response.ok) {
+          console.log('Form submitted successfully!');
+          setFormSubmitted(true);
+          scrollToSection(successMessageRef);
+        } else {
+          console.error('Error submitting:', response.statusText);
+        }
+      } catch (error) {
+        console.error('Error submitting form:', error.message);
+      }  
     } 
-  } 
-
+  }
+  
   return (
     <div ref={successMessageRef} id="contact-page" className="contact-page page-margin page-padding">
       <h2 className='heading text-align-center'>Contact</h2>

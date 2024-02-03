@@ -2,26 +2,37 @@ require('dotenv').config();
 const express = require('express');
 const nodemailer = require('nodemailer');
 const bodyParser = require('body-parser');
+const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT;
+
+app.use(cors());
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true}));
+
+app.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', '*');
+  res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
+  res.header('Access-Control-Allow-Headers', 'Content-Type');
+  res.header('Access-Control-Allow-Credentials', true);
+  next();
+});
 
 const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'aduong9417@gmail.com',
-    pass: process.env.GMAIL_PASSWORD
+    pass: process.env.EMAIL_PASSWORD
   }
 });
 
 app.post('/submit-form', (req, res) => {
   const { name, email, message } = req.body;
-
+  
   const mailOptions = {
-    from: 'aduong9417@gmail.com',
+    from: email,
     to: 'aduong9417@gmail.com',
     subject: 'Portfolio Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`

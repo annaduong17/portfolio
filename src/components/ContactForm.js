@@ -20,7 +20,7 @@ function ContactForm({ formData, errors, handleInputChange, handleSubmit }) {
 
      <section className="form-section">
       <label className="form-label bold" htmlFor="message">Message</label>
-      <textarea onChange={handleInputChange} required className="form-textarea form-field" id="message" type="text">{formData.message}</textarea>
+      <textarea onChange={handleInputChange} required className="form-textarea form-field" id="message" type="text" value={formData.message}></textarea>
       <span className="validation-message">{errors.message}</span>
      </section>
 
