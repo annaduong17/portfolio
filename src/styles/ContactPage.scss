@@ -23,6 +23,7 @@ $white: #FFFFFF;
   }
 
   p {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 200%;
   }
 }
@@ -32,15 +33,6 @@ $white: #FFFFFF;
   background-color: $white;
   padding: clamp(50px, 5vw, 100px) clamp(30px, 5vw, 75px);
   width: 50%;
-  
-  h2 {
-    text-align: center;
-  }
-
-  p {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
-    line-height: 200%;
-  }
 
   .contact-link {
     display: flex;
@@ -126,12 +118,8 @@ $white: #FFFFFF;
 }
 
 .success {
-  
-  h2 {
-    font-family: 'Satisfy', cursive;
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    margin-top: 0;
-    color: $pink;
+  p {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
   }
 }
 

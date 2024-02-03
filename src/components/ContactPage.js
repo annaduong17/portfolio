@@ -8,6 +8,8 @@ function ContactPage() {
   const [ formData, setFormData ] = useState({});
   const [ formSubmitted, setFormSubmitted ] = useState(false);
   const [ errors, setErrors ] = useState({});
+  const [ isLoading, setIsLoading ] = useState(false);
+  const [ serverError, setServerError ] = useState(false);
   const successMessageRef = useRef(null);
 
   const scrollToSection = (ref) => {
@@ -57,7 +59,9 @@ function ContactPage() {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('http://localhost:3434/api/submit-form', {
+        setIsLoading(true);
+
+        const response = await fetch('/api/submit-form', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -70,10 +74,14 @@ function ContactPage() {
           setFormSubmitted(true);
           scrollToSection(successMessageRef);
         } else {
-          console.error('Error submitting:', response.statusText);
+          setServerError(true);
+          console.error('Error submitting form:', response.statusText);
         }
       } catch (error) {
+        setServerError(true);
         console.error('Error submitting form:', error.message);
+      } finally {
+        setIsLoading(false);
       }  
     } 
   }
@@ -87,6 +95,8 @@ function ContactPage() {
           errors={errors}
           handleInputChange={handleInputChange}
           handleSubmit={handleSubmit}
+          isLoading={isLoading}
+          serverError={serverError}
         />}
         <ContactInfo />
       </div>
