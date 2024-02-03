@@ -57,7 +57,7 @@ function ContactPage() {
 
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await fetch('http://localhost:3000/submit-form', {
+        const response = await fetch('http://localhost:3434/api/submit-form', {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json'
@@ -66,7 +66,7 @@ function ContactPage() {
         });
   
         if (response.ok) {
-          console.log('Form submitted successfully!');
+          setFormData({});
           setFormSubmitted(true);
           scrollToSection(successMessageRef);
         } else {

@@ -5,7 +5,7 @@ const bodyParser = require('body-parser');
 const cors = require('cors');
 
 const app = express();
-const PORT = process.env.PORT;
+const PORT = process.env.PORT || 3434;
 
 app.use(cors());
 
@@ -28,11 +28,11 @@ const transporter = nodemailer.createTransport({
   }
 });
 
-app.post('/submit-form', (req, res) => {
+app.post('/api/submit-form', (req, res) => {
   const { name, email, message } = req.body;
   
   const mailOptions = {
-    from: email,
+    from: 'aduong9417@gmail.com',
     to: 'aduong9417@gmail.com',
     subject: 'Portfolio Contact Form Submission',
     text: `Name: ${name}\nEmail: ${email}\nMessage: ${message}`
@@ -50,3 +50,5 @@ app.post('/submit-form', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}`);
 });
+
+module.exports = app;
