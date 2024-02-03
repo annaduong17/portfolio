@@ -1,4 +1,6 @@
-function ContactForm({ formData, errors, handleInputChange, handleSubmit, isLoading, serverError }) {
+import ReCAPTCHA from "react-google-recaptcha";
+
+function ContactForm({ formData, errors, handleInputChange, handleSubmit, isLoading, serverError, reRef, handleCaptchaChange }) {
   
   return (
     <div id="form-container" className="contact">
@@ -8,7 +10,7 @@ function ContactForm({ formData, errors, handleInputChange, handleSubmit, isLoad
           <p>An unexpected issue occurred while processing your request. I apologize for the inconvenience. Please try again in a little while or email me directly. Thank you for your understanding.</p>
         </div>) : (
 
-        <form noValidate onSubmit={handleSubmit} className="contact-form">
+        <form method="POST" noValidate onSubmit={handleSubmit} className="contact-form">
         <h3 className="text-align-center">Contact Form</h3>
         <p>I am fluent in English and Vietnamese. Feel free to communicate with me in either language.</p>
 
@@ -28,6 +30,10 @@ function ContactForm({ formData, errors, handleInputChange, handleSubmit, isLoad
         <label className="form-label bold" htmlFor="message">Message</label>
         <textarea onChange={handleInputChange} required className="form-textarea form-field" id="message" type="text" value={formData.message}></textarea>
         <span className="validation-message">{errors.message}</span>
+        </section>
+
+        <section className="form-section flex-row-center">
+          <ReCAPTCHA ref={reRef} size="normal" sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} />
         </section>
 
         <section className="form-section flex-row-center">
