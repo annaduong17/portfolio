@@ -5,11 +5,10 @@ import ContactForm from './ContactForm';
 import Success from './Success';
 
 function ContactPage({ setActiveLink }) {
-  const [ nameInput, setNameInput ] = useState('');
-  const [ emailInput, setEmailInput ] = useState('');
-  const [ message, setMessage ] = useState('');
+  const [ formData, setFormData ] = useState({});
   const [ formSubmitted, setFormSubmitted ] = useState(false);
-  const contactRef = useRef(null);
+  const [ errors, setErrors ] = useState({});
+  const successMessageRef = useRef(null);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -19,19 +18,60 @@ function ContactPage({ setActiveLink }) {
     }
   }
 
+  const handleInputChange = (e) => {
+    const { id, value } = e.target;
+
+    setFormData(prevFormData => {
+      const updatedFormData = {...prevFormData, [id]: value};
+
+      return updatedFormData;
+    });
+  }
+
+  const validateForm = (data) => {
+    const newErrors = {};
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+
+    if (!data.name) {
+      newErrors.name = 'Please enter your name';
+    }
+
+    if (!data.email) {
+      newErrors.email = 'Please enter your email';
+    } else if (!emailRegex.test(data.email)) {
+      newErrors.email = 'Please enter a valid email'
+    }
+
+    if (!data.message) {
+      newErrors.message = 'Please enter a message';
+    }
+
+    return newErrors;
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault();
-    setFormSubmitted(true);
 
-    scrollToSection(contactRef);
+    const newErrors = validateForm(formData);
+    setErrors(newErrors);
+
+    if (Object.keys(newErrors).length === 0) {
+      setFormSubmitted(true);
+      scrollToSection(successMessageRef);
+    } 
   } 
 
   return (
-    <div ref={contactRef} id="contact-page" className="contact-page page-margin page-padding">
-      <h2 className='heading text-align-center'>Contact Me</h2>
+    <div ref={successMessageRef} id="contact-page" className="contact-page page-margin page-padding">
+      <h2 className='heading text-align-center'>Contact</h2>
       <div className='flex-row-center'>
+        {formSubmitted ? <Success /> : <ContactForm 
+          formData={formData}
+          errors={errors}
+          handleInputChange={handleInputChange}
+          handleSubmit={handleSubmit}
+        />}
         <ContactInfo />
-        {formSubmitted ? <Success /> : <ContactForm handleSubmit={handleSubmit}/>}
       </div>
     </div>
   );
