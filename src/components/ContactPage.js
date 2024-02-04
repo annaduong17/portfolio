@@ -2,11 +2,6 @@ import { useState, useRef } from 'react';
 import '../styles/ContactPage.scss';
 
 function ContactPage() {
-  const [ formData, setFormData ] = useState({});
-  const [ formSubmitted, setFormSubmitted ] = useState(false);
-  const [ errors, setErrors ] = useState({});
-  const [ isLoading, setIsLoading ] = useState(false);
-  const [ serverError, setServerError ] = useState(false);
   const successMessageRef = useRef(null);
 
   const scrollToSection = (ref) => {
@@ -15,72 +10,6 @@ function ContactPage() {
         behavior: 'smooth'
       });
     }
-  }
-
-  const handleInputChange = (e) => {
-    const { id, value } = e.target;
-
-    setFormData(prevFormData => {
-      const updatedFormData = {...prevFormData, [id]: value};
-
-      return updatedFormData;
-    });
-  }
-
-  const validateForm = (data) => {
-    const newErrors = {};
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-
-    if (!data.name) {
-      newErrors.name = 'Please enter your name';
-    }
-
-    if (!data.email) {
-      newErrors.email = 'Please enter your email';
-    } else if (!emailRegex.test(data.email)) {
-      newErrors.email = 'Please enter a valid email'
-    }
-
-    if (!data.message) {
-      newErrors.message = 'Please enter a message';
-    }
-
-    return newErrors;
-  }
-
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-
-    const newErrors = validateForm(formData);
-    setErrors(newErrors);
-
-    if (Object.keys(newErrors).length === 0) {
-      try {
-        setIsLoading(true);
-
-        const response = await fetch('/api/submit-form', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          }, 
-          body: JSON.stringify(formData)
-        });
-  
-        if (response.ok) {
-          setFormData({});
-          setFormSubmitted(true);
-          scrollToSection(successMessageRef);
-        } else {
-          setServerError(true);
-          console.error('Error submitting form:', response.statusText);
-        }
-      } catch (error) {
-        setServerError(true);
-        console.error('Error submitting form:', error.message);
-      } finally {
-        setIsLoading(false);
-      }  
-    } 
   }
   
   return (
