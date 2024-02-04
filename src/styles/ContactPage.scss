@@ -31,7 +31,7 @@ $white: #FFFFFF;
   border-radius: 20px;
   background-color: $white;
   padding: clamp(50px, 5vw, 100px) clamp(30px, 5vw, 75px);
-  width: 50%;
+  flex-grow: 1;
   
   h2 {
     text-align: center;
@@ -70,50 +70,6 @@ $white: #FFFFFF;
       text-align: left;
     }
   }
-
-  .submit-section {
-    padding-top: clamp(10px, 2vw, 50px);
-  }
-}
-
-.contact-info {
-  margin-right: clamp(10px, 2vw, 30px);
-}
-
-.contact-form {
-  .form-section {
-    margin-block: clamp(10px, 2vw, 30px);
-  }
-  
-  .form-label {
-    display: block;
-    font-size: clamp(0.75rem, 1.25vw, 1.5rem);
-    text-transform: uppercase;
-  }
-
-  .form-field {
-    width: 100%;
-    margin-block: clamp(10px, 1vw, 20px);
-    border: none;
-    border-radius: 5px;
-    border-bottom: 1px solid $cherry;
-    height: clamp(25px, 3vw, 40px);
-
-    &:focus {
-      border: 1px solid transparent;
-      outline: 1px solid $pink;
-      font-size: clamp(1rem, 1.25vw, 1.5rem);
-    }
-  }
-
-  textarea.form-field {
-    font-family: 'Open Sans', sans-serif;
-    height: clamp(50px, 6vw, 100px);
-  }
-
-  button {
-    text-align: center;
-  }
 }
 
 @media (max-width: 1000px) {
@@ -123,16 +79,5 @@ $white: #FFFFFF;
     h3 {
       font-size: clamp(1.5rem, 4vw, 3rem);
     }
-  }
-
-  .contact {
-    width: auto;
-    flex-grow: 1;
-    padding: clamp(50px, 5vw, 100px) clamp(30px, 8vw, 75px);
-  }
-
-  .contact-info {
-    margin-right: 0;
-    margin-bottom: clamp(10px, 3vw, 30px);
   }
 }

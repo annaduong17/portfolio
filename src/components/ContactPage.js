@@ -1,16 +1,6 @@
-import { useState, useRef } from 'react';
 import '../styles/ContactPage.scss';
 
 function ContactPage() {
-  const successMessageRef = useRef(null);
-
-  const scrollToSection = (ref) => {
-    if (ref && ref.current) {
-      ref.current.scrollIntoView({ 
-        behavior: 'smooth'
-      });
-    }
-  }
   
   return (
     <div id="contact-page" className="page-margin page-padding">

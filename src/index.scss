@@ -114,7 +114,7 @@ svg {
   border-radius: 50px;
   width: 100px;
   font-size: clamp(0.7rem, 1vw, 1rem);
-  padding-block: clamp(0.5rem, 1.75vw, 1.5rem);
+  padding-block: clamp(0.75rem, 1.75vw, 1.5rem);
   padding-inline: clamp(1rem, 2.5vw, 2rem);
   margin-right: clamp(5px, 0.75vw, 15px);
   border: none;
@@ -169,6 +169,12 @@ svg {
   .page-margin {
     margin: clamp(10px, 5vw, 50px);
     margin-top: clamp(65px, 15vw, 100px);
+  }
+}
+
+@media (max-width: 340px) {
+  .page-margin {
+    margin-inline: 5px;
   }
 }
 
