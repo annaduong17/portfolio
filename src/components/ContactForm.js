@@ -36,7 +36,7 @@ function ContactForm({ formData, errors, handleInputChange, handleSubmit, isLoad
           <ReCAPTCHA ref={reRef} size="normal" sitekey={process.env.REACT_APP_RECAPTCHA_SITE_KEY} onChange={handleCaptchaChange} />
         </section>
 
-        <section className="form-section flex-row-center">
+        <section className="form-section flex-row-center submit-section">
           <button disabled={isLoading} type="submit" className="btn primary-btn">{isLoading ? 'Submitting...' : 'Submit' }</button>
         </section>
       </form>

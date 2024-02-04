@@ -62,6 +62,10 @@ $white: #FFFFFF;
       text-align: left;
     }
   }
+
+  .submit-section {
+    padding-top: clamp(10px, 2vw, 50px);
+  }
 }
 
 .contact-info {
