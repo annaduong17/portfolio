@@ -1,24 +1,16 @@
 import { useState, useRef } from 'react';
-import axios from 'axios';
 import '../styles/ContactPage.scss';
 import ContactInfo from './ContactInfo';
 import ContactForm from './ContactForm';
 import Success from './Success';
 
 function ContactPage() {
-  const [ formData, setFormData ] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [ formData, setFormData ] = useState({});
   const [ formSubmitted, setFormSubmitted ] = useState(false);
   const [ errors, setErrors ] = useState({});
   const [ isLoading, setIsLoading ] = useState(false);
   const [ serverError, setServerError ] = useState(false);
-  const [ captchaVerified, setCaptchaVerified ] = useState(false);
-  const [ token, setToken ] = useState(null);
   const successMessageRef = useRef(null);
-  const reRef = useRef(null);
 
   const scrollToSection = (ref) => {
     if (ref && ref.current) {
@@ -59,11 +51,6 @@ function ContactPage() {
     return newErrors;
   }
 
-  const handleCaptchaChange = (value) => {
-    setToken(value);
-    setCaptchaVerified(true);
-  }
-
   const handleSubmit = async (e) => {
     e.preventDefault();
 
@@ -71,34 +58,31 @@ function ContactPage() {
     setErrors(newErrors);
 
     if (Object.keys(newErrors).length === 0) {
-      if (captchaVerified) {
-        try {
-          setIsLoading(true);
+      try {
+        setIsLoading(true);
 
-          const response = await axios.post('/api/submit-form', {
-              name: formData.name,
-              email: formData.email,
-              message: formData.message,
-              token
-          });
-    
-          if (response.status === 201) {
-            setFormData({});
-            setFormSubmitted(true);
-          } else {
-            setServerError(true);
-            console.error('Error submitting:', response.statusText);
-          }
-        } catch (error) {
-          setServerError(true);
-          console.error('Error submitting form:', error.message);
-        } finally {
-          setIsLoading(false);
+        const response = await fetch('/api/submit-form', {
+          method: 'POST',
+          headers: {
+            'Content-Type': 'application/json'
+          }, 
+          body: JSON.stringify(formData)
+        });
+  
+        if (response.ok) {
+          setFormData({});
+          setFormSubmitted(true);
           scrollToSection(successMessageRef);
-        }  
-      } else {
-        console.log("Please verify reCAPTCHA before submitting the form.");
-      }
+        } else {
+          setServerError(true);
+          console.error('Error submitting form:', response.statusText);
+        }
+      } catch (error) {
+        setServerError(true);
+        console.error('Error submitting form:', error.message);
+      } finally {
+        setIsLoading(false);
+      }  
     } 
   }
   
@@ -113,8 +97,6 @@ function ContactPage() {
           handleSubmit={handleSubmit}
           isLoading={isLoading}
           serverError={serverError}
-          reRef={reRef}
-          handleCaptchaChange={handleCaptchaChange}
         />}
         <ContactInfo />
       </div>
