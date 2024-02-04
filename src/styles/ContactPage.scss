@@ -23,7 +23,6 @@ $white: #FFFFFF;
   }
 
   p {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 200%;
   }
 }
@@ -33,15 +32,24 @@ $white: #FFFFFF;
   background-color: $white;
   padding: clamp(50px, 5vw, 100px) clamp(30px, 5vw, 75px);
   width: 50%;
+  
+  h2 {
+    text-align: center;
+  }
 
-  .contact-link {
+  p {
+    font-size: clamp(1rem, 1.25vw, 1.5rem);
+    line-height: 200%;
+  }
+
+  .contact-info {
     display: flex;
     align-items: center;
 
     a {
       font-weight: 700;
       color: $cherry;
-      margin-right: clamp(15px, 1vw, 20px);
+      margin-right: clamp(10px, 1vw, 20px);
 
       &.icon-link {
         width: clamp(20px, 2.5vw, 40px);
@@ -69,11 +77,10 @@ $white: #FFFFFF;
 }
 
 .contact-info {
-  margin-left: clamp(10px, 2vw, 30px);
+  margin-right: clamp(10px, 2vw, 30px);
 }
 
 .contact-form {
-  
   .form-section {
     margin-block: clamp(10px, 2vw, 30px);
   }
@@ -86,7 +93,6 @@ $white: #FFFFFF;
 
   .form-field {
     width: 100%;
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
     margin-block: clamp(10px, 1vw, 20px);
     border: none;
     border-radius: 5px;
@@ -95,15 +101,8 @@ $white: #FFFFFF;
 
     &:focus {
       border: 1px solid transparent;
-      outline: 1px solid $green;
-
-      &:required:invalid {
-        outline: 1px solid red;
-      }
-
-      &:required:invalid + .validation-message {
-        display: block;
-      }
+      outline: 1px solid $pink;
+      font-size: clamp(1rem, 1.25vw, 1.5rem);
     }
   }
 
@@ -114,16 +113,6 @@ $white: #FFFFFF;
 
   button {
     text-align: center;
-  }
-
-  .validation-message {
-    color: red;
-  }
-}
-
-.success {
-  p {
-    font-size: clamp(1rem, 1.25vw, 1.5rem);
   }
 }
 
@@ -143,7 +132,7 @@ $white: #FFFFFF;
   }
 
   .contact-info {
-    margin-left: 0;
-    margin-top: clamp(10px, 3vw, 30px);
+    margin-right: 0;
+    margin-bottom: clamp(10px, 3vw, 30px);
   }
 }
