@@ -8,7 +8,7 @@ function Testimonial({ name, title, image, recommendation }) {
         </div>
       
       <div className="recommendation-container">
-        <p>{recommendation}</p>
+        <p>"{recommendation}"</p>
       </div>
     </div>
   );
