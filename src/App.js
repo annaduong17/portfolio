@@ -11,12 +11,11 @@ function App () {
   const [ scrolled, setScrolled ] = useState(false);
   const [ isMobile, setIsMobile] = useState(window.innerWidth < 600);
   const [ showMenu, setShowMenu ] = useState(false);
-  const [ activeLink, setActiveLink ] = useState("HOME");
+  const [ activeLink, setActiveLink ] = useState("");
 
   const handleNavClick = (e) => {
     setActiveLink(e.target.textContent);
   }
-
 
   const toggleMenu = (e) => {
     setShowMenu(!showMenu);
@@ -41,7 +40,7 @@ function App () {
     return () => {
       window.removeEventListener('scroll', handleScroll)
     }
-  }, [scrolled]);
+  }, [scrolled, activeLink]);
 
   useEffect(() => {
     window.addEventListener('resize', handleResize);
@@ -52,7 +51,7 @@ function App () {
   });
 
   return(
-        <div id='app' className='app'>
+        <div id='home-page' className='app'>
           <Navbar 
             scrolled={scrolled} 
             isMobile={isMobile}

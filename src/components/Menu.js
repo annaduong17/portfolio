@@ -1,8 +1,7 @@
 import '../styles/Menu.scss';
 
 function Menu({ toggleMenu, activeLink }) {
-
-  
+  console.log(activeLink);
   return (
     <div className='menu'>
       <button onClick={toggleMenu}>
@@ -10,7 +9,7 @@ function Menu({ toggleMenu, activeLink }) {
       </button>
       <ul className="flex-column-center">
         <li>
-          <a className={`no-underline ${activeLink === "HOME" ? "bold" : ""}`} onClick={toggleMenu} href="#app">HOME</a>
+          <a className={`no-underline ${activeLink === "HOME" ? "bold" : ""}`} onClick={toggleMenu} href="#home-page">HOME</a>
         </li>
         <li>
         <a className={`no-underline ${activeLink === "PROJECTS" ? "bold" : ""}`} onClick={toggleMenu} href="#portfolio-page">PROJECTS</a>

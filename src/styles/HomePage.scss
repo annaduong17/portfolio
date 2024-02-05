@@ -136,8 +136,8 @@ $white: #FFFFFF;
       margin: clamp(10px, 2vw, 25px);
 
       svg {
-        width: clamp(20px, 3vw, 40px);
-        height: clamp(20px, 3vw, 40px);
+        width: clamp(20px, 3vw, 50px);
+        height: clamp(20px, 3vw, 50px);
       }
 
       button {
@@ -206,7 +206,6 @@ $white: #FFFFFF;
         font-size: clamp(0.7rem, 2.5vw, 2rem);
         padding-block: 3.5vw;
         padding-inline: 5vw;
-        
       }
     }
 
@@ -308,7 +307,6 @@ $white: #FFFFFF;
         }
 
         .control-buttons {
-          
           margin: 8vw;
 
           svg {
@@ -316,6 +314,10 @@ $white: #FFFFFF;
             height: 100%;
             padding-inline: 2.5vw;
             padding-block: 0;
+
+            &.play {
+              width: 10vw;
+            }
           }
         }
       }

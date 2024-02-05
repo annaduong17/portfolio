@@ -19,6 +19,7 @@ $white: #FFFFFF;
   height: 100vh;
   background-color: $cherry;
   z-index: 20;
+  font-weight: 300;
 
   
   button {
@@ -52,17 +53,12 @@ $white: #FFFFFF;
     li * {
       color: $white;
       font-size: clamp(1rem, 2vw, 2rem);
-      font-weight: 300;
       letter-spacing: 2px;
       padding: 20px;
 
       &:hover {
         color: $pink;
       }
-    }
-
-    li *.active {
-        font-weight: 900;
     }
   }
 }
