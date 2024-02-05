@@ -79,10 +79,10 @@ function ContactPage() {
               name: formData.name,
               email: formData.email,
               message: formData.message,
-              token
+              token: token
           });
     
-          if (response.status === 201) {
+          if (response.ok || response.data.success) {
             setFormData({});
             setFormSubmitted(true);
           } else {

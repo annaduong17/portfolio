@@ -10,11 +10,11 @@ const PORT = process.env.PORT || 3434;
 
 app.use(cors());
 
-app.use(bodyParser.json());
+app.use(express.json());
 app.use(bodyParser.urlencoded({ extended: true}));
 
 app.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://www.anna-duong.com');
+  res.header('Access-Control-Allow-Origin', '*');
   res.header('Access-Control-Allow-Methods', 'GET,HEAD,PUT,PATCH,POST,DELETE');
   res.header('Access-Control-Allow-Headers', 'Content-Type');
   res.header('Access-Control-Allow-Credentials', true);
@@ -25,22 +25,24 @@ const transporter = nodemailer.createTransport({
   service: 'gmail',
   auth: {
     user: 'aduong9417@gmail.com',
-    pass: process.env.EMAIL_PASSWORD
+    pass: process.env.SERVER_EMAIL_PASSWORD
   }
 });
 
 app.post('/api/submit-form', async (req, res) => {
   const { name, email, message, token } = req.body;
 
-  const recaptchaSecretKey = process.env.REACT_APP_SECRET_KEY;
+  const recaptchaSecretKey = process.env.SERVER_RECAPTCHA_SECRET_KEY;
   const verificationUrl = `https://www.google.com/recaptcha/api/siteverify?${recaptchaSecretKey}&response=${token}`;
+
+  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
 
   try {
 
     const recaptchaResponse = await axios.post(
       verificationUrl, 
       new URLSearchParams({
-      secret: recaptchaSecretKey,
+      secret: "6LdJwmUpAAAAANTuDRUKi76o4vfubDwXSfzBbDUC",
       response: token,
       }),
       {
@@ -64,8 +66,8 @@ app.post('/api/submit-form', async (req, res) => {
         if (error) {
           return res.status(500).send(error.toString());
         }
-    
-        res.status(201);
+        
+        res.status(200).json({ success: true});
       });
     } else {
       console.error('reCAPTCHA verification failed');
