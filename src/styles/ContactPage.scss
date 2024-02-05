@@ -12,72 +12,43 @@ $dark-gray: rgb(128, 128, 128);
 $white: #FFFFFF;
 
 .contact-page {
-  h3 {
-    font-family: 'Satisfy', cursive;
-    font-size: clamp(1.5rem, 3vw, 3rem);
-    margin-top: 0;
-    color: $pink;
-  }
-  div {
-    align-items: stretch;
-  }
-
-  p {
-    line-height: 200%;
-  }
-}
-
-.contact {
-  border-radius: 20px;
-  background-color: $white;
-  padding: clamp(50px, 5vw, 100px) clamp(30px, 5vw, 75px);
-  flex-grow: 1;
-  
-  h2 {
-    text-align: center;
-  }
-
   p {
     font-size: clamp(1rem, 1.25vw, 1.5rem);
     line-height: 200%;
   }
+}
+.contact-info {
+  border-radius: 20px;
+  background-color: $white;
+  padding: clamp(50px, 5vw, 100px) clamp(30px, 5vw, 75px);
+  flex-grow: 1;
 
-  .contact-info {
+  section {
     display: flex;
     align-items: center;
+  }
 
-    a {
-      font-weight: 700;
-      color: $cherry;
-      margin-right: clamp(10px, 1vw, 20px);
+  a {
+    font-weight: 700;
+    color: $cherry;
+    margin-right: clamp(15px, 1vw, 20px);
 
-      &.icon-link {
-        width: clamp(20px, 2.5vw, 40px);
-        display: flex;
-        justify-content: center;
-      }
-
-      &:hover {
-        color: $pink;
-      }
+    &.icon-link {
+      width: clamp(20px, 2vw, 30px);
+      display: flex;
+      justify-content: center;
     }
 
-    svg {
-      display: flex;
-      justify-content: flex-start;
-      width: 50px;
-      height: 50px;
-      text-align: left;
+    &:hover {
+      color: $pink;
     }
   }
-}
 
-@media (max-width: 1000px) {
-  .contact-page div.flex-row-center {
-    flex-direction: column;
-
-    h3 {
-      font-size: clamp(1.5rem, 4vw, 3rem);
-    }
+  svg {
+    display: flex;
+    justify-content: flex-start;
+    width: 50px;
+    height: 50px;
+    text-align: left;
   }
 }
