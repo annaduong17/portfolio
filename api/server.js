@@ -42,7 +42,7 @@ app.post('/api/submit-form', async (req, res) => {
     const recaptchaResponse = await axios.post(
       verificationUrl, 
       new URLSearchParams({
-      secret: "6LdJwmUpAAAAANTuDRUKi76o4vfubDwXSfzBbDUC",
+      secret: recaptchaSecretKey,
       response: token,
       }),
       {
