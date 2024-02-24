@@ -29,6 +29,32 @@ function PortfolioPage() {
     },
     {
       type: 'project',
+      name: 'Todo App',
+      description: 'A classic todo app with dark/light theme toggle',
+      features: [
+        'add, edit, and delete todos', 
+        'filter for active and completed todos',
+        'clear completed todos',
+        'toggle theme'
+      ],
+      techStack: [
+        'JavaScript',
+        'React.js',
+        'SCSS',
+        'Express.js',
+        'MongoDB'
+      ],
+      images: [
+        '/images/todo-app-1.png',
+        '/images/todo-app-2.png',
+        '/images/todo-app-3.png',
+        '/images/todo-app-4.png'
+      ],
+      button: 'View Github Repo',
+      link: 'https://github.com/annaduong17/todo-app'
+    },
+    {
+      type: 'project',
       name: 'E-commerce App',
       description: 'An app that displays shoes for sale',
       features: [
