@@ -16,11 +16,14 @@ $white: #FFFFFF;
     text-align: center;
   }
 
+  .projects {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
   .portfolio-item {
-    width: 400px;
     background-color: rgba(255, 255, 255, 1);
     border-radius: clamp(10px, 5vw, 20px);
-    flex-grow: 1;
     padding-block: clamp(10px, 1vw, 20px);
     margin: 10px;
   }
@@ -190,5 +193,11 @@ $white: #FFFFFF;
     ul {
       padding-left: 30px;
     }
+  }
+}
+
+@media (max-width: 1200px) {
+  .portfolio-page .projects {
+    grid-template-columns: 1fr;
   }
 }
