@@ -14,7 +14,6 @@ function PortfolioPage() {
         'tool tip displayed on hover'
       ],
       techStack: [
-        'JavaScript',
         'Vue.js',
         'Pinia',
         'D3.js',
@@ -38,9 +37,9 @@ function PortfolioPage() {
         'toggle theme'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS',
+        'REST API',
         'Express.js',
         'MongoDB'
       ],
@@ -64,7 +63,6 @@ function PortfolioPage() {
         'Cart icon updates with total number of items'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS'
       ],
@@ -88,7 +86,6 @@ function PortfolioPage() {
         'See dynamically generated bar heights based on the data in the local JSON file'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS'
       ],
@@ -111,7 +108,6 @@ function PortfolioPage() {
         'Receive validations errors if the date is in the future'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS'
       ],
@@ -133,7 +129,6 @@ function PortfolioPage() {
         'See form validation errors if the email address is not formatted correctly'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS'
       ],
@@ -155,7 +150,6 @@ function PortfolioPage() {
         'Navigate the questions and hide/show answers using keyboard navigation alone'
       ],
       techStack: [
-        'JavaScript',
         'React.js',
         'SCSS'
       ],
