@@ -6,7 +6,7 @@ function Home() {
       </div>
 
       <div className="home-description">
-        <p>Hello, I'm Anna, a web developer. I find joy in translating goals and visions into both functional and visually appealing user interfaces. As a full-stack developer with a strong focus on front-end technologies, I'm dedicated to creating seamless and enjoyable user experiences. Feel free to explore my work and let me know how I can help or contribute to your next project.</p>
+        <p>Hello, I'm Anna, a full-stack web developer. I find joy in translating goals and visions into both functional and visually appealing user interfaces. Feel free to explore my work and let me know how I can help or contribute to your next project.</p>
       </div>
 
       <div className="home-buttons">
